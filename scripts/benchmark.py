@@ -106,7 +106,8 @@ def main() -> None:
         writer.writeheader()
         writer.writerows(rows)
 
-    _print_table(rows, fieldnames)
+    rows_sorted = sorted(rows, key=lambda r: r.get("game_mean") or 0, reverse=True)
+    _print_table(rows_sorted, fieldnames)
     print(f"\nResults written to {output_path}")
 
 

@@ -8,54 +8,102 @@ from typing import Literal
 
 from wordfreq import zipf_frequency
 
-Script = Literal["latin", "cyrillic", "greek", "georgian", "armenian"]
+Script = Literal["latin", "cyrillic", "greek", "georgian", "armenian", "devanagari", "arabic", "bengali", "gurmukhi"]
 
 CACHE_DIR = Path(__file__).parent.parent / "scripts"
 
 EXCLUDE_POS = {
-    "name", "suffix", "prefix", "character", "phrase", "proverb",
-    "contraction", "interfix", "symbol", "infix", "combining_form",
+    "name",
+    "suffix",
+    "prefix",
+    "character",
+    "phrase",
+    "proverb",
+    "contraction",
+    "interfix",
+    "symbol",
+    "infix",
+    "combining_form",
 }
 
 VOWELS = set("aeiouáéíóúàèìòùâêîôûäëïöüýæœ")
 
 ABBREVIATION_TAGS = {"abbreviation", "initialism", "acronym"}
 
+# Scripts that use combining/diacritic marks that aren't alpha — isalpha() fails on them
+COMBINING_SCRIPTS: set[Script] = {"devanagari", "bengali", "gurmukhi", "arabic"}
+
 
 @dataclass
 class LanguageConfig:
     display_name: str
-    folder_name: str        # folder segment in kaikki.org URL
-    file_name: str          # filename base in kaikki.org URL
-    script: Script | None   # None = accept all scripts
-    wordfreq_lang: str      # language code for wordfreq
-    min_frequency: float    # default Zipf frequency threshold (0 = disabled)
+    folder_name: str  # folder segment in kaikki.org URL
+    file_name: str  # filename base in kaikki.org URL
+    script: Script | None  # None = accept all scripts
+    wordfreq_lang: str  # language code for wordfreq
+    min_frequency: float  # default Zipf frequency threshold (0 = disabled)
     allow_uppercase_start: bool = False  # German nouns are legitimately capitalized
 
 
 LANGUAGES: dict[str, LanguageConfig] = {
-    "sh-latin":    LanguageConfig("Serbo-Croatian (Latin)",    "Serbo-Croatian", "SerboCroatian", "latin",    "sh", 0.0),
-    "sh-cyrillic": LanguageConfig("Serbo-Croatian (Cyrillic)", "Serbo-Croatian", "SerboCroatian", "cyrillic", "sh", 0.0),
-    "de":          LanguageConfig("German",    "German",    "German",    "latin",    "de", 2.0, allow_uppercase_start=True),
-    "en":          LanguageConfig("English",   "English",   "English",   "latin",    "en", 2.0),
-    "es":          LanguageConfig("Spanish",   "Spanish",   "Spanish",   "latin",    "es", 2.0),
-    "fr":          LanguageConfig("French",    "French",    "French",    "latin",    "fr", 2.0),
-    "bg":          LanguageConfig("Bulgarian",  "Bulgarian",  "Bulgarian",  "cyrillic",  "bg", 0.0),
-    "mk":          LanguageConfig("Macedonian", "Macedonian", "Macedonian", "cyrillic",  "mk", 0.0),
-    "ru":          LanguageConfig("Russian",    "Russian",    "Russian",    "cyrillic",  "ru", 2.0),
-    "uk":          LanguageConfig("Ukrainian",  "Ukrainian",  "Ukrainian",  "cyrillic",  "uk", 0.0),
-    "el":          LanguageConfig("Greek",      "Greek",      "Greek",      "greek",     "el", 0.0),
-    "hy":          LanguageConfig("Armenian",   "Armenian",   "Armenian",   "armenian",  "hy", 0.0),
-    "ka":          LanguageConfig("Georgian",   "Georgian",   "Georgian",   "georgian",  "ka", 0.0),
-    "it":          LanguageConfig("Italian",    "Italian",    "Italian",    "latin",     "it", 2.0),
-    "pt":          LanguageConfig("Portuguese", "Portuguese", "Portuguese", "latin",     "pt", 2.0),
-    "ro":          LanguageConfig("Romanian",   "Romanian",   "Romanian",   "latin",     "ro", 0.0),
-    "nl":          LanguageConfig("Dutch",      "Dutch",      "Dutch",      "latin",     "nl", 2.0),
-    "pl":          LanguageConfig("Polish",     "Polish",     "Polish",     "latin",     "pl", 2.0),
-    "cs":          LanguageConfig("Czech",      "Czech",      "Czech",      "latin",     "cs", 2.0),
-    "sq":          LanguageConfig("Albanian",   "Albanian",   "Albanian",   "latin",     "sq", 0.0),
-    "sl":          LanguageConfig("Slovenian",  "Slovene",    "Slovene",    "latin",     "sl", 0.0),
+    "sh-latin": LanguageConfig("Serbo-Croatian (Latin)", "Serbo-Croatian", "SerboCroatian", "latin", "sh", 0.0),
+    "sh-cyrillic": LanguageConfig(
+        "Serbo-Croatian (Cyrillic)", "Serbo-Croatian", "SerboCroatian", "cyrillic", "sh", 0.0
+    ),
+    "de": LanguageConfig("German", "German", "German", "latin", "de", 2.0, allow_uppercase_start=True),
+    "en": LanguageConfig("English", "English", "English", "latin", "en", 2.0),
+    "es": LanguageConfig("Spanish", "Spanish", "Spanish", "latin", "es", 2.0),
+    "fr": LanguageConfig("French", "French", "French", "latin", "fr", 2.0),
+    "bg": LanguageConfig("Bulgarian", "Bulgarian", "Bulgarian", "cyrillic", "bg", 0.0),
+    "mk": LanguageConfig("Macedonian", "Macedonian", "Macedonian", "cyrillic", "mk", 0.0),
+    "ru": LanguageConfig("Russian", "Russian", "Russian", "cyrillic", "ru", 2.0),
+    "uk": LanguageConfig("Ukrainian", "Ukrainian", "Ukrainian", "cyrillic", "uk", 0.0),
+    "el": LanguageConfig("Greek", "Greek", "Greek", "greek", "el", 0.0),
+    "hy": LanguageConfig("Armenian", "Armenian", "Armenian", "armenian", "hy", 0.0),
+    "ka": LanguageConfig("Georgian", "Georgian", "Georgian", "georgian", "ka", 0.0),
+    "it": LanguageConfig("Italian", "Italian", "Italian", "latin", "it", 2.0),
+    "pt": LanguageConfig("Portuguese", "Portuguese", "Portuguese", "latin", "pt", 2.0),
+    "ro": LanguageConfig("Romanian", "Romanian", "Romanian", "latin", "ro", 0.0),
+    "nl": LanguageConfig("Dutch", "Dutch", "Dutch", "latin", "nl", 2.0),
+    "pl": LanguageConfig("Polish", "Polish", "Polish", "latin", "pl", 2.0),
+    "cs": LanguageConfig("Czech", "Czech", "Czech", "latin", "cs", 2.0),
+    "sq": LanguageConfig("Albanian", "Albanian", "Albanian", "latin", "sq", 0.0),
+    # "sl": LanguageConfig("Slovenian", "Slovene", "Slovene", "latin", "sl", 0.0),
+    # Germanic
+    "sv": LanguageConfig("Swedish", "Swedish", "Swedish", "latin", "sv", 2.0),
+    # "no": LanguageConfig("Norwegian", "Norwegian", "Norwegian", "latin", "no", 0.0),
+    # "da": LanguageConfig("Danish", "Danish", "Danish", "latin", "da", 2.0),
+    # "af": LanguageConfig("Afrikaans", "Afrikaans", "Afrikaans", "latin", "af", 0.0),
+    # Romance
+    # "ca": LanguageConfig("Catalan", "Catalan", "Catalan", "latin", "ca", 2.0),
+    # "gl": LanguageConfig("Galician", "Galician", "Galician", "latin", "gl", 0.0),
+    # "la": LanguageConfig("Latin", "Latin", "Latin", "latin", "la", 0.0),
+    # "oc": LanguageConfig("Occitan", "Occitan", "Occitan", "latin", "oc", 0.0),
+    # Slavic
+    "sk": LanguageConfig("Slovak", "Slovak", "Slovak", "latin", "sk", 0.0),
+    # "be": LanguageConfig("Belarusian", "Belarusian", "Belarusian", "cyrillic", "be", 0.0),
+    # Baltic
+    "lt": LanguageConfig("Lithuanian", "Lithuanian", "Lithuanian", "latin", "lt", 0.0),
+    "lv": LanguageConfig("Latvian", "Latvian", "Latvian", "latin", "lv", 0.0),
+    # Celtic
+    # "cy": LanguageConfig("Welsh", "Welsh", "Welsh", "latin", "cy", 0.0),
+    # "ga": LanguageConfig("Irish", "Irish", "Irish", "latin", "ga", 0.0),
+    # Indo-Iranian
+    "hi": LanguageConfig("Hindi", "Hindi", "Hindi", "devanagari", "hi", 0.0),
+    # "ur": LanguageConfig("Urdu", "Urdu", "Urdu", "arabic", "ur", 0.0),
+    # "fa": LanguageConfig("Persian", "Persian", "Persian", "arabic", "fa", 2.0),
+    # "bn": LanguageConfig("Bengali", "Bengali", "Bengali", "bengali", "bn", 0.0),
+    # "pa": LanguageConfig("Punjabi", "Punjabi", "Punjabi", "gurmukhi", "pa", 0.0),
+    # "mr": LanguageConfig("Marathi", "Marathi", "Marathi", "devanagari", "mr", 0.0),
+    # "ne": LanguageConfig("Nepali", "Nepali", "Nepali", "devanagari", "ne", 0.0),
+    # "sa": LanguageConfig("Sanskrit", "Sanskrit", "Sanskrit", "devanagari", "sa", 0.0),
 }
+
+
+def is_clean_word(word: str, script: Script) -> bool:
+    if script in COMBINING_SCRIPTS:
+        return not any(c.isspace() or c.isdigit() or c in r".-_/\()[]{}" for c in word)
+    return word.isalpha()
 
 
 def has_vowel(word: str) -> bool:
@@ -63,15 +111,14 @@ def has_vowel(word: str) -> bool:
 
 
 def is_abbreviation(entry: dict) -> bool:
-    return any(
-        not ABBREVIATION_TAGS.isdisjoint(sense.get("tags", []))
-        for sense in entry.get("senses", [])
-    )
+    return any(not ABBREVIATION_TAGS.isdisjoint(sense.get("tags", [])) for sense in entry.get("senses", []))
 
 
 def has_valid_casing(word: str, allow_uppercase_start: bool) -> bool:
     if word.islower():
         return True
+    if not any(c.isupper() or c.islower() for c in word):
+        return True  # caseless script (Devanagari, Arabic, etc.)
     if allow_uppercase_start and word[0].isupper() and word[1:].islower():
         return True
     return False
@@ -87,16 +134,21 @@ def detect_script(word: str) -> Script:
             return "georgian"
         if "Ա" <= c <= "ֆ":
             return "armenian"
+        if "ऀ" <= c <= "ॿ":
+            return "devanagari"
+        if "؀" <= c <= "ۿ":
+            return "arabic"
+        if "ঀ" <= c <= "৿":
+            return "bengali"
+        if "਀" <= c <= "੿":
+            return "gurmukhi"
     return "latin"
 
 
 def download_if_needed(config: LanguageConfig) -> Path:
     cache_path = CACHE_DIR / f"{config.file_name}.jsonl"
     if not cache_path.exists():
-        url = (
-            f"https://kaikki.org/dictionary/{config.folder_name}/"
-            f"kaikki.org-dictionary-{config.file_name}.jsonl"
-        )
+        url = f"https://kaikki.org/dictionary/{config.folder_name}/" f"kaikki.org-dictionary-{config.file_name}.jsonl"
         print(f"Downloading {config.display_name} dictionary...")
         urllib.request.urlretrieve(url, cache_path)
         print("Done.")
@@ -121,7 +173,7 @@ def _filter_words(
                 continue
             word_script = detect_script(word)
             if (
-                word.isalpha()
+                is_clean_word(word, word_script)
                 and entry.get("pos") not in EXCLUDE_POS
                 and has_valid_casing(word, config.allow_uppercase_start)
                 and (config.script is None or word_script == config.script)
