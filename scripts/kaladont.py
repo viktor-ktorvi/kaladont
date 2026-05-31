@@ -71,7 +71,7 @@ def main() -> None:
     print(f"  Mean:   {statistics.mean(game_lengths):.1f}")
     print(f"  Median: {statistics.median(game_lengths)}")
     print(f"  Std:    {statistics.stdev(game_lengths):.1f}")
-    print(f"\nLast game: {' -> '.join(last_game[:10])} ...")
+    print(f"\nLast game ({len(last_game)} words):\n{' -> '.join(last_game)}")
 
 
 if __name__ == "__main__":

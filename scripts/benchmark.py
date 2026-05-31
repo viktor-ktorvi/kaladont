@@ -26,11 +26,24 @@ def benchmark_language(
     }
 
     if not words:
-        row.update({"game_min": None, "game_max": None, "game_mean": None, "game_median": None, "game_std": None})
+        row.update(
+            {
+                "game_min": None,
+                "game_max": None,
+                "game_mean": None,
+                "game_median": None,
+                "game_std": None,
+                "example_chain": "",
+            }
+        )
         return row
 
     endings_map = build_endings_map(words)
-    game_lengths = [len(play_game(words, endings_map)) for _ in range(n_simulations)]
+    games = [play_game(words, endings_map) for _ in range(n_simulations)]
+    game_lengths = [len(g) for g in games]
+
+    good = [g for g in games if 3 <= len(g) <= 10]
+    example = good[0] if good else min(games, key=lambda g: abs(len(g) - 6))
 
     row.update(
         {
@@ -39,6 +52,7 @@ def benchmark_language(
             "game_mean": round(statistics.mean(game_lengths), 1),
             "game_median": statistics.median(game_lengths),
             "game_std": round(statistics.stdev(game_lengths), 1),
+            "example_chain": " → ".join(example),
         }
     )
     return row
@@ -87,7 +101,7 @@ def main() -> None:
             )
         rows.append(row)
 
-    fieldnames = [
+    csv_fieldnames = [
         "language_key",
         "language",
         "script",
@@ -102,25 +116,60 @@ def main() -> None:
         "game_std",
     ]
     with open(output_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer = csv.DictWriter(f, fieldnames=csv_fieldnames, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(rows)
 
     rows_sorted = sorted(rows, key=lambda r: r.get("game_mean") or 0, reverse=True)
-    _print_table(rows_sorted, fieldnames)
+
+    md_columns = [
+        "language",
+        "num_words",
+        "game_min",
+        "game_max",
+        "game_mean",
+        "game_median",
+        "game_std",
+        "example_chain",
+    ]
+    _print_markdown_table(rows_sorted, md_columns)
+
+    ascii_columns = csv_fieldnames
+    _print_ascii_table(rows_sorted, ascii_columns)
+
     print(f"\nResults written to {output_path}")
 
 
-def _print_table(rows: list[dict], columns: list[str]) -> None:
+def _print_markdown_table(rows: list[dict], columns: list[str]) -> None:
+    headers = {
+        "language": "Language",
+        "num_words": "Words",
+        "game_min": "Min",
+        "game_max": "Max",
+        "game_mean": "Mean",
+        "game_median": "Median",
+        "game_std": "Std",
+        "example_chain": "Example chain",
+    }
+    header_row = " | ".join(headers.get(c, c) for c in columns)
+    separator = " | ".join("---" for _ in columns)
+    print(f"\n| {header_row} |")
+    print(f"| {separator} |")
+    for row in rows:
+        cells = " | ".join(str(row.get(c, "")) for c in columns)
+        print(f"| {cells} |")
+
+
+def _print_ascii_table(rows: list[dict], columns: list[str]) -> None:
     str_rows = [{c: str(row.get(c, "")) for c in columns} for row in rows]
     widths = {c: max(len(c), max(len(r[c]) for r in str_rows)) for c in columns}
 
-    sep = f"+-{'-+-'.join(('-' * widths[c] for c in columns))}-+"
-    header = f"| {' | '.join((c.ljust(widths[c]) for c in columns))} |"
+    sep = f"+-{'-+-'.join('-' * widths[c] for c in columns)}-+"
+    header = f"| {' | '.join(c.ljust(widths[c]) for c in columns)} |"
 
     print(f"\n{sep}\n{header}\n{sep}")
     for row in str_rows:
-        print(f"| {' | '.join((row[c].ljust(widths[c]) for c in columns))} |")
+        print(f"| {' | '.join(row[c].ljust(widths[c]) for c in columns)} |")
     print(sep)
 
 

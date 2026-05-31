@@ -1,6 +1,6 @@
-# Python repo template
+# Kaladont
 
-This is a template repo for python projects.
+[Kaladont](https://en.wikipedia.org/wiki/Kaladont) is a word chain game popular amongst kids in Serbo-croatian speaking regions, where players take turns saying words, each starting with the last two letters of the previous one — for example, *tantalum* → *umpire* → *rerun* → *unpleasant*. The game's name comes from the Austrian toothpaste brand Kalodont, which became the canonical winning word because no South Slavic word begins with "nt". This project simulates the game across multiple languages using lemmatized word lists from [kaikki.org](https://kaikki.org) Wiktionary data, running Monte Carlo experiments to measure how long chains can get.
 
 ## Installation
 
@@ -11,6 +11,103 @@ uv sync
 
 ## Usage
 
+Play a single language (Monte Carlo simulation):
+
 ```shell
-uv run main.py
+uv run python -m scripts.kaladont --language en --simulations 100
 ```
+
+Benchmark all languages and export results:
+
+```shell
+uv run python -m scripts.benchmark --simulations 100 --output results.csv
+```
+
+## Supported languages
+
+Game length statistics from 100 simulations, sorted by mean chain length:
+
+| Language | Words | Min | Max | Mean | Median | Std | Example chain |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Serbo-Croatian (Latin) | 26401 | 1 | 250 | 40.4 | 29.0 | 38.0 | džul → ultrazvuk → ukrasti → tisutnjik → ikonostas → asketizam → amerikanski → kibicirati → tiskarstvo → volt |
+| Georgian | 16771 | 1 | 170 | 34.9 | 26.0 | 30.2 | მთვარიანი → ნიადაგ → აგზნებადობა → ბადებს |
+| Serbo-Croatian (Cyrillic) | 22752 | 1 | 230 | 29.6 | 21.0 | 28.2 | футур → урођеница → царевна → надвожњак → активност → столић |
+| Italian | 32990 | 1 | 130 | 24.2 | 18.0 | 21.7 | globulo → losanga → gaudioso → sordità |
+| Macedonian | 37349 | 1 | 173 | 19.1 | 13.0 | 19.3 | искака → карта → ташак → акредитиви → висина → наопаку → кујнски → кимне → непарење |
+| Romanian | 68411 | 1 | 147 | 18.5 | 13.0 | 18.5 | desolidarizat → atrase → semideșertic → icosaedru → rugător → orizont |
+| Lithuanian | 6261 | 1 | 57 | 16.6 | 13.0 | 13.6 | šliužas → astronautas → asas → astrologija → japoniškas → astatis → ispaniškai → aimanuoti → tiesiog |
+| Spanish | 28230 | 1 | 87 | 12.3 | 10.0 | 10.2 | fonética → cazador → originariamente → televisor → orografía |
+| Portuguese | 22716 | 1 | 56 | 7.5 | 6.0 | 7.0 | suado → doceria → ianque |
+| Czech | 20080 | 1 | 30 | 5.4 | 4.0 | 4.5 | ptačinec → echo → horník |
+| English | 39656 | 1 | 31 | 5.2 | 4.0 | 4.7 | barman → analogous → using |
+| Albanian | 8896 | 1 | 22 | 4.3 | 3.0 | 3.5 | tashme → metaforë → rëngë → gërnetë → tërfojë |
+| Dutch | 25001 | 1 | 29 | 4.2 | 3.0 | 3.7 | stoker → erbarmen → enkel → elektrolyt |
+| German | 38823 | 1 | 35 | 4.1 | 2.0 | 4.1 | Tolle → leaken → entlaufen → entzaubern |
+| Swedish | 23467 | 1 | 28 | 4.0 | 3.0 | 3.5 | taurin → insyltad → adjungerad → addition → onanera → ransonering |
+| French | 26692 | 1 | 25 | 3.9 | 3.0 | 3.1 | albigeois → islamophobe → beach → charier → ergonomie → iels |
+| Bulgarian | 13803 | 1 | 19 | 3.8 | 3.0 | 3.4 | механик → икономист → старейш |
+| Ukrainian | 22580 | 1 | 19 | 3.8 | 3.0 | 3.2 | приваблювати → типаж → ажурний |
+| Russian | 27285 | 1 | 18 | 3.6 | 3.0 | 2.9 | козерог → оглушительно → нокаутировать → тьма → мания |
+| Polish | 20834 | 1 | 20 | 3.6 | 3.0 | 3.1 | potrzebny → nylon → onegdaj → ajerkoniak → akurat → atakować |
+| Armenian | 12838 | 1 | 15 | 3.0 | 2.0 | 2.5 | ջազվե → վերածել → ելնել → ելուստ → ստրկություն |
+| Slovak | 6782 | 1 | 21 | 2.9 | 2.0 | 2.4 | kocka → kazajka → kapitalista → tangá → gáfrový → výstava → valach → chémia |
+| Latvian | 13829 | 1 | 9 | 2.4 | 2.0 | 1.6 | smadzenītes → esot → otrdiena → nazalizēju → jumts |
+| Hindi | 14708 | 1 | 15 | 2.4 | 2.0 | 2.0 | घुटकना → नाइनसाफ़ → फ़्रिज |
+| Greek | 24134 | 1 | 12 | 2.0 | 1.0 | 1.6 | πουτανίδιο → ιονόσφαιρα → ραντό → τόφφος |
+
+
+Word lists are sourced from [kaikki.org](https://kaikki.org/dictionary/) (English Wiktionary, lemmatized). Frequency filtering uses [wordfreq](https://github.com/rspeer/wordfreq) Zipf scores where corpus coverage is sufficient.
+
+### Options
+
+| Flag | Short | Default | Description |
+|---|---|---|---|
+| `--language` | `-l` | `sh-latin` | Language to play |
+| `--simulations` | `-n` | `100` | Number of Monte Carlo simulations |
+| `--min-frequency` | `-f` | per-language | Minimum Zipf frequency (0 = disabled) |
+| `--min-word-size` | `-w` | `4` | Minimum word length in characters |
+
+### Word lists
+
+Word lists are downloaded from [kaikki.org](https://kaikki.org/dictionary/), which parses the English Wiktionary into structured JSONL. Wiktionary entries are generally dictionary headwords (lemmas), though it also contains entries for individual inflected forms that redirect to the base word.
+
+The raw data is filtered down to playable words by removing:
+- **Proper nouns, affixes, symbols** — excluded by part-of-speech tag
+- **Multi-word entries and hyphens** — only single tokens allowed
+- **Inflected and alternative forms** — entries tagged as `form-of` or `alt-of` in any sense are excluded
+- **Abbreviations** — all-caps words (e.g. `NATO`, `DNA`) and entries tagged as abbreviations or initialisms
+- **Words without a vowel** — catches lowercase abbreviations like `src`, `rsvp` (Latin script only)
+- **Proper-noun casing** — words starting with a capital are dropped, except in languages where common nouns are capitalised (e.g. German)
+- **Low-frequency words** — for languages with large, well-covered corpora (English, Spanish, French, German, etc.) a [wordfreq](https://github.com/rspeer/wordfreq) Zipf score threshold of 2.0 is applied to filter out rare technical and medical terms; smaller or less-covered languages skip this step to avoid over-filtering
+
+Despite this, **the word lists are imperfect** — obscure loanwords, archaic forms, highly technical terms, and inflected forms can still slip through, either because they appear as legitimate Wiktionary headwords or due to inconsistent tagging, but so do legitimate words get filtered out. The simulation treats all surviving words as equally valid.
+
+The table below shows a random sample of surviving and filtered-out words per language, giving a sense of what passes through and what gets removed:
+
+| Language | Surviving words | Filtered out words |
+|---|---|---|
+| Serbo-Croatian (Latin) | *strahotan*, *maran*, *macola*, *kozmos*, *gospodski*, *adresar*, *integralan*, *turoban*, *brecati*, *napadnost*, *zdravo*, *kozetina*, *glasnogovornik*, *ličan*, *umeti*, *kašičica*, *zena*, *raznositeljski*, *paškanat*, *špurijus*, *prevara*, *jova*, *otmjen*, *umetnuti*, *naraštaj* | *bojovati*, *odele*, *plesni*, *Rogoznica*, *Bilice*, *istoj*, *domova*, *sudžuka*, *živom*, *Tuđman*, *Mika*, *čuješ*, *varkanje*, *Ivanjica*, *ložio*, *revna*, *vuk dlaku mijenja, ali ćud nikada*, *momentu*, *Konstantinopolj*, *Island*, *gorka*, *jurnuti*, *ložiš*, *kurči*, *siđi* |
+| Serbo-Croatian (Cyrillic) | *пресликати*, *апстрахирати*, *разбјећи*, *грдосија*, *блесирати*, *аскурђел*, *момче*, *алпски*, *симеринг*, *сузивати*, *смотрити*, *шмиргла*, *местимичан*, *тенк*, *кракелура*, *коврчав*, *кутлача*, *стол*, *лончић*, *домољубље*, *промицати*, *разбољети*, *раст*, *контузија*, *првенствен* | *кликнути*, *тамбур*, *Асирија*, *Брисел*, *професору*, *Петровац*, *Нантежанин*, *Сабах*, *надвладавати*, *зоолошки врт*, *еуро-*, *Аристотел*, *схематизам*, *Стеван*, *сагледавати*, *Жељко*, *Корушац*, *Змијавци*, *Ускрс*, *подгризати*, *Кампидољ*, *браву*, *Нови завјет*, *Гркиња*, *билеси* |
+| German | *Tscheche*, *Umbruch*, *konvex*, *Agentin*, *Ölberg*, *Zylinderkopf*, *Leipziger*, *Schlüpfer*, *glücklich*, *unterliegen*, *Agitation*, *Staatsdienst*, *Zünder*, *langfristig*, *pauken*, *eindrücken*, *sturzbetrunken*, *Freiheitsstrafe*, *detonieren*, *Fabrik*, *Hetzer*, *ausströmen*, *Belgier*, *Bilderbuch*, *Zeitverzögerung* | *Concentrationen*, *schwindelerregendstem*, *erfrorst*, *kommandierte*, *Übersiedlerin*, *härteste*, *Balsams*, *festgelegtes*, *Vorlagen*, *Bundesministerien*, *vollständiges*, *halbiertest*, *komparabel*, *Antrieben*, *Isolierstoffen*, *-haltig*, *bestirntestes*, *bestreitbarerem*, *DACHs*, *ätzenderer*, *Malerklebebands*, *streufähigeren*, *festfragst*, *lernet*, *Maik* |
+| English | *marching*, *dolman*, *metrics*, *hermeneutics*, *diffraction*, *quay*, *fragrance*, *thickener*, *pathological*, *caressing*, *wonderful*, *repeatedly*, *limiter*, *facilitation*, *eider*, *atta*, *lunging*, *combinator*, *destabilising*, *farewell*, *coming*, *savoring*, *tonne*, *allogeneic*, *whichever* | *succussation*, *Szenbergs*, *third-pounder*, *pulling someone's plumes*, *sluggishnesses*, *filchi*, *multisynthetase*, *asthenoteratozoospermia*, *creekside*, *Shadles*, *shamlas*, *effeminations*, *Auriemmas*, *infects*, *Maliwara*, *Jestice*, *rNMPs*, *melyrid*, *autoptic*, *siteholders*, *anergetic*, *Jutlandish*, *sinseollo*, *dodecicosidodecahedra*, *epispores* |
+| Spanish | *mesozoico*, *desintegrar*, *secretamente*, *mapping*, *completamente*, *insti*, *pisa*, *drag*, *emparentado*, *cantata*, *brilloso*, *erial*, *hablante*, *poda*, *desenvoltura*, *actitud*, *chisme*, *reivindicación*, *cíngulo*, *aparentemente*, *imberbe*, *obstáculo*, *desestabilizador*, *saber*, *cortical* | *explayad*, *guango*, *chonismo*, *excoriados*, *embromábamos*, *coquearías*, *cespitad*, *trapeábamos*, *tugurizara*, *compusieseis*, *furibundos*, *contadito*, *majara*, *eyectándolos*, *brincotearan*, *utaheñas*, *desconfiándote*, *enterrabas*, *eclosionabais*, *Xiquena*, *dragándome*, *vitalizado*, *ópticos*, *guaireño*, *repollito de agua* |
+| French | *échange*, *ilot*, *weekend*, *élire*, *convenir*, *anticorruption*, *resto*, *dynamisme*, *katangais*, *butch*, *brandir*, *drépanocytose*, *gentleman*, *incongruité*, *délayer*, *composite*, *circulation*, *poussin*, *rétrospectif*, *vampirisme*, *condensation*, *protecteur*, *taquet*, *sommelier*, *puîné* | *apprêtez*, *plairaient*, *revisitants*, *déshabillées*, *cormes*, *cafardâtes*, *détellera*, *régénéreras*, *flagorna*, *signalisions*, *exfolierons*, *psychologiserez*, *crawlaient*, *fracassai*, *cardinalités*, *pervenche de Madagascar*, *toponymes*, *coprésideraient*, *rabattez*, *zézayante*, *ébattissent*, *chaperonnâtes*, *vitrifiais*, *exceptées*, *publierait* |
+| Bulgarian | *сега*, *лисица*, *насекомо*, *дателен*, *пристигалия*, *предпоставка*, *акробатичен*, *директор*, *избъдвам*, *седалище*, *карабина*, *черква*, *скърчав*, *доплитам*, *нужда*, *аларма*, *преувеличавам*, *зрелия*, *формирам*, *побеждаващия*, *ближещия*, *летец*, *произтичам*, *къжлица*, *сладуран* | *осите*, *снежен глобус*, *героиньо*, *обоснованите*, *анулирала*, *обосновавал*, *начетен*, *отвеждащи*, *довличащата*, *аерогарата*, *подслушващо*, *атинянката*, *обичалите*, *убедят*, *загубвана*, *животописите*, *унесъл*, *заемите*, *паднеха*, *запредяха*, *загубиш*, *метяло*, *пика*, *да еба*, *смажи* |
+| Macedonian | *пепел*, *мобилизира*, *неразводнет*, *електрода*, *афористичен*, *бессознание*, *капетан*, *нагло*, *есперантистка*, *исламабаѓанка*, *џубокс*, *шилинг*, *недување*, *непродаден*, *клавичембало*, *дедомразовски*, *тако*, *петнаесетгодишен*, *буен*, *веселие*, *литературен*, *разгори*, *прабаба*, *енклитичен*, *незазеленување* | *понекоректен*, *штитење*, *тешен*, *багремје*, *свиревте*, *посензационален*, *распрскување*, *чадови*, *издолжуван*, *било*, *перел*, *истресен*, *кровови*, *сета*, *се искези*, *толчницине*, *боски*, *надоместување*, *цмокнуван*, *батаљон*, *здрвување*, *слизнат*, *зошо*, *македонско*, *водица* |
+| Russian | *курсор*, *скрещивать*, *художественность*, *неизбежность*, *водяной*, *умышленный*, *зной*, *бубнить*, *предшествовать*, *меньшее*, *кумовство*, *заслонить*, *закат*, *паровой*, *белка*, *джерси*, *подловить*, *аккомпанировать*, *навсегда*, *особенно*, *неровность*, *всемогущество*, *сдержанно*, *шопинг*, *модерн* | *отстранивши*, *родительном падеже*, *примыканий*, *поляне*, *втискивались*, *заезжими*, *забастующий*, *неверующему*, *взаимопомощи*, *комментировал*, *пупсика*, *непониманиях*, *кизильник*, *растягивают*, *решают*, *наказываются*, *сдёрнуть*, *прилепляетесь*, *прогревающий*, *пригреют*, *сжатию*, *затаившись*, *специализации*, *окаменелостям*, *борце* |
+| Ukrainian | *вяюрюненіт*, *вагатися*, *абазин*, *шикарний*, *бардзо*, *четверговий*, *словнік*, *наскрізь*, *противник*, *автокефальний*, *спорожняти*, *кавувати*, *вживання*, *чапля*, *висисати*, *човняр*, *гормональний*, *кардіологічний*, *кобза*, *бора*, *післясмак*, *гусь*, *крокодилячий*, *проєктуватимете*, *анекдот* | *речам*, *коштував*, *кліфгенґер*, *діяльністю*, *дозволяймо*, *Олексіїв*, *пручаються*, *думкам*, *Пухачі*, *газеті*, *людину*, *перемогою*, *паузах*, *їжаками*, *-яче*, *розширеними*, *постала*, *шортам*, *путах*, *Сіверський Донець*, *вперся*, *стверджуємо*, *зручній*, *красивим*, *Оленівка* |
+| Greek | *επισμηναγός*, *γλιτώνω*, *αποθαυμάζω*, *παραγράφω*, *μαφιόζικος*, *πλειστάκις*, *μπαίνω*, *αναστροφέας*, *καννελής*, *τριανταφυλλή*, *νεκροταφείο*, *αναδρομικά*, *σαμπούκος*, *προκαταβάλλομαι*, *λειτουργός*, *μηνοειδής*, *αντικείμενο*, *θλίψη*, *μαλακισμένος*, *λούγκρα*, *υποψία*, *κατσαπλιάς*, *αποδόμηση*, *θανάσιμος*, *παιδεύω* | *κρουστάλλου*, *ανασκαλέματος*, *αυτοκράτορα*, *ηλικιωμένου*, *απεντομώσεως*, *πορνογραφικών*, *ψυχοκόρης*, *διέλευσης*, *στο πηγάδι κατούρησα*, *γυιό*, *μαλακές*, *αντικλήτους*, *βαθυσκάφη*, *δικαίου*, *γεφυριών*, *διακρίσεων*, *αθανάτους*, *θύμησες*, *αλαμπουρνέζικης*, *άνεργες*, *ευνουχισμών*, *ηλεκτρομαγνητική αλληλεπίδραση*, *αναβατήρα*, *ευνουχισμού*, *καταυλισμούς* |
+| Armenian | *մեկտեղանոց*, *թիկնապահ*, *լիժա*, *կոկորդ*, *խայտառակել*, *չեղարկել*, *բարկանալ*, *ստվարախումբ*, *դոգմատիզմ*, *օրգան*, *ստամբակություն*, *նորածին*, *անհամեստ*, *արբանյակային*, *ահաբեկություն*, *ժամանում*, *փղոսկր*, *առոգանել*, *արածել*, *զեղչ*, *ցլամարտ*, *բառամթերք*, *չինացի*, *սենյորություն*, *մրթմրթալ* | *ախպար*, *Գանդի*, *Դոնեցկ*, *ստացող*, *Ամիրան*, *Պուքովինա*, *օգտակար մոդել*, *Յալթա*, *արքայամոր*, *միկրոալիքային վառարան*, *եղեք*, *ինքնավար օկրուգ*, *Վլադիսլավ*, *Գեղամա լեռներ*, *մառուլ*, *մամիկ*, *արծվի*, *երկրաշարժեր*, *սուսերներ*, *փչացած*, *արած*, *Եղիազարյան*, *իրավապահ մարմիններ*, *Էլէքճեան*, *Շիշեճյան* |
+| Georgian | *შეკრებს*, *ასახავს*, *ჩაწერს*, *დინდგელი*, *საქალაქო*, *უწოდებს*, *პირუთვნელად*, *ცოცხი*, *ხანგრძლივობა*, *ჩვიდმეტჯერ*, *რთავს*, *მწუხრი*, *სანაქებოდ*, *ორიენტირი*, *მარკა*, *საღარი*, *კანონდარღვევა*, *მომწვანო*, *სითბური*, *თანაც*, *მცენარეულობა*, *კახელი*, *საწმისი*, *ლიგა*, *იდილიური* | *ნათქვამი*, *კონსერვატიული პარტია*, *ოქტომბრის*, *დახურვა*, *ციმბირის წყლული*, *დაბადების მოწმობა*, *აფსათი*, *კავკასიის ალბანეთი*, *ბომბარდირები*, *საზოგადო მოღვაწე*, *ქვედა რეგისტრის*, *რუსეთს*, *მეფეთ*, *გასუფთავება*, *მისური*, *დამთავრებული*, *ნაბეჭდი დაფა*, *დღიურის*, *მე- -ე*, *დამხმარე ძაღლი*, *მშობიარეებს*, *სეიშელის კუნძულები*, *ესპანეთის*, *მეგობრის*, *არაბეთი* |
+| Italian | *mongolfiera*, *odiarli*, *amatoriale*, *esaminare*, *empio*, *pasco*, *codolo*, *meleto*, *partner*, *svezzamento*, *arrendevole*, *atro*, *mortalità*, *truccarti*, *rispondere*, *eurozona*, *civilista*, *stimatore*, *deca*, *orgogliosamente*, *recita*, *seguirlo*, *antisismico*, *prepagato*, *esasperato* | *adiranno*, *rollavamo*, *ripiomberemo*, *calendarizzato*, *appesendo*, *Tosi*, *sostenti*, *districavano*, *pneumoniche*, *accendo*, *riciclandoci*, *autoindotti*, *sembrasse*, *tenoreggiano*, *psittacismo*, *genano*, *oroscopi*, *assaporassero*, *innacquavate*, *dinamizza*, *ricompattazione*, *eterificazione*, *precedendovi*, *inassimilabili*, *traduzionali* |
+| Portuguese | *dossel*, *reformado*, *flagrante*, *cigarra*, *latente*, *notícia*, *jóia*, *leitosa*, *certame*, *riquinho*, *glandular*, *predileção*, *sakura*, *desafiador*, *pilantra*, *amígdala*, *amadureceram*, *sedoso*, *illegal*, *inverter*, *hasta*, *subtilmente*, *antiaéreo*, *tamanduá*, *animadamente* | *ídiche*, *entelharia*, *injectaremos*, *oiarias*, *subestimai*, *fissurarmos*, *espanholizaríamos*, *constrinjas*, *bolchevizemos*, *refregarão*, *autentiqueis*, *configureis*, *moshai*, *jihadistas*, *isempta*, *reconquistáramos*, *aguadores*, *lamentou*, *filosóficos*, *muque*, *revolverem*, *remontada*, *esgravatásseis*, *anquilosasse*, *acromatizaríeis* |
+| Romanian | *mitizare*, *pambriu*, *scuzat*, *zbugheală*, *eremit*, *entomofil*, *prăda*, *landgrafat*, *magnetoterapie*, *căutat*, *imbecil*, *capsulat*, *oamă*, *înrădăcinare*, *simpatie*, *răscumpăra*, *ariditate*, *admonestație*, *paratifos*, *emasculație*, *malpoziție*, *înrobitor*, *nucleație*, *neaccentuat*, *ștrand* | *plaiului*, *cocoșată*, *gradațiune*, *fată în casă*, *Accadân*, *Velcovici*, *forjat*, *Cumpăna*, *Pluton-Dolhești*, *incoherență*, *moment de inerție*, *Someșan*, *exhibițiune*, *dezbășcăluit*, *crestomatie*, *treizeci și două*, *Serghiescu*, *Mândruțescu*, *frunzulică*, *Răulescu*, *radiațiilor*, *metodologă*, *fitofagă*, *Nemțeanu*, *vipiscă* |
+| Dutch | *vernederend*, *modehuis*, *bestrijden*, *afvalt*, *inhaler*, *optelsom*, *blindelings*, *breinaald*, *adviesprijs*, *schaap*, *gebruiksvriendelijk*, *stroom*, *onderuit*, *liefdesleven*, *briefing*, *straffeloosheid*, *opvoering*, *reiger*, *mechanisch*, *roddelblad*, *aankleed*, *aardkorst*, *getrouw*, *herder*, *wachtende* | *reukoffers*, *vergare*, *besabbelde*, *gijns*, *worstelden*, *stouw*, *belegeringswapen*, *cuckstoel*, *Biesland*, *etterbuil*, *toetsstenen*, *brengen bij*, *afluisteraar*, *orkaatje*, *aanhoude*, *afscheidsmalen*, *gevonden*, *filologe*, *dennetje*, *diakentjes*, *bezage*, *lokalisatietje*, *echoden*, *opgraaf*, *echoë* |
+| Polish | *oddział*, *przypilnować*, *zachorowalność*, *zwycięstwo*, *kurczę*, *osiemset*, *budzić*, *praktyk*, *przełamać*, *południk*, *epilepsja*, *dysfunkcja*, *zagranica*, *intensyfikacja*, *urwać*, *ocalały*, *czytadło*, *gogo*, *spytać*, *salmonella*, *zgadzać*, *uważać*, *rebeliant*, *zainspirować*, *jadalnia* | *dostatniej*, *zwolić*, *psiętrz*, *antyrządowy*, *naplotę*, *zakańczać*, *schód*, *co do jednego*, *hugenot*, *ożénić*, *chwiołek*, *maestria*, *wdychali*, *czegoś*, *Kisielewicz*, *rezydencję*, *jagódeczka*, *jezyk*, *krzyżyk*, *wysłużyć*, *odwracać kota ogonem*, *poetką*, *hiszpańscy*, *Słowiańszczyzna*, *tenisistów* |
+| Czech | *lokaj*, *střelný*, *pozorovatelna*, *neobyčejný*, *každoročně*, *rockový*, *otevřenost*, *precizní*, *dražit*, *rovně*, *puškař*, *čtyřicet*, *ledacos*, *blízce*, *samba*, *zmrzlina*, *meteorologie*, *stoický*, *výjimka*, *vést*, *mělnický*, *příbytek*, *pšenice*, *obecný*, *sifon* | *jedlích*, *kukadlo*, *zavine*, *aviatika*, *provede*, *Choc*, *tabulce*, *Prošek*, *přemáhat*, *dukce*, *Jevišovka*, *vedlejší účinek*, *mdlí*, *šíříš*, *zdrojový kód*, *Britové*, *norem*, *chtěl*, *bahnem*, *králíkářem*, *pardubickém*, *nadal*, *vtipek*, *zmrzačen*, *Porod* |
+| Albanian | *terrtohem*, *refuzoj*, *çapalitje*, *shqiptohem*, *imunulogji*, *çjerr*, *përdhunoj*, *kthjelloj*, *gjithashtu*, *folje*, *shënim*, *kukule*, *brof*, *çila*, *çajgëz*, *lutje*, *alarmoj*, *arrestoj*, *shartoj*, *krik*, *elbth*, *minutë*, *aritmetikë*, *parë*, *tingëlla* | *Popaj*, *ngarkoni*, *mësonjës*, *gjirafave*, *capinave*, *shalimi*, *njoha*, *Armand*, *Dren*, *yzengjitë*, *currja*, *calluar*, *lakova*, *ardhshin*, *buzagazi*, *avancova*, *ftesash*, *cpordhësi*, *princeshash*, *krahët*, *sarke*, *cucllat*, *shkrirë*, *gërhanat*, *Rexhepagiqi* |
+| Swedish | *barnsligt*, *krigszon*, *sekret*, *piga*, *lägenhet*, *promille*, *gästvänlighet*, *vida*, *fornlämning*, *hjärntumör*, *konkurrenskraft*, *fruktansvärd*, *dörrknackning*, *uttala*, *elektromagnetism*, *portfölj*, *gnälla*, *avsked*, *skivsamling*, *svartkrut*, *läsa*, *handbok*, *stillestånd*, *skvaller*, *uttrycksfull* | *laxermedels*, *bakplåtspapperets*, *motgifternas*, *tronavsägelse*, *konformat*, *pärlcollierer*, *inläsningarnas*, *mildringars*, *dimmigheters*, *myggnäts*, *gracerna*, *ofrånkomliga*, *knatat*, *spännbögarna*, *underrättelseverksamheterna*, *cystoskopierna*, *ceremonierna*, *polemisk*, *skådeprocessens*, *buklandade*, *högkulturernas*, *länkade listornas*, *överhuvud taget*, *dubbelparkerande*, *mellanmålen* |
+| Slovak | *slabika*, *pľuzgier*, *sloboda*, *vrah*, *janičiar*, *volavka*, *karpina*, *avarčina*, *zúčtovateľný*, *orol*, *mäsový*, *gazela*, *sihoť*, *centripetálny*, *bábka*, *mydlina*, *používateľský*, *mexicky*, *mihalnica*, *volant*, *vorkoholizmus*, *východný*, *černobyľ*, *povaľač*, *lieskový* | *Krakov*, *tchora*, *Čechách*, *uncí*, *Macháč*, *-krát*, *Friga*, *Fajmon*, *sáču*, *Mojžíš*, *našuchovačky*, *Ramač*, *Ľoľo*, *Zajac*, *Bačuvčík*, *Pavlík*, *čítaj*, *nemotou*, *Ctibor*, *vagínu*, *márnejší*, *zubáče*, *dôslednejší*, *budujem*, *volali* |
+| Lithuanian | *ispaniškas*, *tylėjus*, *ligonis*, *sumokėti*, *įmanomas*, *gausiant*, *butas*, *priebalsis*, *daržas*, *nugalint*, *gudobelė*, *medynas*, *savanoris*, *arbata*, *laisvė*, *naudotas*, *miltas*, *palaukdavus*, *fizinis*, *vėlus*, *čiuožti*, *poskyris*, *pusmetis*, *kelialapis*, *dykas* | *sėdėkite*, *mažesniame*, *ryto žvaigždėmis*, *Vadimas*, *asmeniui*, *duodąs*, *blizgu*, *rumuniški*, *dulis*, *gyvūnų*, *išlaipina*, *dieviškesnėmis*, *vartokime*, *nuduosiančioms*, *Danieliaus knyga*, *meniškesniajame*, *daniškuose*, *sulaukdavote*, *sapnuojamiems*, *respublikose*, *sulaukime*, *Agota*, *Abukavičienė*, *stebinčiam*, *ejakuliavusiųjų* |
+| Latvian | *dobji*, *apcepamies*, *āvis*, *nezīdināts*, *nolikt*, *simbols*, *ziņkāri*, *spārnots*, *latīnis*, *netaustīts*, *atklāts*, *piemirsdams*, *prievārds*, *glābjams*, *notikt*, *kāja*, *neglābjot*, *skatīties*, *biezums*, *cepam*, *augša*, *irānis*, *nespriestais*, *nacisms*, *neapcepamies* | *skūpstītajās*, *neaicinošas*, *nekurdamas*, *visintīmākie*, *begemotiem*, *jautrinošajām*, *svešādākas*, *viskaraliskākās*, *humānie*, *nemežģījamajām*, *stulbeņos*, *visnormālākās*, *drīkstamo*, *nevienotu*, *darāmās*, *oranžīgākās*, *mirsto*, *nemezglotie*, *skaidrojamajā*, *neizaruši*, *zobenā*, *visdebilākajā*, *hipopotamus*, *tautiskākajai*, *dienvidslāvietēs* |
+| Hindi | *भ्रूणीय*, *धरती*, *बेईमानी*, *घरौंदा*, *मज्जा*, *कॉमेडियन*, *वलंदेज़*, *प्रतिबिंबक*, *किरगिज़*, *भुगतना*, *सीज़र*, *भौंकना*, *द्विपद*, *अनुरोध*, *पदयात्रा*, *घुड़दौड़*, *विज़ारत*, *अधीन*, *बोना*, *जारक*, *कविता*, *फिल्म*, *फफकना*, *इंगनी*, *तंत्र* | *महिलाएँ*, *लटकाऊँ*, *धोऊँ*, *पृथ्वी द्रव्यमान*, *कुसुम*, *चिढ़ाया*, *दिखा*, *सहकर्मियो*, *अग्रजो*, *भरनेवाला*, *हराओगे*, *मतवाले*, *पलटाऊँगा*, *अनुसूचियो*, *लगायेंगे*, *धूम्रपानियों*, *खुलनीं*, *भगाया*, *खोलेगा*, *अदानी*, *ठहरकर*, *आभासी यथार्थ*, *संकटो*, *ढाहना*, *नलियो* |

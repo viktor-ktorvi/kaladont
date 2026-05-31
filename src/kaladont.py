@@ -28,7 +28,7 @@ EXCLUDE_POS = {
 
 VOWELS = set("aeiouáéíóúàèìòùâêîôûäëïöüýæœ")
 
-ABBREVIATION_TAGS = {"abbreviation", "initialism", "acronym"}
+EXCLUDE_SENSE_TAGS = {"abbreviation", "initialism", "acronym", "form-of", "alt-of"}
 
 # Scripts that use combining/diacritic marks that aren't alpha — isalpha() fails on them
 COMBINING_SCRIPTS: set[Script] = {"devanagari", "bengali", "gurmukhi", "arabic"}
@@ -42,7 +42,7 @@ class LanguageConfig:
     script: Script | None  # None = accept all scripts
     wordfreq_lang: str  # language code for wordfreq
     min_frequency: float  # default Zipf frequency threshold (0 = disabled)
-    allow_uppercase_start: bool = False  # German nouns are legitimately capitalized
+    allow_uppercase_start: bool = False  # some languages capitalize common nouns (e.g. German)
 
 
 LANGUAGES: dict[str, LanguageConfig] = {
@@ -110,8 +110,8 @@ def has_vowel(word: str) -> bool:
     return any(c.lower() in VOWELS for c in word)
 
 
-def is_abbreviation(entry: dict) -> bool:
-    return any(not ABBREVIATION_TAGS.isdisjoint(sense.get("tags", [])) for sense in entry.get("senses", []))
+def has_excluded_sense_tag(entry: dict) -> bool:
+    return any(not EXCLUDE_SENSE_TAGS.isdisjoint(sense.get("tags", [])) for sense in entry.get("senses", []))
 
 
 def has_valid_casing(word: str, allow_uppercase_start: bool) -> bool:
@@ -178,7 +178,7 @@ def _filter_words(
                 and has_valid_casing(word, config.allow_uppercase_start)
                 and (config.script is None or word_script == config.script)
                 and (word_script != "latin" or has_vowel(word))
-                and not is_abbreviation(entry)
+                and not has_excluded_sense_tag(entry)
                 and (min_frequency == 0.0 or zipf_frequency(word, config.wordfreq_lang) >= min_frequency)
             ):
                 words.append(word)
