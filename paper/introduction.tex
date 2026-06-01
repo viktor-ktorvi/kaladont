@@ -1,0 +1,12 @@
+\section{Introduction}
+
+Kaladont is a word game popular among children in the Serbo-Croatian language speaking regions of southeastern Europe.
+In this game players start from a random word and take turns coming up with a word which starts with the last two letters of the previous one — for example, \textit{tantalum} $\to$ \textit{umpire} $\to$ \textit{rerun} $\to$ \textit{unpleasant}.
+The game ends when a player cannot produce a valid continuation.
+The name derives from Kaladont, an Austrian toothpaste brand that became ubiquitous in the region~\cite{kalodont_wiki}; \textit{kaladont} itself is the canonical winning word because no word in the Serbo-Croatian language begins with \textit{nt}.
+
+The idea for the investigation in this paper came to me when I tried to play the game in the company of English speaking people, but, to my surprise, we struggled to come up with more than three or four words in a row. Coincidentally, among those people was a guy from Georgia who was, actually, the one to initiate the game, and he confirmed that this is, in fact, a game played in his homeland as well. Seeing how we struggled to play the game in English, hearing that people successfully play it in Georgia, and having heard before that Serbo-Croatian and Georgian are languages which possess the property of phonemic orthography, where the written text directly mirrors the spoken language — one letter represents exactly one sound (phoneme), and every letter is pronounced~\cite{katz1992, seymour2003}, made me almost instantly speculate that this is the reason why playing the game of Kaladont is possible in these two languages, as opposed to English which does not possess this property~\cite{seymour2003}.
+
+To put that speculation to the test, in this paper we computationally simulate thousands of rounds of Kaladont in 25 languages from 9 language families.
+For each language we compiled a word list from Wiktionary~\cite{kaikki}, filtered out words that would not be considered valid in the game (abbreviations, proper nouns, very rare words, etc.), and ran simulated games to see how long the chains tend to get.
+The code and data are available at \url{https://github.com/viktor-ktorvi/kaladont}.

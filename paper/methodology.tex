@@ -1,0 +1,66 @@
+\section{Methodology}
+
+\subsection{Data Source}
+
+Word lists are drawn from \href{https://kaikki.org}{kaikki.org}, which provides pre-parsed JSON Lines (JSONL) dumps of the English Wiktionary. Each entry contains the headword, its part of speech, sense definitions, and sense-level tags. Because Wiktionary entries represent dictionary headwords, the data is primarily lemmatised, though individual inflected forms are sometimes listed as separate entries.
+
+\subsection{Filtering Pipeline}
+
+Raw Wiktionary data contains a large proportion of entries unsuitable for gameplay. We apply the following filters in sequence, discarding an entry if any condition fails:
+
+\begin{enumerate}
+    \item \textbf{Minimum length.} Words shorter than four characters are excluded, matching the standard Kaladont rule.
+    \item \textbf{Part-of-speech exclusion.} Entries tagged as proper names, affixes (prefix, suffix, infix, interfix, combining form), characters, symbols, phrases, proverbs, or contractions are removed.
+    \item \textbf{Casing.} Words beginning with a capital letter are excluded, with the exception of languages in which common nouns are conventionally capitalised (e.g.\ German). All-uppercase words (abbreviations and acronyms such as \texttt{NATO} or \texttt{DNA}) are also removed.
+    \item \textbf{Sense-level tags.} Entries whose senses carry a \texttt{form-of} or \texttt{alt-of} tag are discarded; these represent inflected or alternative-spelling entries rather than base lexical items. Entries tagged as abbreviations or initialisms are similarly excluded.
+    \item \textbf{Vowel check (Latin script only).} Words containing no Latin vowel are rejected, catching lowercase abbreviations such as \textit{src} or \textit{rsvp}.
+    \item \textbf{Token validity.} Words containing spaces, hyphens, or digits are removed; only single orthographic tokens are accepted. For scripts that use non-alphabetic combining marks (Devanagari, Bengali, Gurmukhi, Arabic), the standard \texttt{isalpha()} check is replaced with a looser character-set check.
+    \item \textbf{Frequency threshold.} For languages with large, well-covered corpora — English, Spanish, French, German, Italian, Portuguese, Russian, Dutch, Polish, Czech, Swedish, Catalan — a minimum Zipf frequency of 2.0 is imposed using the \texttt{wordfreq} library \cite{wordfreq}, filtering out rare technical and medical vocabulary. Languages with smaller or less-covered corpora skip this step to avoid over-filtering valid words.
+\end{enumerate}
+
+Filtered word lists are cached on disk, keyed by language, script, frequency threshold, and minimum word length. Subsequent runs load the cache directly, making the simulation fast (under 0.25 seconds per language after the first run).
+
+\subsection{Simulation}
+
+For each language we build a \emph{endings map}: a dictionary from each two-letter prefix to the list of words sharing that prefix. A single game proceeds as follows: a starting word is chosen uniformly at random from the word list, and at each step a successor is chosen uniformly at random from all words beginning with the current word's last two letters that have not yet been used. The game terminates when no valid successor exists. We run 100 such simulations per language and record the chain length of each.
+
+\subsection{Languages}
+
+Table~\ref{tab:languages} lists all 25 languages included in the study, along with their script, wordfreq language code, and frequency threshold. The selection covers eight branches of the Indo-European family together with Georgian (Kartvelian).
+
+\begin{table}[h]
+\centering
+\caption{Languages included in the study.}
+\label{tab:languages}
+\begin{tabular}{llll}
+\toprule
+Language & Script & Freq.\ threshold & Language family \\
+\midrule
+Serbo-Croatian (Latin)    & Latin      & 0.0 & South Slavic \\
+Serbo-Croatian (Cyrillic) & Cyrillic   & 0.0 & South Slavic \\
+Macedonian                & Cyrillic   & 0.0 & South Slavic \\
+Bulgarian                 & Cyrillic   & 0.0 & South Slavic \\
+Russian                   & Cyrillic   & 2.0 & East Slavic  \\
+Ukrainian                 & Cyrillic   & 0.0 & East Slavic  \\
+Polish                    & Latin      & 2.0 & West Slavic  \\
+Czech                     & Latin      & 2.0 & West Slavic  \\
+Slovak                    & Latin      & 0.0 & West Slavic  \\
+Lithuanian                & Latin      & 0.0 & Baltic       \\
+Latvian                   & Latin      & 0.0 & Baltic       \\
+German                    & Latin      & 2.0 & Germanic     \\
+English                   & Latin      & 2.0 & Germanic     \\
+Dutch                     & Latin      & 2.0 & Germanic     \\
+Swedish                   & Latin      & 2.0 & Germanic     \\
+Spanish                   & Latin      & 2.0 & Romance      \\
+French                    & Latin      & 2.0 & Romance      \\
+Italian                   & Latin      & 2.0 & Romance      \\
+Portuguese                & Latin      & 2.0 & Romance      \\
+Romanian                  & Latin      & 0.0 & Romance      \\
+Albanian                  & Latin      & 0.0 & Albanian     \\
+Greek                     & Greek      & 0.0 & Hellenic     \\
+Armenian                  & Armenian   & 0.0 & Armenian     \\
+Hindi                     & Devanagari & 0.0 & Indo-Iranian \\
+Georgian                  & Georgian   & 0.0 & Kartvelian   \\
+\bottomrule
+\end{tabular}
+\end{table}

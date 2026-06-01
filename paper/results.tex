@@ -1,0 +1,58 @@
+\section{Results}
+
+Table~\ref{tab:results} reports, for each language, the number of words in the filtered lexicon and summary statistics of chain length over 100 simulations, sorted by mean chain length.
+
+\begin{table}[h]
+\centering
+\caption{Chain length statistics across 25 languages (100 simulations each, minimum word length 4).}
+\label{tab:results}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Language & Words & Min & Max & Mean & Median & Std \\
+\midrule
+Serbo-Croatian (Latin)    & 26{,}401  &  1 & 250 & 40.4 & 29.0 & 38.0 \\
+Georgian                  & 16{,}771  &  1 & 170 & 34.9 & 26.0 & 30.2 \\
+Serbo-Croatian (Cyrillic) & 22{,}752  &  1 & 230 & 29.6 & 21.0 & 28.2 \\
+Italian                   & 32{,}990  &  1 & 130 & 24.2 & 18.0 & 21.7 \\
+Macedonian                & 37{,}349  &  1 & 173 & 19.1 & 13.0 & 19.3 \\
+Romanian                  & 68{,}411  &  1 & 147 & 18.5 & 13.0 & 18.5 \\
+Lithuanian                &  6{,}261  &  1 &  57 & 16.6 & 13.0 & 13.6 \\
+Spanish                   & 28{,}230  &  1 &  87 & 12.3 & 10.0 & 10.2 \\
+Portuguese                & 22{,}716  &  1 &  56 &  7.5 &  6.0 &  7.0 \\
+Czech                     & 20{,}080  &  1 &  30 &  5.4 &  4.0 &  4.5 \\
+English                   & 39{,}656  &  1 &  31 &  5.2 &  4.0 &  4.7 \\
+Albanian                  &  8{,}896  &  1 &  22 &  4.3 &  3.0 &  3.5 \\
+Dutch                     & 25{,}001  &  1 &  29 &  4.2 &  3.0 &  3.7 \\
+German                    & 38{,}823  &  1 &  35 &  4.1 &  2.0 &  4.1 \\
+Swedish                   & 23{,}467  &  1 &  28 &  4.0 &  3.0 &  3.5 \\
+French                    & 26{,}692  &  1 &  25 &  3.9 &  3.0 &  3.1 \\
+Bulgarian                 & 13{,}803  &  1 &  19 &  3.8 &  3.0 &  3.4 \\
+Ukrainian                 & 22{,}580  &  1 &  19 &  3.8 &  3.0 &  3.2 \\
+Russian                   & 27{,}285  &  1 &  18 &  3.6 &  3.0 &  2.9 \\
+Polish                    & 20{,}834  &  1 &  20 &  3.6 &  3.0 &  3.1 \\
+Armenian                  & 12{,}838  &  1 &  15 &  3.0 &  2.0 &  2.5 \\
+Slovak                    &  6{,}782  &  1 &  21 &  2.9 &  2.0 &  2.4 \\
+Latvian                   & 13{,}829  &  1 &   9 &  2.4 &  2.0 &  1.6 \\
+Hindi                     & 14{,}708  &  1 &  15 &  2.4 &  2.0 &  2.0 \\
+Greek                     & 24{,}134  &  1 &  12 &  2.0 &  1.0 &  1.6 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Cross-language Variation}
+
+Chain lengths vary substantially across languages. Serbo-Croatian (Latin script) achieves the highest mean of 40.4 words per game, with chains reaching up to 250 words in the best-simulated run. Georgian, despite its smaller lexicon (16,771 words), achieves a mean of 34.9 — the second highest — suggesting that its orthographic structure creates unusually dense connections in the word-chain graph. At the other end, Greek and Hindi yield mean chains of only 2.0 and 2.4 words respectively.
+
+The high variance (std $>$ mean for most languages) indicates a heavy-tailed distribution: most games terminate quickly, but a minority run for many multiples of the mean. This is consistent with the chain graph containing a small number of highly connected ``hub'' bigrams.
+
+\subsection{Effect of Lexicon Size}
+
+There is no clear monotone relationship between lexicon size and mean chain length. Romanian has 68,411 words and achieves a mean of 18.5, while Georgian achieves 34.9 with only 16,771 words. Latvian, with 13,829 words, yields a mean of only 2.4. This suggests that chain length is determined more by the distributional regularity of word endings in a language than by raw vocabulary size.
+
+\subsection{Language Family Patterns}
+
+South Slavic languages (Serbo-Croatian, Macedonian, Bulgarian) occupy the upper portion of the ranking. The Romance languages (Italian, Spanish, Portuguese, French, Romanian) span a wide range, from 24.2 (Italian) to 3.9 (French). Germanic languages (German, English, Dutch, Swedish) cluster tightly around means of 4.0–5.2. The Baltic languages (Lithuanian, Latvian) diverge sharply: Lithuanian achieves a mean of 16.6 while Latvian reaches only 2.4, despite both languages being closely related.
+
+\subsection{Script and Filtering Effects}
+
+Serbo-Croatian can be played in either Latin or Cyrillic script; the Latin variant yields a higher mean (40.4 vs.\ 29.6), which we attribute to the different word set sizes rather than script per se. For languages in which the English Wiktionary coverage is sparse (Georgian, Armenian, Albanian, Hindi), no frequency threshold is applied; for well-covered languages the 2.0 Zipf threshold removes a substantial portion of the raw entries (e.g.\ Russian drops from $\approx$400k raw entries to 27,285 after filtering), focusing gameplay on common vocabulary.
