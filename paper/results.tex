@@ -4,44 +4,56 @@ Table~\ref{tab:results} shows, for each language, how many words were in the fil
 
 \begin{table}[h]
 \centering
-\caption{Chain length statistics across 25 languages (100 simulations each, minimum word length 4).}
+\caption{Chain length statistics (1000 simulations each).}
 \label{tab:results}
 \begin{tabular}{lrrrrrrr}
 \toprule
-Language & Words & Min & Max & Mean & Median & Std \\
+Language & Chain & Words & Min & Max & Mean & Median & Std \\
 \midrule
-Serbo-Croatian (Latin)    & 26{,}401  &  1 & 250 & 40.4 & 29.0 & 38.0 \\
-Georgian                  & 16{,}771  &  1 & 170 & 34.9 & 26.0 & 30.2 \\
-Serbo-Croatian (Cyrillic) & 22{,}752  &  1 & 230 & 29.6 & 21.0 & 28.2 \\
-Italian                   & 32{,}990  &  1 & 130 & 24.2 & 18.0 & 21.7 \\
-Macedonian                & 37{,}349  &  1 & 173 & 19.1 & 13.0 & 19.3 \\
-Romanian                  & 68{,}411  &  1 & 147 & 18.5 & 13.0 & 18.5 \\
-Lithuanian                &  6{,}261  &  1 &  57 & 16.6 & 13.0 & 13.6 \\
-Spanish                   & 28{,}230  &  1 &  87 & 12.3 & 10.0 & 10.2 \\
-Portuguese                & 22{,}716  &  1 &  56 &  7.5 &  6.0 &  7.0 \\
-Czech                     & 20{,}080  &  1 &  30 &  5.4 &  4.0 &  4.5 \\
-English                   & 39{,}656  &  1 &  31 &  5.2 &  4.0 &  4.7 \\
-Albanian                  &  8{,}896  &  1 &  22 &  4.3 &  3.0 &  3.5 \\
-Dutch                     & 25{,}001  &  1 &  29 &  4.2 &  3.0 &  3.7 \\
-German                    & 38{,}823  &  1 &  35 &  4.1 &  2.0 &  4.1 \\
-Swedish                   & 23{,}467  &  1 &  28 &  4.0 &  3.0 &  3.5 \\
-French                    & 26{,}692  &  1 &  25 &  3.9 &  3.0 &  3.1 \\
-Bulgarian                 & 13{,}803  &  1 &  19 &  3.8 &  3.0 &  3.4 \\
-Ukrainian                 & 22{,}580  &  1 &  19 &  3.8 &  3.0 &  3.2 \\
-Russian                   & 27{,}285  &  1 &  18 &  3.6 &  3.0 &  2.9 \\
-Polish                    & 20{,}834  &  1 &  20 &  3.6 &  3.0 &  3.1 \\
-Armenian                  & 12{,}838  &  1 &  15 &  3.0 &  2.0 &  2.5 \\
-Slovak                    &  6{,}782  &  1 &  21 &  2.9 &  2.0 &  2.4 \\
-Latvian                   & 13{,}829  &  1 &   9 &  2.4 &  2.0 &  1.6 \\
-Hindi                     & 14{,}708  &  1 &  15 &  2.4 &  2.0 &  2.0 \\
-Greek                     & 24{,}134  &  1 &  12 &  2.0 &  1.0 &  1.6 \\
+Serbo-Croatian (Latin) & 2 & 26{,}902 & 1 & 254 & 51.2 & 39.0 & 45.5 \\
+Indonesian & 2 & 20{,}347 & 1 & 236 & 43.3 & 33.0 & 37.3 \\
+Serbo-Croatian (Cyrillic) & 2 & 23{,}233 & 1 & 200 & 37.6 & 28.0 & 33.0 \\
+Georgian & 2 & 16{,}905 & 1 & 222 & 35.5 & 28.0 & 31.6 \\
+Malay & 2 & 6{,}862 & 1 & 131 & 34.2 & 31.0 & 23.8 \\
+Finnish & 2 & 34{,}066 & 1 & 140 & 25.9 & 19.0 & 23.9 \\
+Italian & 2 & 33{,}191 & 1 & 132 & 25.0 & 18.0 & 22.4 \\
+Persian & 2 & 10{,}557 & 1 & 94 & 23.7 & 20.0 & 17.8 \\
+Korean & 1 & 27{,}140 & 1 & 148 & 23.3 & 16.0 & 22.0 \\
+Romanian & 2 & 68{,}983 & 1 & 154 & 21.5 & 15.0 & 21.3 \\
+Macedonian & 2 & 37{,}883 & 1 & 123 & 20.4 & 15.0 & 19.4 \\
+Lithuanian & 2 & 6{,}342 & 1 & 57 & 16.6 & 13.0 & 13.2 \\
+Swahili & 2 & 7{,}761 & 1 & 117 & 14.4 & 10.0 & 13.4 \\
+Spanish & 2 & 28{,}595 & 1 & 64 & 12.7 & 10.0 & 10.4 \\
+Turkish & 2 & 16{,}959 & 1 & 61 & 12.3 & 9.0 & 10.9 \\
+Portuguese & 2 & 23{,}067 & 1 & 47 & 8.0 & 6.0 & 7.2 \\
+Arabic & 2 & 46{,}904 & 1 & 39 & 6.5 & 5.0 & 5.4 \\
+English & 2 & 41{,}022 & 1 & 33 & 5.2 & 4.0 & 4.7 \\
+Czech & 2 & 20{,}578 & 1 & 26 & 5.1 & 4.0 & 4.1 \\
+Albanian & 2 & 9{,}406 & 1 & 29 & 4.8 & 4.0 & 4.0 \\
+French & 2 & 27{,}105 & 1 & 37 & 4.3 & 3.0 & 3.7 \\
+Bulgarian & 2 & 14{,}283 & 1 & 39 & 4.2 & 3.0 & 3.9 \\
+Dutch & 2 & 25{,}575 & 1 & 24 & 4.1 & 3.0 & 3.6 \\
+German & 2 & 39{,}209 & 1 & 33 & 4.0 & 3.0 & 3.9 \\
+Swedish & 2 & 24{,}340 & 1 & 24 & 4.0 & 3.0 & 3.5 \\
+Russian & 2 & 27{,}855 & 1 & 20 & 3.7 & 3.0 & 2.8 \\
+Ukrainian & 2 & 22{,}940 & 1 & 26 & 3.5 & 3.0 & 3.1 \\
+Polish & 2 & 21{,}609 & 1 & 17 & 3.3 & 2.0 & 2.7 \\
+Armenian & 2 & 13{,}516 & 1 & 21 & 3.3 & 2.0 & 3.0 \\
+Slovak & 2 & 7{,}025 & 1 & 15 & 3.0 & 2.0 & 2.3 \\
+Latvian & 2 & 13{,}915 & 1 & 14 & 2.3 & 2.0 & 1.5 \\
+Hindi & 2 & 15{,}995 & 1 & 13 & 2.2 & 2.0 & 1.5 \\
+Greek & 2 & 24{,}284 & 1 & 10 & 2.0 & 2.0 & 1.4 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+
 
 \subsection{Cross-language Variation}
 
 
 \subsection{Script and Filtering Effects}
 
-Serbo-Croatian can be written in either Latin or Cyrillic; the Latin version averages 40.4 words per game versus 29.6 for Cyrillic, which we attribute to the different word list sizes rather than the script itself. For languages where English Wiktionary coverage is thin (Georgian, Armenian, Albanian, Hindi), we kept all words regardless of frequency. For well-covered languages, the frequency filter cut a large fraction of entries — Russian, for example, goes from roughly 400,000 raw entries down to 27,285 after filtering — keeping the game focused on everyday vocabulary.
+Serbo-Croatian can be written in either Latin or Cyrillic; the Latin version averages 40.4 words per game versus 29.6 for Cyrillic, which we attribute to the different word list sizes rather than the script itself.
+For languages where English Wiktionary coverage is thin (Georgian, Armenian, Albanian, Hindi), we kept all words regardless of frequency.
+For well-covered languages, the frequency filter cut a large fraction of entries — Russian, for example, goes from roughly 400,000 raw entries down to 27,285 after filtering — keeping the game focused on everyday vocabulary.

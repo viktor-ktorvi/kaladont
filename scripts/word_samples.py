@@ -2,7 +2,6 @@ import random
 
 from src.kaladont import LANGUAGES, _filter_words, detect_script, download_if_needed
 
-MIN_WORD_SIZE = 4
 SAMPLE_SIZE = 25
 
 
@@ -10,7 +9,7 @@ def main() -> None:
     rows = []
     for lang_key, config in LANGUAGES.items():
         jsonl_path = download_if_needed(config)
-        words, filtered = _filter_words(config, jsonl_path, config.min_frequency, MIN_WORD_SIZE)
+        words, filtered = _filter_words(config, jsonl_path, config.min_frequency)
         words = list(dict.fromkeys(words))
         filtered = list(dict.fromkeys(filtered))
 

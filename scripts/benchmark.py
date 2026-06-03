@@ -7,20 +7,17 @@ from pathlib import Path
 from src.kaladont import LANGUAGES, build_endings_map, load_words, play_game
 
 
-def benchmark_language(
-    lang_key: str,
-    n_simulations: int,
-    min_word_size: int,
-) -> dict:
+def benchmark_language(lang_key: str, n_simulations: int) -> dict:
     config = LANGUAGES[lang_key]
-    words, filtered = load_words(config, config.min_frequency, min_word_size)
+    words, filtered = load_words(config, config.min_frequency)
 
     row = {
         "language_key": lang_key,
         "language": config.display_name,
         "script": config.script or "any",
         "min_frequency": config.min_frequency,
-        "min_word_size": min_word_size,
+        "min_word_size": config.min_word_size,
+        "chain_chars": config.chain_chars,
         "num_words": len(words),
         "num_filtered": len(filtered) if filtered else "cached",
     }
@@ -38,8 +35,8 @@ def benchmark_language(
         )
         return row
 
-    endings_map = build_endings_map(words)
-    games = [play_game(words, endings_map) for _ in range(n_simulations)]
+    endings_map = build_endings_map(words, config.chain_chars)
+    games = [play_game(words, endings_map, config.chain_chars) for _ in range(n_simulations)]
     game_lengths = [len(g) for g in games]
 
     good = [g for g in games if 3 <= len(g) <= 10]
@@ -68,13 +65,6 @@ def main() -> None:
         help="Number of Monte Carlo simulations per language (default: 100)",
     )
     parser.add_argument(
-        "--min-word-size",
-        "-w",
-        type=int,
-        default=4,
-        help="Minimum word length in characters (default: 4)",
-    )
-    parser.add_argument(
         "--output",
         "-o",
         type=Path,
@@ -89,7 +79,7 @@ def main() -> None:
     for lang_key in LANGUAGES:
         print(f"\n[{lang_key}] {LANGUAGES[lang_key].display_name}")
         try:
-            row = benchmark_language(lang_key, args.simulations, args.min_word_size)
+            row = benchmark_language(lang_key, args.simulations)
         except Exception as e:
             print(f"  ERROR: {e}")
             row = {"language_key": lang_key, "language": LANGUAGES[lang_key].display_name, "error": str(e)}
@@ -107,6 +97,7 @@ def main() -> None:
         "script",
         "min_frequency",
         "min_word_size",
+        "chain_chars",
         "num_words",
         "num_filtered",
         "game_min",
@@ -124,6 +115,7 @@ def main() -> None:
 
     md_columns = [
         "language",
+        "chain_chars",
         "num_words",
         "game_min",
         "game_max",
@@ -137,12 +129,25 @@ def main() -> None:
     ascii_columns = csv_fieldnames
     _print_ascii_table(rows_sorted, ascii_columns)
 
+    latex_columns = [
+        "language",
+        "chain_chars",
+        "num_words",
+        "game_min",
+        "game_max",
+        "game_mean",
+        "game_median",
+        "game_std",
+    ]
+    _print_latex_table(rows_sorted, latex_columns)
+
     print(f"\nResults written to {output_path}")
 
 
 def _print_markdown_table(rows: list[dict], columns: list[str]) -> None:
     headers = {
         "language": "Language",
+        "chain_chars": "Chain",
         "num_words": "Words",
         "game_min": "Min",
         "game_max": "Max",
@@ -171,6 +176,43 @@ def _print_ascii_table(rows: list[dict], columns: list[str]) -> None:
     for row in str_rows:
         print(f"| {' | '.join(row[c].ljust(widths[c]) for c in columns)} |")
     print(sep)
+
+
+def _print_latex_table(rows: list[dict], columns: list[str]) -> None:
+    _HEADERS = {
+        "language": "Language",
+        "chain_chars": "Chain",
+        "num_words": "Words",
+        "game_min": "Min",
+        "game_max": "Max",
+        "game_mean": "Mean",
+        "game_median": "Median",
+        "game_std": "Std",
+    }
+    _NUMERIC = {"num_words", "game_min", "game_max", "game_mean", "game_median", "game_std", "chain_chars"}
+    alignment = "".join("r" if c in _NUMERIC else "l" for c in columns)
+
+    def _fmt(col: str, val) -> str:
+        if val is None or val == "":
+            return ""
+        if col == "num_words":
+            return f"{int(val):,}".replace(",", "{,}")
+        return str(val)
+
+    print()
+    print(r"\begin{table}[h]")
+    print(r"\centering")
+    print(r"\caption{Chain length statistics (1000 simulations each).}")
+    print(r"\label{tab:results}")
+    print(f"\\begin{{tabular}}{{{alignment}}}")
+    print(r"\toprule")
+    print(" & ".join(_HEADERS.get(c, c) for c in columns) + r" \\")
+    print(r"\midrule")
+    for row in rows:
+        print(" & ".join(_fmt(c, row.get(c, "")) for c in columns) + r" \\")
+    print(r"\bottomrule")
+    print(r"\end{tabular}")
+    print(r"\end{table}")
 
 
 if __name__ == "__main__":

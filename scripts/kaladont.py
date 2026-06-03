@@ -34,13 +34,6 @@ def main() -> None:
         default=None,
         help="Minimum Zipf frequency to include a word (0=off, 3=once per million words, default: per-language)",
     )
-    parser.add_argument(
-        "--min-word-size",
-        "-w",
-        type=int,
-        default=4,
-        help="Minimum word length in characters (default: 4)",
-    )
     args = parser.parse_args()
 
     config = LANGUAGES[args.language]
@@ -48,7 +41,7 @@ def main() -> None:
     print(f"Language: {config.display_name}")
     print(f"Min frequency (Zipf): {min_frequency}")
 
-    words, filtered = load_words(config, min_frequency, args.min_word_size)
+    words, filtered = load_words(config, min_frequency)
     filtered_sample = [w for w in filtered if detect_script(w) == config.script] if config.script else filtered
     print(f"Loaded {len(words)} words, e.g.:    {sample(words)}")
     print(f"Filtered {len(filtered)} words, e.g.: {sample(filtered_sample)}")
@@ -57,12 +50,12 @@ def main() -> None:
         print("No words loaded — cannot run simulations.")
         return
 
-    endings_map = build_endings_map(words)
+    endings_map = build_endings_map(words, config.chain_chars)
 
     last_game: list[str] = []
     game_lengths: list[int] = []
     for _ in range(args.simulations):
-        last_game = play_game(words, endings_map)
+        last_game = play_game(words, endings_map, config.chain_chars)
         game_lengths.append(len(last_game))
 
     print(f"\nGame lengths over {args.simulations} simulations:")

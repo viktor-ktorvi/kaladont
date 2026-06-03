@@ -1,83 +1,118 @@
 \section{Methodology}
 
-To simulate Kaladont across many languages, we needed a word list for each one — ideally containing only the kinds of words a real player would use. This section describes where those word lists came from, how we cleaned them up, how the simulation works, and which languages were included.
+To simulate Kaladont across many languages, we needed a word list for each one — ideally containing only the kinds of words a real player would use.
+This section describes where those word lists came from, how we cleaned them up, how the simulation works, and which languages were included.
 
 \subsection{Data Source}
 
-Word lists come from \href{https://kaikki.org}{kaikki.org}, a site that provides machine-readable dumps of the English Wiktionary. Rather than raw wiki markup, kaikki.org parses each Wiktionary page into a structured format where every entry has fields for the headword, its part of speech, sense definitions, and tags that describe things like whether the word is an abbreviation or an inflected form of another word. This makes it straightforward to filter entries by these properties without having to parse wiki syntax ourselves.
+Word lists come from \href{https://kaikki.org}{kaikki.org}, a site that provides machine-readable dumps of the English Wiktionary.
+Rather than raw wiki markup, kaikki.org parses each Wiktionary page into a structured format where every entry has fields for the headword, its part of speech, sense definitions, and tags that describe things like whether the word is an abbreviation or an inflected form of another word.
+This makes it straightforward to filter entries by these properties without having to parse wiki syntax ourselves.
 
-Wiktionary entries are mostly base (dictionary) forms of words — the kind you would look up in a physical dictionary — though inflected forms (e.g.\ verb conjugations or noun declensions — the same word changed to fit a grammatical role) occasionally appear as their own entries. The coverage varies a lot between languages: a large language like English or Russian has hundreds of thousands of raw entries, while a smaller or less internationally prominent language may have only a few thousand.
+Wiktionary entries are mostly base (dictionary) forms of words — the kind you would look up in a physical dictionary — though inflected forms (e.g.,\ verb conjugations or noun declensions — the same word changed to fit a grammatical role) occasionally appear as their own entries.
+The coverage varies a lot between languages: a large language like English or Russian has hundreds of thousands of raw entries, while a smaller or less internationally prominent language may have only a few thousand.
 
 \subsection{Filtering Pipeline}
 
-Not everything in Wiktionary is a valid Kaladont word. A raw dump includes abbreviations, symbols, multi-word phrases, verb conjugations, and plenty of highly technical vocabulary that no one would reasonably use in a casual game. We filter out entries that would not be accepted in a real game, keeping only those that pass all of the following checks:
+Not everything in Wiktionary is a valid Kaladont word.
+A raw dump includes abbreviations, symbols, multi-word phrases, verb conjugations, and plenty of highly technical vocabulary that no one would reasonably use in a casual game.
+We filter out entries that would not be accepted in a real game, keeping only those that pass all of the following checks:
 
 \begin{enumerate}
-    \item \textbf{Minimum length.} Words shorter than four characters are excluded. This matches the standard Kaladont rule and also removes a lot of short function words that would otherwise dominate the word list.
+    \item \textbf{Minimum length.} Words shorter than three characters are excluded by default.
+    This removes a lot of short function words that would otherwise dominate the word list.
+    Korean is an exception: the minimum is two characters, because each Korean character (a Hangul syllable block) already represents a full syllable, so a two-character word is already two syllables long — comparable in richness to a three-letter word in a Latin-script language.
 
-    \item \textbf{Part of speech.} We remove proper names (places, people), affixes (prefix, suffix, infix, etc.), symbols, standalone characters, phrases, proverbs, and contractions. These either cannot be used in the game by convention or are not really independent words.
+    \item \textbf{Part of speech.} We remove proper names (places, people), affixes (prefix, suffix, infix, etc.), symbols, standalone characters, phrases, proverbs, and contractions.
+    These either cannot be used in the game by convention or are not really independent words.
 
-    \item \textbf{Casing.} Words starting with a capital letter are excluded, except in languages where common nouns are capitalised by convention (e.g.\ German, where nouns like \textit{Hund} (dog) are always written with a capital). All-uppercase words like \texttt{NATO} or \texttt{DNA} are also removed, since these are acronyms rather than regular words.
+    \item \textbf{Casing.} Words starting with a capital letter are excluded, except in languages where common nouns are capitalised by convention (e.g.,\ German, where nouns like \textit{Hund} (dog) are always written with a capital).
+    All-uppercase words like \texttt{NATO} or \texttt{DNA} are also removed, since these are acronyms rather than regular words.
 
-    \item \textbf{Inflected and alternative forms.} Wiktionary sometimes lists inflected forms — for example, the dative singular of a noun — as their own separate entries, tagged as ``form of'' the base word. We remove these, since they represent the same word in a different grammatical form rather than a distinct vocabulary item. Entries tagged as alternative spellings of another word are also removed.
+    \item \textbf{Inflected and alternative forms.} Wiktionary sometimes lists inflected forms — for example, the Spanish \textit{fueron} (they went), an inflected form of \textit{ir} (to go) — as their own separate entries, tagged as ``form of'' the base word.
+    We remove these, since they represent the same word in a different grammatical form rather than a distinct vocabulary item.
+    Entries tagged as alternative spellings of another word are also removed.
 
-    \item \textbf{Vowel check (Latin script only).} Words written in the Latin alphabet that contain no vowel are rejected. This catches lowercase abbreviations like \textit{src}, \textit{rsvp}, or \textit{ngr} that slipped past the earlier filters. The check only applies to Latin-script languages because other scripts (Cyrillic, Georgian, etc.) do not have the same pattern of consonant-only abbreviations.
+    \item \textbf{Vowel check (Latin script only).} Words written in the Latin alphabet that contain no vowel are rejected.
+    This catches lowercase abbreviations like \textit{src}, \textit{rsvp}, or \textit{ngr} that slipped past the earlier filters.
+    The check only applies to Latin-script languages because other scripts (Cyrillic, Georgian, etc.) do not have the same pattern of consonant-only abbreviations.
 
-    \item \textbf{Valid single tokens.} Words containing spaces, hyphens, or digits are removed — we only want single, unbroken words. For scripts that use non-alphabetic combining marks (Devanagari, Bengali, Gurmukhi, Arabic), the standard alphabetic character check does not work correctly, so we use a looser check that only rejects whitespace, digits, and punctuation.
+    \item \textbf{Valid single tokens.} Words containing spaces, hyphens, or digits are removed — we only want single, unbroken words.
+    For scripts that use non-alphabetic combining marks (Devanagari, Bengali, Gurmukhi, Arabic), the standard alphabetic character check does not work correctly, so we use a looser check that only rejects whitespace, digits, and punctuation.
 
-    \item \textbf{Frequency filter.} For languages with large, well-covered Wiktionary entries — English, Spanish, French, German, Italian, Portuguese, Russian, Dutch, Polish, Czech, Swedish — we only keep words that are common enough to appear in everyday speech. We measure this using the \texttt{wordfreq} library \cite{wordfreq}, which assigns each word a Zipf frequency score: roughly, a score of 6 means the word appears about once per thousand words of text, and a score of 2 means it appears about once per hundred million words. We keep only words with a score of 2.0 or above, which removes very rare technical and medical terms that a typical player would never know. Languages with smaller or patchier Wiktionary coverage skip this step, because applying the same threshold would filter out too many legitimate words that simply do not appear often enough in the corpora that \texttt{wordfreq} was built from.
+    \item \textbf{Frequency filter.} For languages with large, well-covered Wiktionary entries — English, Spanish, French, German, Italian, Portuguese, Russian, Dutch, Polish, Czech, Swedish, Finnish — we only keep words that are common enough to appear in everyday speech.
+    We measure this using the \texttt{wordfreq} library \cite{wordfreq}, which assigns each word a Zipf frequency score: roughly, a score of 6 means the word appears about once per thousand words of text, and a score of 2 means it appears about once per hundred million words.
+    We keep only words with a score of 2.0 or above, which removes very rare technical and medical terms that a typical player would never know.
+    Languages with smaller or patchier Wiktionary coverage skip this step, because applying the same threshold would filter out too many legitimate words that simply do not appear often enough in the corpora that \texttt{wordfreq} was built from.
 \end{enumerate}
 
 \subsection{Simulation}
-To simulate a single game, we pick a starting word at random from the word list. At each step, we look up all unused words that begin with the last two letters of the current word and pick one at random. The game ends when no such word exists — either because those two letters never appear at the start of any word, or because all words that do begin with them have already been used. We record the number of words in the chain as the game's length.
 
+To simulate a single game, we pick a starting word at random from the word list.
+At each step, we look up all unused words that begin with the last two characters of the current word and pick one at random.
+The game ends when no such word exists — either because that ending never appears at the start of any word, or because all words that do start with it have already been used.
+We record the number of words in the chain as the game's length.
+
+Korean is handled differently.
+In most scripts, two characters is a rough proxy for two sounds, which matches how the game is played in practice.
+In Hangul, however, each character is already a complete syllable, so using two characters would demand an unusually long overlap.
+We use just one character (one syllable) for Korean, which corresponds to the same spirit of the rule.
 
 TODO simulate for longer
 
-
-We repeat this 100 times per language. Using random selection rather than a smart strategy means the results loosely reflect what an average game between two players of average vocabulary might look like, rather than the theoretical maximum a perfect player could achieve.
+We repeat this 1000 times per language.
+Using random selection rather than a smart strategy means the results loosely reflect what an average game between two players of average vocabulary might look like, rather than the theoretical maximum a perfect player could achieve.
 
 \subsection{Languages}
 
-TODO do more languages, not just indoeuropean
+The languages were chosen to give a range of language families, scripts, and Wiktionary coverage levels.
+We focused on Indo-European languages — since Kaladont originates there — but also included several non-Indo-European families to broaden the comparison.
+Some languages were excluded because their Wiktionary data was too sparse to be useful (e.g.,\ Welsh or Irish).
 
-The 25 languages were chosen to give a range of language families, scripts, and Wiktionary coverage levels. We focused on Indo-European languages — since Kaladont originates there — and included Georgian as the one non-Indo-European language in the study due to the anecdote in the introduction. Some languages were excluded because their Wiktionary data was too sparse to be useful (e.g.\ Welsh or Irish), or because the script required special handling that was out of scope.
-
-Table~\ref{tab:languages} shows all 25 languages, along with their script and whether a frequency filter was applied.
+Table~\ref{tab:languages} shows all 33 languages, along with their script, frequency threshold, chaining unit, and language family.
+The ``Chain'' column shows how many characters are taken from the end of one word and matched against the start of the next; for Korean this is 1 (one syllable block) rather than 2.
 
 \begin{table}[h]
 \centering
 \caption{Languages included in the study.}
 \label{tab:languages}
-\begin{tabular}{llll}
+\begin{tabular}{lllrl}
 \toprule
-Language & Script & Freq.\ threshold & Language family \\
+Language & Script & Freq.\ threshold & Chain & Language family \\
 \midrule
-Serbo-Croatian (Latin)    & Latin      & 0.0 & South Slavic \\
-Serbo-Croatian (Cyrillic) & Cyrillic   & 0.0 & South Slavic \\
-Macedonian                & Cyrillic   & 0.0 & South Slavic \\
-Bulgarian                 & Cyrillic   & 0.0 & South Slavic \\
-Russian                   & Cyrillic   & 2.0 & East Slavic  \\
-Ukrainian                 & Cyrillic   & 0.0 & East Slavic  \\
-Polish                    & Latin      & 2.0 & West Slavic  \\
-Czech                     & Latin      & 2.0 & West Slavic  \\
-Slovak                    & Latin      & 0.0 & West Slavic  \\
-Lithuanian                & Latin      & 0.0 & Baltic       \\
-Latvian                   & Latin      & 0.0 & Baltic       \\
-German                    & Latin      & 2.0 & Germanic     \\
-English                   & Latin      & 2.0 & Germanic     \\
-Dutch                     & Latin      & 2.0 & Germanic     \\
-Swedish                   & Latin      & 2.0 & Germanic     \\
-Spanish                   & Latin      & 2.0 & Romance      \\
-French                    & Latin      & 2.0 & Romance      \\
-Italian                   & Latin      & 2.0 & Romance      \\
-Portuguese                & Latin      & 2.0 & Romance      \\
-Romanian                  & Latin      & 0.0 & Romance      \\
-Albanian                  & Latin      & 0.0 & Albanian     \\
-Greek                     & Greek      & 0.0 & Hellenic     \\
-Armenian                  & Armenian   & 0.0 & Armenian     \\
-Hindi                     & Devanagari & 0.0 & Indo-Iranian \\
-Georgian                  & Georgian   & 0.0 & Kartvelian   \\
+Serbo-Croatian (Latin)    & Latin      & 0.0 & 2 & South Slavic \\
+Serbo-Croatian (Cyrillic) & Cyrillic   & 0.0 & 2 & South Slavic \\
+Macedonian                & Cyrillic   & 0.0 & 2 & South Slavic \\
+Bulgarian                 & Cyrillic   & 0.0 & 2 & South Slavic \\
+Russian                   & Cyrillic   & 2.0 & 2 & East Slavic  \\
+Ukrainian                 & Cyrillic   & 0.0 & 2 & East Slavic  \\
+Polish                    & Latin      & 2.0 & 2 & West Slavic  \\
+Czech                     & Latin      & 2.0 & 2 & West Slavic  \\
+Slovak                    & Latin      & 0.0 & 2 & West Slavic  \\
+Lithuanian                & Latin      & 0.0 & 2 & Baltic       \\
+Latvian                   & Latin      & 0.0 & 2 & Baltic       \\
+German                    & Latin      & 2.0 & 2 & Germanic     \\
+English                   & Latin      & 2.0 & 2 & Germanic     \\
+Dutch                     & Latin      & 2.0 & 2 & Germanic     \\
+Swedish                   & Latin      & 2.0 & 2 & Germanic     \\
+Spanish                   & Latin      & 2.0 & 2 & Romance      \\
+French                    & Latin      & 2.0 & 2 & Romance      \\
+Italian                   & Latin      & 2.0 & 2 & Romance      \\
+Portuguese                & Latin      & 2.0 & 2 & Romance      \\
+Romanian                  & Latin      & 0.0 & 2 & Romance      \\
+Albanian                  & Latin      & 0.0 & 2 & Albanian     \\
+Greek                     & Greek      & 0.0 & 2 & Hellenic     \\
+Armenian                  & Armenian   & 0.0 & 2 & Armenian     \\
+Hindi                     & Devanagari & 0.0 & 2 & Indo-Iranian \\
+Persian                   & Arabic     & 0.0 & 2 & Indo-Iranian \\
+Georgian                  & Georgian   & 0.0 & 2 & Kartvelian   \\
+Finnish                   & Latin      & 2.0 & 2 & Uralic       \\
+Turkish                   & Latin      & 0.0 & 2 & Turkic       \\
+Korean                    & Hangul     & 0.0 & 1 & Koreanic     \\
+Indonesian                & Latin      & 0.0 & 2 & Austronesian \\
+Malay                     & Latin      & 0.0 & 2 & Austronesian \\
+Arabic                    & Arabic     & 0.0 & 2 & Semitic      \\
+Swahili                   & Latin      & 0.0 & 2 & Bantu        \\
 \bottomrule
 \end{tabular}
 \end{table}
