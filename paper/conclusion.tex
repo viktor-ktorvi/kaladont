@@ -1,9 +1,5 @@
 \section{Conclusion}
 
-We simulated Kaladont across 33 languages and found that how well the game plays varies dramatically.
-Among the original 25 languages, Serbo-Croatian and Georgian produced the longest chains (averages of 40.4 and 34.9 words), confirming the intuition from the introduction, while Greek and Hindi produced the shortest (averages of 2.0 and 2.4).
-Language family is a rough guide but not a reliable one: South Slavic languages consistently rank high, Germanic languages cluster in the middle, but the Baltic languages — Lithuanian and Latvian — diverge sharply despite being closely related.
-The expanded set of 33 languages now covers 15 families, including non-Indo-European families such as Uralic, Turkic, Koreanic, Austronesian, Semitic, and Bantu, with full results pending re-simulation.
 
 \subsection{Limitations}
 
@@ -11,9 +7,3 @@ A few caveats are worth keeping in mind.
 All word lists come from the English Wiktionary, which covers some languages much better than others — smaller or less internationally prominent languages have fewer entries, which may skew the results.
 The word lists are also imperfect: unusual loanwords, archaic terms, and some inflected forms can slip through the filters.
 The simulation does not account for the fact that real players only know a fraction of the dictionary, and it does not model strategy — in a real game, a smart player would try to end their word on a two-letter combination that is hard to continue, whereas here the next word is always chosen at random.
-
-\subsection{Future Work}
-
-There are several natural next steps: using Wiktionary editions in the target language (rather than the English edition) for better coverage of smaller languages; simulating strategic play where each player picks the word whose ending is hardest to continue; and studying the structure of the word-chain graph itself — which two-letter combinations act as hubs, and how strongly connected the graph is.
-
-\paragraph{Code and data.} The simulation code is available at \url{https://github.com/viktor-ktorvi/kaladont}.

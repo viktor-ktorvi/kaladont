@@ -58,21 +58,17 @@ In most scripts, two characters is a rough proxy for two sounds, which matches h
 In Hangul, however, each character is already a complete syllable, so using two characters would demand an unusually long overlap.
 We use just one character (one syllable) for Korean, which corresponds to the same spirit of the rule.
 
-TODO simulate for longer
+
 
 We repeat this 1000 times per language.
 Using random selection rather than a smart strategy means the results loosely reflect what an average game between two players of average vocabulary might look like, rather than the theoretical maximum a perfect player could achieve.
 
 \subsection{Languages}
 
-The languages were chosen to give a range of language families, scripts, and Wiktionary coverage levels.
-We focused on Indo-European languages — since Kaladont originates there — but also included several non-Indo-European families to broaden the comparison.
-Some languages were excluded because their Wiktionary data was too sparse to be useful (e.g.,\ Welsh or Irish).
-
-Table~\ref{tab:languages} shows all 33 languages, along with their script, frequency threshold, chaining unit, and language family.
+Table~\ref{tab:languages} shows all the languages, along with their script, frequency threshold, chaining unit, and language family.
 The ``Overlap'' column shows how many characters are taken from the end of one word and matched against the start of the next; for Korean this is 1 (one syllable block) rather than 2.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Languages included in the study.}
 \label{tab:languages}

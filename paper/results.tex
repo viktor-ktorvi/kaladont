@@ -2,7 +2,7 @@
 
 Table~\ref{tab:results} shows, for each language, how many words were in the filtered word list and how long games tended to be across 100 simulations, sorted from longest to shortest average chain.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Chain length statistics (1000 simulations each).}
 \label{tab:results}
@@ -47,15 +47,3 @@ Greek & \textemdash & 3 & 2 & 24{,}284 & 10 & 2.0 & 2.0 \\
 \end{tabular}
 \end{table}
 
-
-
-
-\subsection{Cross-language Variation}
-
-Appendix~\ref{app:example-chains} shows five concrete example chains per language to give an intuition for how the overlap rule plays out across different scripts and word structures.
-
-\subsection{Script and Filtering Effects}
-
-Serbo-Croatian can be written in either Latin or Cyrillic; the Latin version averages 40.4 words per game versus 29.6 for Cyrillic, which we attribute to the different word list sizes rather than the script itself.
-For languages where English Wiktionary coverage is thin (Georgian, Armenian, Albanian, Hindi), we kept all words regardless of frequency.
-For well-covered languages, the frequency filter cut a large fraction of entries — Russian, for example, goes from roughly 400,000 raw entries down to 27,285 after filtering — keeping the game focused on everyday vocabulary.
