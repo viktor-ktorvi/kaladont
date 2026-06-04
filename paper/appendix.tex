@@ -1,0 +1,21 @@
+\appendix
+
+\section{Word Sample Quality Check}
+\label{app:word-samples}
+
+To give a sense of what the filtering pipeline keeps and what it discards, Table~\ref{tab:word-samples} shows a random sample of ten surviving words and ten filtered-out words for each language.
+Surviving words are drawn from the final list used in simulation.
+Filtered-out words are those that were present in the raw Wiktionary dump but removed by at least one filtering step: wrong part of speech, multi-word entry, inflected or alternative form, abbreviation, missing vowel, incorrect casing, or below the frequency threshold.
+The samples are random and will differ between runs of the script (\texttt{uv run python -m scripts.word\_samples}).
+
+\input{word_samples_table}
+
+
+\section{Example Game Chains}
+\label{app:example-chains}
+
+Table~\ref{tab:example-chains} shows five example game chains per language, each between three and eight words long, drawn at random from Monte Carlo simulations.
+The chains illustrate how the overlap rule plays out in practice and give an intuition for why some languages produce longer chains than others.
+For Korean the overlap is one syllable block rather than two characters, which is reflected in the single-character transitions shown.
+
+\input{example_chains_table}

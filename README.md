@@ -96,194 +96,216 @@ Despite this, **the word lists are imperfect** — obscure loanwords, archaic fo
 
 The table below shows a random sample of surviving and filtered-out words per language, giving a sense of what passes through and what gets removed:
 
+<!-- BEGIN:word-samples -->
 <table>
 <tr><th>Language</th><th>Surviving words</th><th>Filtered out words</th></tr>
-<tr><td>Serbo-Croatian (Latin)</td><td><em>dragan</em>, <em>rumunjski</em>, <em>rasteretiti</em>, <em>tetrijeb</em>, <em>nutrina</em>, <em>scenarij</em>, <em>ceh</e
-m>, <em>pohod</em>, <em>izuzetan</em>, <em>huškalo</em>, <em>ćešiti</em>, <em>neuropsihofarmakologija</em>, <em>papirničar</em>, <em>pomoćnik</em>, <em>selen</em>, 
-<em>srebrnjak</em>, <em>inatljivo</em>, <em>imitacija</em>, <em>kamičak</em>, <em>razbuđivati</em>, <em>livreja</em>, <em>onečistiti</em>, <em>albanološkinja</em>, 
-<em>ker</em>, <em>otkopčan</em></td><td><em>zajašiti</em>, <em>očevi</em>, <em>Janja</em>, <em>tepemo</em>, <em>Island</em>, <em>muči</em>, <em>stogom</em>, <em>tac
-no</em>, <em>zemljotresu</em>, <em>vazali</em>, <em>jarče</em>, <em>pasena</em>, <em>ločimo</em>, <em>mamila</em>, <em>morski šipak</em>, <em>Jašarević</em>, <em>dunem</em>, <em>kosku</em>, <em>svarene</em>, <em>davio</em>, <em>udalo</em>, <em>gorko</em>, <em>bacani</em>, <em>pojavio</em>, <em>veštu</em></td></tr>
-<tr><td>Serbo-Croatian (Cyrillic)</td><td><em>шведски</em>, <em>дуговјечан</em>, <em>растављати</em>, <em>збијати</em>, <em>машинерија</em>, <em>диплоидан</em>, <em
->напето</em>, <em>самооплођивање</em>, <em>глагољица</em>, <em>прецизно</em>, <em>кретенизација</em>, <em>половина</em>, <em>кријумчарство</em>, <em>прашак</em>, <e
-m>бод</em>, <em>фотоотпорник</em>, <em>заокружити</em>, <em>светиште</em>, <em>јунски</em>, <em>лажност</em>, <em>катастрофалан</em>, <em>решење</em>, <em>искоришта
-вати</em>, <em>сумњичав</em>, <em>разломити</em></td><td><em>изоравати</em>, <em>Мексиканац</em>, <em>Крешевљанин</em>, <em>Јован</em>, <em>Сисак</em>, <em>нагртати
-</em>, <em>Саудијац</em>, <em>Бечкерек</em>, <em>-ило</em>, <em>Суданац</em>, <em>малинама</em>, <em>стићи</em>, <em>Копарштина</em>, <em>баласту</em>, <em>Андорац<
-/em>, <em>подстакнути</em>, <em>Жепче</em>, <em>доодење</em>, <em>мешће</em>, <em>дооде</em>, <em>антик</em>, <em>мог</em>, <em>стрн</em>, <em>Земљин</em>, <em>-ист</em></td></tr>
-<tr><td>Macedonian</td><td><em>неотстаплив</em>, <em>кандидира</em>, <em>недостоинствено</em>, <em>непоткренат</em>, <em>урнек</em>, <em>помавта</em>, <em>пропаст</
-em>, <em>недозволив</em>, <em>карбонизација</em>, <em>колокација</em>, <em>страв</em>, <em>попишувач</em>, <em>колеџ</em>, <em>кикиришка</em>, <em>несотрен</em>, <e
-m>лаик</em>, <em>кафен</em>, <em>незаштитено</em>, <em>маршалски</em>, <em>срамни</em>, <em>идила</em>, <em>лежи</em>, <em>победува</em>, <em>квасец</em>, <em>делта
-</em></td><td><em>Злата</em>, <em>повеликодушен</em>, <em>наоблачување</em>, <em>додворување</em>, <em>елени</em>, <em>зашеметен</em>, <em>се врати</em>, <em>реклам
-и</em>, <em>компјутерџии</em>, <em>цветче</em>, <em>се искака</em>, <em>скаран</em>, <em>подзамрзнат</em>, <em>телепортиран</em>, <em>набиен</em>, <em>се состои</em
->, <em>вакцини</em>, <em>препрочитуван</em>, <em>фишечиште</em>, <em>дојавуван</em>, <em>басамаци</em>, <em>идентификување</em>, <em>насапунување</em>, <em>поштенско сандаче</em>, <em>рестораниште</em></td></tr>
-<tr><td>Bulgarian</td><td><em>обръгвам</em>, <em>птичар</em>, <em>леди</em>, <em>върховие</em>, <em>перач</em>, <em>порт</em>, <em>проводник</em>, <em>лаптоп</em>, 
-<em>изчисление</em>, <em>колеж</em>, <em>регион</em>, <em>наустник</em>, <em>неприязън</em>, <em>шантажирам</em>, <em>ларва</em>, <em>ридая</em>, <em>перигей</em>, 
-<em>произтичащия</em>, <em>ерген</em>, <em>оръдие</em>, <em>акростишен</em>, <em>полза</em>, <em>хоплит</em>, <em>шарен</em>, <em>рибояд</em></td><td><em>четиридесе
-т и две</em>, <em>лъвице</em>, <em>победяла</em>, <em>абортирайте</em>, <em>ометат</em>, <em>легализирания</em>, <em>зачетяхме</em>, <em>разхождащо</em>, <em>опасли
-</em>, <em>припадаше</em>, <em>костурче</em>, <em>сушащо</em>, <em>потънахме</em>, <em>коронясай</em>, <em>отровилото</em>, <em>бъбар</em>, <em>изгризалата</em>, <em>обковавано</em>, <em>отсъстващ</em>, <em>изсечал</em>, <em>винене</em>, <em>администрацийо</em>, <em>дръвчета</em>, <em>трънак</em>, <em>клюнове</em></td></tr>   
-<tr><td>Russian</td><td><em>провинность</em>, <em>дорогуша</em>, <em>концентрационный</em>, <em>раскраска</em>, <em>порознь</em>, <em>преобладание</em>, <em>немалов
-ажный</em>, <em>всыпать</em>, <em>салак</em>, <em>поплавать</em>, <em>верба</em>, <em>буквоед</em>, <em>логично</em>, <em>видимость</em>, <em>нулевой</em>, <em>убра
-нство</em>, <em>астролябия</em>, <em>менопауза</em>, <em>редис</em>, <em>сервировка</em>, <em>крестить</em>, <em>суммарный</em>, <em>фонтан</em>, <em>саркастический
-</em>, <em>эвкалипт</em></td><td><em>издольщин</em>, <em>порадеют</em>, <em>замедли</em>, <em>милосердиях</em>, <em>уравниваю</em>, <em>стилизаций</em>, <em>уплачив
-ает</em>, <em>тверки</em>, <em>лексемах</em>, <em>изваяла</em>, <em>вылито</em>, <em>накрапывали</em>, <em>восьмиугольнике</em>, <em>прапрапрадед</em>, <em>комиксам
-и</em>, <em>солнцестояниям</em>, <em>Исикари</em>, <em>шорный</em>, <em>опорожнении</em>, <em>позванивал</em>, <em>шеломам</em>, <em>цинках</em>, <em>приготавливаюсь</em>, <em>инцидентами</em>, <em>плову</em></td></tr>
-<tr><td>Ukrainian</td><td><em>поема</em>, <em>чергуватися</em>, <em>материнство</em>, <em>відтак</em>, <em>рибальство</em>, <em>синельниківський</em>, <em>вирішення
-</em>, <em>оригінальний</em>, <em>ворог</em>, <em>авіаобприскування</em>, <em>шопінг</em>, <em>українськість</em>, <em>хрестоматійний</em>, <em>мармеляда</em>, <em>
-шик</em>, <em>біоматеріал</em>, <em>акулячий</em>, <em>нереалістичний</em>, <em>ждати</em>, <em>відро</em>, <em>ковтун</em>, <em>впадати</em>, <em>галактика</em>, <
-em>повечеряти</em>, <em>горе</em></td><td><em>виконають</em>, <em>навколишнє</em>, <em>оранжеву</em>, <em>обчислювальну</em>, <em>першопрохідця</em>, <em>оцінок</em
->, <em>вроду</em>, <em>залоги</em>, <em>чухай</em>, <em>Шостка</em>, <em>вуличну</em>, <em>феєрверкові</em>, <em>Трійця</em>, <em>дешеве</em>, <em>вирішування</em>,
- <em>усміхаймося</em>, <em>укриття</em>, <em>найскладніші</em>, <em>ефективних</em>, <em>Лисівці</em>, <em>художньому</em>, <em>проведу</em>, <em>йодований</em>, <em>Бранденбурзькі ворота</em>, <em>бесіди</em></td></tr>
-<tr><td>Polish</td><td><em>podobać</em>, <em>manewrowy</em>, <em>triathlon</em>, <em>cebula</em>, <em>zobowiązany</em>, <em>mężny</em>, <em>aranżer</em>, <em>przynę
-ta</em>, <em>ratować</em>, <em>dziura</em>, <em>semafor</em>, <em>wpędzić</em>, <em>szczodrze</em>, <em>sejf</em>, <em>sztorm</em>, <em>unieść</em>, <em>suplement</
-em>, <em>sierota</em>, <em>organizacyjny</em>, <em>nierozpuszczalny</em>, <em>barber</em>, <em>dostateczny</em>, <em>kisiel</em>, <em>staroć</em>, <em>próba</em></t
-d><td><em>krótkowąs</em>, <em>podrywałaby</em>, <em>wądołami</em>, <em>mleczan</em>, <em>gotujmy</em>, <em>odwiedzałbym</em>, <em>Zwoliński</em>, <em>poboruchać</em
->, <em>najciemniej</em>, <em>welociraptor</em>, <em>rwetes</em>, <em>nawiew</em>, <em>wyminąwszy</em>, <em>słusny</em>, <em>wspaniałej</em>, <em>stratyfikować</em>,
- <em>północnomacedońską</em>, <em>symulowało</em>, <em>słałeś</em>, <em>ciężarach</em>, <em>podlewałabyś</em>, <em>kromeczką</em>, <em>gorący kartofel</em>, <em>kontenta</em>, <em>senną</em></td></tr>
-<tr><td>Czech</td><td><em>následník</em>, <em>březový</em>, <em>herpes</em>, <em>svádění</em>, <em>kopáč</em>, <em>předplacený</em>, <em>bubeník</em>, <em>hlasatel<
-/em>, <em>cvičák</em>, <em>převratný</em>, <em>uhel</em>, <em>spotřebič</em>, <em>degradovat</em>, <em>ladný</em>, <em>tesařství</em>, <em>čelovka</em>, <em>nehořla
-vý</em>, <em>lýko</em>, <em>pojistné</em>, <em>vášnivý</em>, <em>pošetilý</em>, <em>scenárista</em>, <em>foťák</em>, <em>nábytek</em>, <em>bezcelní</em></td><td><em
->obyvatelům</em>, <em>křivé</em>, <em>Radvan</em>, <em>zpustly</em>, <em>rozlišovatelný</em>, <em>Besarábie</em>, <em>arkussinus</em>, <em>loutnička</em>, <em>besed
-ník</em>, <em>zorá</em>, <em>kazili</em>, <em>vévodkyních</em>, <em>řídící znak</em>, <em>hnisavý vřed</em>, <em>jestřábník</em>, <em>toulky</em>, <em>opakování</em>, <em>pře</em>, <em>Dobroslav</em>, <em>žeh</em>, <em>-nice</em>, <em>katalýza</em>, <em>nezdravá</em>, <em>medák</em>, <em>Kudláč</em></td></tr>
-<tr><td>Slovak</td><td><em>galéria</em>, <em>pevnosť</em>, <em>jarmový</em>, <em>štetec</em>, <em>sirôtka</em>, <em>sklo</em>, <em>politika</em>, <em>činža</em>, <e
-m>altruizmus</em>, <em>hŕba</em>, <em>čepiec</em>, <em>patizón</em>, <em>hlohový</em>, <em>altsaxofón</em>, <em>charizmaticky</em>, <em>miestnosť</em>, <em>histopat
-ológia</em>, <em>entuziastický</em>, <em>dobro</em>, <em>rezeň</em>, <em>amnézia</em>, <em>dula</em>, <em>kotúľ</em>, <em>juhás</em>, <em>afatický</em></td><td><em>
-Mareš</em>, <em>Miškech</em>, <em>krajine</em>, <em>rekordmaniek</em>, <em>mala</em>, <em>učňami</em>, <em>patria</em>, <em>laze</em>, <em>Želmíra</em>, <em>dňami</
-em>, <em>čižmička</em>, <em>rybárka</em>, <em>Bern</em>, <em>žúrmi</em>, <em>charakteru</em>, <em>gúľaj</em>, <em>hrdinami</em>, <em>menší</em>, <em>Karovič</em>, <em>Bába</em>, <em>Fišer</em>, <em>zlodejovi</em>, <em>nej</em>, <em>kobier</em>, <em>elektroterapiou</em></td></tr>
-<tr><td>Lithuanian</td><td><em>šarvas</em>, <em>dėkoju</em>, <em>kapueira</em>, <em>moterius</em>, <em>kiras</em>, <em>svajonė</em>, <em>kepti</em>, <em>vetušas</em
->, <em>saitas</em>, <em>ciklas</em>, <em>paslaptingai</em>, <em>garantija</em>, <em>išmokti</em>, <em>gaubti</em>, <em>pirmokė</em>, <em>patogus</em>, <em>golfas</e
-m>, <em>paupys</em>, <em>kompetentingas</em>, <em>ilgai</em>, <em>baronas</em>, <em>sėdėti</em>, <em>ieškoti</em>, <em>registruoti</em>, <em>kūryba</em></td><td><em
->estiškojo</em>, <em>nekenčiau</em>, <em>šiknarankėmis</em>, <em>švelnesniame</em>, <em>smulkmeniškuosius</em>, <em>Vilniumi</em>, <em>haliucinuosiančiai</em>, <em>
-Apolono</em>, <em>seniausiojoje</em>, <em>dieviškesniųjų</em>, <em>mįslingesnę</em>, <em>Tunisas</em>, <em>duosiančiąja</em>, <em>švelnesnėmis</em>, <em>pripratote<
-/em>, <em>švelnesnis</em>, <em>atkeliaujančiąsias</em>, <em>izotopą</em>, <em>myžąs</em>, <em>suprastas</em>, <em>vaizdingumus</em>, <em>seilėkime</em>, <em>duosiančiosiose</em>, <em>atkeliaudavęs</em>, <em>paradoksų</em></td></tr>
-<tr><td>Latvian</td><td><em>fašists</em>, <em>laisks</em>, <em>latīniskāk</em>, <em>censīgāks</em>, <em>intoksikācija</em>, <em>dancināts</em>, <em>nākam</em>, <em>
-interesants</em>, <em>vislokāk</em>, <em>blāvodams</em>, <em>neskatot</em>, <em>elektrostacija</em>, <em>paslēpjošs</em>, <em>diennakts</em>, <em>visnedzirdīgākais<
-/em>, <em>nestāvēšana</em>, <em>fotogrāfiski</em>, <em>reālisms</em>, <em>dzīvi</em>, <em>neitrālāks</em>, <em>bezjēdzīgāk</em>, <em>aploks</em>, <em>neņemam</em>, 
-<em>vienpadsmit</em>, <em>slimīgs</em></td><td><em>rūpīgāk</em>, <em>ledus lāča</em>, <em>mirušajās</em>, <em>rupjām vīlēm</em>, <em>slimībai</em>, <em>neabstrahējo
-šām</em>, <em>vismīļākie</em>, <em>apmainītā</em>, <em>vispasīvākajās</em>, <em>bučojamus</em>, <em>baznices</em>, <em>visbrīvākajās</em>, <em>īsākās</em>, <em>danč
-i</em>, <em>rīks</em>, <em>atvainojušiem</em>, <em>visutainākajai</em>, <em>biezas</em>, <em>labās</em>, <em>Aleksandrs</em>, <em>gaumīga</em>, <em>netīrīgie</em>, <em>nešuvāt</em>, <em>visazerbaidžāniskākajā</em>, <em>nesarkdamas</em></td></tr>
-<tr><td>German</td><td><em>schnorren</em>, <em>Vorfreude</em>, <em>Agnostizismus</em>, <em>Sago</em>, <em>Vertragsrecht</em>, <em>Ausdrucksweise</em>, <em>Kolumnist
-</em>, <em>übergreifen</em>, <em>Führerstand</em>, <em>hundert</em>, <em>Kongress</em>, <em>bauen</em>, <em>Alias</em>, <em>darlegen</em>, <em>angstvoll</em>, <em>b
-egeben</em>, <em>Aal</em>, <em>blendend</em>, <em>warm</em>, <em>Bürotür</em>, <em>Draisine</em>, <em>Unwahrheit</em>, <em>imprägnieren</em>, <em>stören</em>, <em>L
-ungenödem</em></td><td><em>maledeien</em>, <em>betriebsratsverseuchtem</em>, <em>halfst mit</em>, <em>Grotten</em>, <em>Jahrhundertende</em>, <em>beunruhigte</em>, 
-<em>talmudischeres</em>, <em>Achtelfinal</em>, <em>Pilzrahmsuppe</em>, <em>führte</em>, <em>fusskrank</em>, <em>S-Bootes</em>, <em>Brotkarte</em>, <em>beantragt</em
->, <em>Wertbegriffes</em>, <em>Mikrophons</em>, <em>mittelmäßiger</em>, <em>exorzierst</em>, <em>unsanfterer</em>, <em>neuer</em>, <em>halsabschneiderischerem</em>, <em>Wurstscheiben</em>, <em>umtauschend</em>, <em>brach auseinander</em>, <em>Umweltauswirkung</em></td></tr>
-<tr><td>English</td><td><em>crone</em>, <em>salaried</em>, <em>animated</em>, <em>lauding</em>, <em>waterlogged</em>, <em>fray</em>, <em>sleepwalking</em>, <em>grit
-</em>, <em>roleplaying</em>, <em>equity</em>, <em>inviting</em>, <em>fortunate</em>, <em>nuk</em>, <em>shanty</em>, <em>prosocial</em>, <em>overstock</em>, <em>nonc
-onformist</em>, <em>cappuccino</em>, <em>sociolinguistic</em>, <em>pinus</em>, <em>shinkansen</em>, <em>immortal</em>, <em>bayless</em>, <em>grab</em>, <em>universa
-list</em></td><td><em>choky</em>, <em>toadstool leather coral</em>, <em>asparagusate</em>, <em>compliest</em>, <em>ashwagandha</em>, <em>maasbanker</em>, <em>longil
-oquence</em>, <em>nontherapy</em>, <em>the damage is done</em>, <em>botanists</em>, <em>flexor carpi radialis</em>, <em>Garibaldi biscuits</em>, <em>motion-pictures
-</em>, <em>exatons</em>, <em>Sians</em>, <em>money spell</em>, <em>grapled</em>, <em>transplantologist</em>, <em>perthiocyanate</em>, <em>toparch</em>, <em>counterpicketer</em>, <em>in no time</em>, <em>blazen</em>, <em>brain fluid</em>, <em>full metal jacket</em></td></tr>
-<tr><td>Dutch</td><td><em>werkkamer</em>, <em>meedogenloos</em>, <em>econoom</em>, <em>drukwerk</em>, <em>amuse</em>, <em>veiligheidsdienst</em>, <em>zomers</em>, <
-em>opbracht</em>, <em>opbouw</em>, <em>verzinnen</em>, <em>gelijkwaardigheid</em>, <em>opzien</em>, <em>dokter</em>, <em>bestuurbaar</em>, <em>calorie</em>, <em>toi
-letpapier</em>, <em>landbouwbeleid</em>, <em>rozenbottel</em>, <em>sparren</em>, <em>regio</em>, <em>vaste</em>, <em>berusten</em>, <em>aandrukken</em>, <em>kunnen<
-/em>, <em>rechts</em></td><td><em>bedinging</em>, <em>cowboykapitalisme</em>, <em>verplegers</em>, <em>dolf</em>, <em>miste</em>, <em>Noordkant</em>, <em>kansen</em
->, <em>verlangzaamt</em>, <em>geprolongeerd</em>, <em>bedoven</em>, <em>romusha</em>, <em>Rooi Afo</em>, <em>mortuariums</em>, <em>ingrave</em>, <em>gedichtjes</em>
-, <em>-noom</em>, <em>37ste</em>, <em>terugbrachten</em>, <em>bepeinze</em>, <em>verschanste</em>, <em>ingestonken</em>, <em>loop om</em>, <em>De Knijp</em>, <em>herkrijgen</em>, <em>voorbipsje</em></td></tr>
-<tr><td>Swedish</td><td><em>bann</em>, <em>radio</em>, <em>sallad</em>, <em>bokskog</em>, <em>befogenhet</em>, <em>handbollsmatch</em>, <em>halta</em>, <em>kristall
-glas</em>, <em>briljera</em>, <em>gatubarn</em>, <em>smeka</em>, <em>komplexitet</em>, <em>ypperligt</em>, <em>vetenskapsjournalist</em>, <em>blomma</em>, <em>envis
-as</em>, <em>underförstådd</em>, <em>slutanvändare</em>, <em>avlida</em>, <em>varningsskott</em>, <em>begynnelse</em>, <em>årgång</em>, <em>femtio</em>, <em>kollaps
-</em>, <em>nödlanda</em></td><td><em>förvaringsutrymmets</em>, <em>biltäthetens</em>, <em>kostnadsökningarnas</em>, <em>kapplöpningsbanors</em>, <em>ögonblicket</em
->, <em>giljotinernas</em>, <em>tågolyckans</em>, <em>sångsparvarna</em>, <em>påtvingar</em>, <em>plikttrogna</em>, <em>bebisars</em>, <em>praktmalvan</em>, <em>skru
-darna</em>, <em>betalsystemen</em>, <em>kamtjatkakrabbas</em>, <em>åskvädrens</em>, <em>lockvaras</em>, <em>numreringar</em>, <em>blodregn</em>, <em>knapptelefonens</em>, <em>manschetten</em>, <em>inbegripne</em>, <em>sammanhängt</em>, <em>nygrekiskt</em>, <em>litteraturens</em></td></tr>
-<tr><td>Spanish</td><td><em>aluminio</em>, <em>quejarse</em>, <em>barranco</em>, <em>tinto</em>, <em>cosmopolita</em>, <em>primicia</em>, <em>pacto</em>, <em>contra
-riamente</em>, <em>gajo</em>, <em>insistente</em>, <em>deporte</em>, <em>comprometida</em>, <em>urraca</em>, <em>escayola</em>, <em>pensamiento</em>, <em>funcional<
-/em>, <em>deshuesado</em>, <em>tempo</em>, <em>contrincante</em>, <em>exhibir</em>, <em>chocante</em>, <em>meada</em>, <em>ahijado</em>, <em>salchichón</em>, <em>sk
-ate</em></td><td><em>acetifiquéis</em>, <em>auscultándose</em>, <em>establecidas</em>, <em>genuidad</em>, <em>remeciéndome</em>, <em>ostrería</em>, <em>abultadísima
-</em>, <em>aterrorizase</em>, <em>dañare</em>, <em>chambearías</em>, <em>cotos</em>, <em>candaran</em>, <em>aturquesado</em>, <em>escalarme</em>, <em>seleniforme</e
-m>, <em>renguearéis</em>, <em>aplatanabas</em>, <em>polinizadora</em>, <em>evanescés</em>, <em>anglicanizarme</em>, <em>lengüeteáremos</em>, <em>exclamaste</em>, <em>queñuales</em>, <em>cetoácido</em>, <em>retipificaras</em></td></tr>
-<tr><td>French</td><td><em>thaï</em>, <em>rature</em>, <em>partir</em>, <em>nouvellement</em>, <em>sténographe</em>, <em>bégayer</em>, <em>différenciation</em>, <em
->rafle</em>, <em>archiduc</em>, <em>orange</em>, <em>bellot</em>, <em>vieillissant</em>, <em>hivernal</em>, <em>brandon</em>, <em>virer</em>, <em>propulsion</em>, <
-em>tchécoslovaque</em>, <em>cadavre</em>, <em>porto</em>, <em>pipi</em>, <em>électroménager</em>, <em>fatal</em>, <em>adéquat</em>, <em>stimuler</em>, <em>décodage<
-/em></td><td><em>droits de l'homme</em>, <em>désagrafassiez</em>, <em>puniciques</em>, <em>endivisionna</em>, <em>caravelles</em>, <em>empileriez</em>, <em>garder s
-on calme</em>, <em>soûlions</em>, <em>réécrivirent</em>, <em>surfaciques</em>, <em>interdiras</em>, <em>rebaptises</em>, <em>correspondant</em>, <em>aromatisés</em>
-, <em>excrèteras</em>, <em>amaranthe</em>, <em>offrant</em>, <em>reflétassions</em>, <em>dallé</em>, <em>tire-au-flanc</em>, <em>parrainai</em>, <em>il n'y a pas de quoi fouetter un chat</em>, <em>manœuvrai</em>, <em>Béziers</em>, <em>marcherez</em></td></tr>
-<tr><td>Italian</td><td><em>consenziente</em>, <em>serialità</em>, <em>sistematicamente</em>, <em>spensierato</em>, <em>mononucleosi</em>, <em>rostro</em>, <em>armi
-stizio</em>, <em>carezza</em>, <em>incancellabile</em>, <em>linkare</em>, <em>databile</em>, <em>cercarli</em>, <em>elettivo</em>, <em>uscio</em>, <em>mutevolezza</
-em>, <em>carnera</em>, <em>solitario</em>, <em>lampone</em>, <em>diramare</em>, <em>villano</em>, <em>prepensionamento</em>, <em>ulti</em>, <em>sfilza</em>, <em>rec
-arci</em>, <em>donnino</em></td><td><em>risaltavamo</em>, <em>conculcabile</em>, <em>eflornitine</em>, <em>strangolate</em>, <em>spopolandovi</em>, <em>pagavo</em>,
- <em>Rodinò</em>, <em>allacciassi</em>, <em>radiologhe</em>, <em>divertivo</em>, <em>fiocinammo</em>, <em>sgrigiato</em>, <em>sposseggano</em>, <em>lofoforo</em>, <
-em>autopubblichiamo</em>, <em>maturanda</em>, <em>bilanciavi</em>, <em>trascinano</em>, <em>lisciassero</em>, <em>anglonormanna</em>, <em>ombrellificio</em>, <em>permanentato</em>, <em>assiemi</em>, <em>odografi</em>, <em>rovisteresti</em></td></tr>
-<tr><td>Portuguese</td><td><em>voador</em>, <em>deliberadamente</em>, <em>condão</em>, <em>live</em>, <em>radiológico</em>, <em>atingir</em>, <em>mol</em>, <em>gulo
-so</em>, <em>empurraram</em>, <em>relaxante</em>, <em>átrio</em>, <em>cidade</em>, <em>retranca</em>, <em>regozijo</em>, <em>flatulência</em>, <em>fluorescente</em>
-, <em>genoma</em>, <em>snowboard</em>, <em>prol</em>, <em>salvaguardar</em>, <em>processador</em>, <em>deão</em>, <em>arquitetónico</em>, <em>fuste</em>, <em>barra<
-/em></td><td><em>encriptaste</em>, <em>tosaram</em>, <em>zerar a vida</em>, <em>lépida</em>, <em>delinquias</em>, <em>bainhámos</em>, <em>veredicto</em>, <em>cromem
-</em>, <em>eternizava</em>, <em>pensionada</em>, <em>academizáramos</em>, <em>ganirem</em>, <em>boqui-aberta</em>, <em>sonambuleis</em>, <em>alcoolemia</em>, <em>op
-primiu</em>, <em>baitariam</em>, <em>desacopláveis</em>, <em>contratares</em>, <em>Dubrovnik</em>, <em>lamuriará</em>, <em>quadriculado</em>, <em>logaste</em>, <em>engolirás</em>, <em>Furukawa</em></td></tr>
-<tr><td>Romanian</td><td><em>solniță</em>, <em>pisoi</em>, <em>oniric</em>, <em>lanametru</em>, <em>primordie</em>, <em>harghitean</em>, <em>jăratic</em>, <em>pușki
-nian</em>, <em>termorezistent</em>, <em>benedicțiune</em>, <em>histerometru</em>, <em>otrăvire</em>, <em>anartrie</em>, <em>sprijin</em>, <em>magnetizat</em>, <em>i
-zogeoterm</em>, <em>ricanare</em>, <em>kurd</em>, <em>crescând</em>, <em>frigăruică</em>, <em>săritură</em>, <em>mobilizabil</em>, <em>peștiman</em>, <em>diurn</em>
-, <em>adaptabilitate</em></td><td><em>chircit</em>, <em>ferestraș mic</em>, <em>banano</em>, <em>Șcheia</em>, <em>Șilea</em>, <em>cardiologe</em>, <em>cișmă</em>, <
-em>scrietor</em>, <em>termen generic</em>, <em>Bâstroe</em>, <em>densitate de sarcină</em>, <em>recopiat</em>, <em>Gura Bâdiliței</em>, <em>dobrogeancă</em>, <em>No
-vosiolovca</em>, <em>microbiologa</em>, <em>bombat</em>, <em>chirioară</em>, <em>Băluța</em>, <em>jurisdicții</em>, <em>mijlocaș ofensiv</em>, <em>pisici</em>, <em>Hobaia</em>, <em>golful</em>, <em>Tăutu</em></td></tr>
-<tr><td>Greek</td><td><em>προσκοπιμότητα</em>, <em>ξεσπίτωμα</em>, <em>επαναφέρω</em>, <em>βοήθεια</em>, <em>οκτακοσιοστός</em>, <em>ρεσεψιόν</em>, <em>αφουγκράζομα
-ι</em>, <em>αγκουρέτο</em>, <em>οικοτοξικολογία</em>, <em>ανεπιστημοσύνη</em>, <em>θετικός</em>, <em>αχρέωτος</em>, <em>βραζιλιάνικος</em>, <em>αστή</em>, <em>στρίβ
-ομαι</em>, <em>μπακάλικο</em>, <em>αποσχισμένος</em>, <em>σμίλη</em>, <em>αιδοίο</em>, <em>σκεπάζω</em>, <em>αλευρόγαια</em>, <em>χορευτής</em>, <em>ουρηθροσκοπία</
-em>, <em>ασπρόμαυρο</em>, <em>αεί</em></td><td><em>ψόφε</em>, <em>υπερφυσικές</em>, <em>δικές</em>, <em>ψάχτηκα</em>, <em>χορέψανε</em>, <em>μύτες</em>, <em>αντοχών
-</em>, <em>σαββατοκύριακων</em>, <em>αμέλησα</em>, <em>σιδέρωσα</em>, <em>αρχηγίνες</em>, <em>πρόβιος</em>, <em>αιγό-</em>, <em>αγκομαχητών</em>, <em>δυνατούς</em>,
- <em>αντιμιλιταρισμούς</em>, <em>αιχμής</em>, <em>βαριόμασταν</em>, <em>αμφισβητήσεως</em>, <em>αεροστεγή</em>, <em>υμνήσω</em>, <em>αλεύρων</em>, <em>Αθιγγάνων</em>, <em>βεβαιότερης</em>, <em>συγκεκριμένο</em></td></tr>
-<tr><td>Armenian</td><td><em>խոհանոց</em>, <em>տարատեսակ</em>, <em>կենալ</em>, <em>կոմունիկացիա</em>, <em>սրբել</em>, <em>դաստակերտ</em>, <em>ժեստ</em>, <em>էտրուսկ
-երեն</em>, <em>ձայնարկիչ</em>, <em>քարայր</em>, <em>ուսում</em>, <em>ցեղակրոնություն</em>, <em>ֆլեյտա</em>, <em>առկայծում</em>, <em>մազալու</em>, <em>բարձունք</em>,
- <em>կրթաթոշակ</em>, <em>ճամփորդական</em>, <em>նմանապես</em>, <em>մշկընկույզ</em>, <em>քարտեզագրական</em>, <em>լորձունք</em>, <em>ամեն</em>, <em>օթարան</em>, <em>առ
-ակախոս</em></td><td><em>աղջիկներ</em>, <em>կուտեի</em>, <em>Ռայպուր</em>, <em>Նորատունկ</em>, <em>եղինջներ</em>, <em>Իյնէճեան</em>, <em>Քարոն</em>, <em>խոսքերով</em
->, <em>Սարդինիա</em>, <em>Հայտոսթյան</em>, <em>ինչ կա չկա</em>, <em>Ջեյմս Բոնդ</em>, <em>Աղդամ</em>, <em>գեղեցկուհին</em>, <em>Շահինյան</em>, <em>գուշակվել</em>, <e
-m>Բիրմինհամ</em>, <em>Այար Ռաջա</em>, <em>գործեր</em>, <em>ԱԱՌ</em>, <em>Հինդուստան</em>, <em>Անի</em>, <em>ժանի</em>, <em>լիւն</em>, <em>մարդասպաններ</em></td></tr>
-<tr><td>Albanian</td><td><em>rrënoj</em>, <em>fabrikë</em>, <em>dëngla</em>, <em>mbret</em>, <em>gëlqere</em>, <em>kombëtar</em>, <em>armatë</em>, <em>normalitet</e
-m>, <em>namaz</em>, <em>kërrlë</em>, <em>ndore</em>, <em>mashë</em>, <em>vetiu</em>, <em>gri</em>, <em>gjeometri</em>, <em>murgash</em>, <em>sevda</em>, <em>autor</
-em>, <em>harmi</em>, <em>thith</em>, <em>arësyetoj</em>, <em>njëkohës</em>, <em>kult</em>, <em>trullos</em>, <em>tall</em></td><td><em>qiraxhinj</em>, <em>Liridon</
-em>, <em>ndenjke</em>, <em>Kujtim</em>, <em>hallash</em>, <em>Ilir</em>, <em>Ajteni</em>, <em>Etrit</em>, <em>boshtra</em>, <em>njerëzit</em>, <em>talla</em>, <em>Z
-hitia</em>, <em>populli</em>, <em>rrëbythem</em>, <em>zhavorresh</em>, <em>krinë</em>, <em>Sheval</em>, <em>Gjimshiti</em>, <em>fsheha</em>, <em>afërditë</em>, <em>mrekullitë</em>, <em>bregdeteve</em>, <em>cergurine</em>, <em>grusht shteti</em>, <em>bymyen</em></td></tr>
-<tr><td>Hindi</td><td><em>सत्याग्रह</em>, <em>हिस्सेदारी</em>, <em>नक़लची</em>, <em>मोती</em>, <em>धनुर्विद्या</em>, <em>मुक्का</em>, <em>मार्मिक</em>, <em>प्रतिभाव
-ान</em>, <em>नियमित</em>, <em>प्रासंगिकता</em>, <em>कीकर</em>, <em>पुष्पांजलि</em>, <em>जोन्ह</em>, <em>याचक</em>, <em>निकट</em>, <em>अकाल</em>, <em>मुँहतोड़</em>, 
-<em>मूलकण</em>, <em>धर्मशाला</em>, <em>म्याऊँ</em>, <em>दिक्पात</em>, <em>कचनार</em>, <em>पद्मिनी</em>, <em>छिन</em>, <em>क्रम</em></td><td><em>समधियो</em>, <em>मिल
-वानी</em>, <em>अंधियारा</em>, <em>भरी</em>, <em>पलटवाती</em>, <em>समझाते</em>, <em>चोरों</em>, <em>काटे</em>, <em>के कारण</em>, <em>वरदानों</em>, <em>दान देना</em>,
- <em>कुरेदनेवाली</em>, <em>मस्तिष्क स्तम्भ</em>, <em>घटेंगे</em>, <em>डायन</em>, <em>पछाड़ेगी</em>, <em>जमघट्ट</em>, <em>प्रतियो</em>, <em>खरीदोगे</em>, <em>समझता</em>, <em>वेधशालाएँ</em>, <em>ख़ुशबुओं</em>, <em>गलतियों</em>, <em>मर्दो</em>, <em>बाटेंगी</em></td></tr>
-<tr><td>Persian</td><td><em>دخل</em>, <em>نوچ</em>, <em>بهت</em>, <em>قلیان</em>, <em>لفاف</em>, <em>ناکام</em>, <em>دوازده‌امامی</em>, <em>تغییر</em>, <em>آدمیت</e
-m>, <em>وحشت</em>, <em>واردات</em>, <em>ساماندهی</em>, <em>بهاری</em>, <em>جلاد</em>, <em>اله</em>, <em>عزیمت</em>, <em>انبازی</em>, <em>کبودی</em>, <em>یبوست</em>,
- <em>مواجه</em>, <em>گنده</em>, <em>آذوقه</em>, <em>تقلیل</em>, <em>زهرشناسی</em>, <em>موزه</em></td><td><em>مجبور کردن</em>, <em>دان</em>, <em>بهادر</em>, <em>پرک<
-/em>, <em>جوش</em>, <em>می‌دیدم</em>, <em>گابن</em>, <em>مجروح کردن</em>, <em>ارشاد</em>, <em>اوت</em>, <em>میکروـ</em>, <em>جمهوری دموکراتیک کنگو</em>, <em>عقب‌افت
-اده</em>, <em>اعضا</em>, <em>کشتی گرفتن</em>, <em>هفته‌ها</em>, <em>جمهوری دموکراتیک افغانستان</em>, <em>خزنده</em>, <em>سوق دادن</em>, <em>بد اخلاق</em>, <em>پس فردا</em>, <em>شکل گرفتن</em>, <em>مدیریت داده‌ها</em>, <em>می‌نوشد</em>, <em>گران‌تر</em></td></tr>
-<tr><td>Georgian</td><td><em>შორსმხედველი</em>, <em>დრენაჟი</em>, <em>სულთანი</em>, <em>ფიწიღი</em>, <em>წინამძღვარი</em>, <em>ნახევარკუნძულოვანი</em>, <em>ბაქტერია
-</em>, <em>ნატურალიზაცია</em>, <em>მისცემს</em>, <em>იუსტიცია</em>, <em>ძიძიშვილი</em>, <em>აბლაკი</em>, <em>შემოდგომა</em>, <em>ილოტი</em>, <em>ხალიფა</em>, <em>და
-უბეგრავი</em>, <em>დანდალუკი</em>, <em>ცუნამი</em>, <em>თელვადი</em>, <em>ბუდობა</em>, <em>ნაძლევი</em>, <em>ფეხსაცმელი</em>, <em>სოციალიზმი</em>, <em>მეტაფორული</e
-m>, <em>პოლიმორფული</em></td><td><em>ჯენიფერი</em>, <em>სიყვარულო</em>, <em>ბრიტანეთი</em>, <em>განადგურების</em>, <em>მემარჯვენე პოპულიზმი</em>, <em>კავები</em>, <
-em>ვეტოს დადება</em>, <em>ითვლებოდა</em>, <em>წინა აზია</em>, <em>შემოდგომა</em>, <em>დარდანელის სრუტე</em>, <em>-ზე</em>, <em>საჯარო მოხელე</em>, <em>უძლეველი არმა
-და</em>, <em>ასაქცევი</em>, <em>ქიმიური ფიზიკა</em>, <em>ჭიის ხვრელი</em>, <em>კონტინენტური ევროპის სამართალი</em>, <em>გონების თვალი</em>, <em>ლოყები</em>, <em>თავდაპირველი სამშობლო</em>, <em>ფლამანდური</em>, <em>ბრაბანტი</em>, <em>ფარდობითობის ზოგადი თეორია</em>, <em>გერმანიის ფედერაციული რესპუბლიკა</em></td></tr>
-<tr><td>Finnish</td><td><em>viilipytty</em>, <em>karkaaminen</em>, <em>lennättää</em>, <em>filmata</em>, <em>pensseli</em>, <em>kannustaa</em>, <em>elinkaari</em>, 
-<em>vesirakentaminen</em>, <em>tuulitunneli</em>, <em>metropoli</em>, <em>pääepäilty</em>, <em>miä</em>, <em>sääasema</em>, <em>surffaus</em>, <em>pelitapa</em>, <e
-m>lihaliemi</em>, <em>ventovieras</em>, <em>epämääräinen</em>, <em>pistelasku</em>, <em>hanuri</em>, <em>lapsiporno</em>, <em>harkita</em>, <em>ranneketju</em>, <em
->jyystää</em>, <em>kuningataräiti</em></td><td><em>dumpperi</em>, <em>kyttyräselkä</em>, <em>mandariinit</em>, <em>toissakesäinen</em>, <em>kuljetuskustannus</em>, 
-<em>ihomato</em>, <em>keittosyvennys</em>, <em>kesänä</em>, <em>kääpiökiipijähiiri</em>, <em>informaatiopolitiikka</em>, <em>rahkasuo</em>, <em>hammastua</em>, <em>
-harmaansininen</em>, <em>keltainen 2G</em>, <em>sopusoinnussa</em>, <em>puhallella</em>, <em>aavikoituisivat</em>, <em>risteilyt</em>, <em>käyttöihin</em>, <em>ruutuseiska</em>, <em>piitimensaame</em>, <em>riipan</em>, <em>betonirakenne</em>, <em>tuplapenetraatio</em>, <em>kelmiä</em></td></tr>
-<tr><td>Turkish</td><td><em>sik</em>, <em>kucak</em>, <em>tükürmek</em>, <em>hoşaf</em>, <em>kanlarınızın</em>, <em>esinlemek</em>, <em>kiremit</em>, <em>sülfür</em
->, <em>ancak</em>, <em>yeröte</em>, <em>altrüist</em>, <em>derleme</em>, <em>haşa</em>, <em>kerpeten</em>, <em>imkân</em>, <em>adaylık</em>, <em>spekülatif</em>, <e
-m>baget</em>, <em>abartmacı</em>, <em>meşruiyet</em>, <em>bro</em>, <em>farik</em>, <em>yeğ</em>, <em>sattırtmak</em>, <em>müjde</em></td><td><em>katma</em>, <em>pe
-rmütasyonu</em>, <em>Larissa</em>, <em>voleybolu</em>, <em>fizikçiler</em>, <em>alaca doğan</em>, <em>bahis oynamak</em>, <em>duyu-dil programlamayı</em>, <em>İnan<
-/em>, <em>canavarların</em>, <em>yorganın</em>, <em>gaz odası</em>, <em>uyurum</em>, <em>başını</em>, <em>Alaca</em>, <em>kat'î</em>, <em>çıraklara</em>, <em>kralla
-rın</em>, <em>Yenifakılı</em>, <em>ziyaretçiler</em>, <em>yordamın</em>, <em>yardım etmek</em>, <em>şalgam dolması</em>, <em>peygamberler</em>, <em>Gölpazarı</em></td></tr>
-<tr><td>Korean</td><td><em>보급</em>, <em>통거미</em>, <em>와전</em>, <em>그룹</em>, <em>산후통</em>, <em>시력</em>, <em>글래머</em>, <em>사암</em>, <em>압생트</em>
-, <em>좆대가리</em>, <em>정맥</em>, <em>야레</em>, <em>클릭</em>, <em>스카</em>, <em>환경</em>, <em>전통적</em>, <em>말대꾸하다</em>, <em>빛깔</em>, <em>꿀벌</em>, 
-<em>보리수</em>, <em>어드럭하다</em>, <em>이탈리아어</em>, <em>만발하다</em>, <em>빨딱</em>, <em>공주님</em></td><td><em>안후이</em>, <em>철산</em>, <em>겨울 스포츠
-/em>, <em>지난</em>, <em>쏘비에트 사회주의 공화국 련방</em>, <em>배타적 경제 수역</em>, <em>우즈베끼스딴</em>, <em>가새다</em>, <em>토이기</em>, <em>파키스탄</em>,,
- <em>X레이</em>, <em>저울자리</em>, <em>가매</em>, <em>-도</em>, <em>라아단</em>, <em>-케</em>, <em>무스거</em>, <em>페로 제도</em>, <em>주체사상</em>, <em>비타민 D2</em>, <em>둘-</em>, <em>시디 플레이어</em>, <em>랭면</em>, <em>게이 프라이드</em>, <em>오호</em></td></tr>
-<tr><td>Indonesian</td><td><em>pemantapan</em>, <em>menyelesaikan</em>, <em>petahana</em>, <em>siang</em>, <em>kereb</em>, <em>tabuh</em>, <em>ragu</em>, <em>cabai<
-/em>, <em>arsenik</em>, <em>keserasian</em>, <em>kanca</em>, <em>reaksi</em>, <em>cemen</em>, <em>dulur</em>, <em>meni</em>, <em>katalis</em>, <em>bilas</em>, <em>g
-eulis</em>, <em>birama</em>, <em>barut</em>, <em>penghindaran</em>, <em>wirausaha</em>, <em>mengoperasi</em>, <em>magersari</em>, <em>kapasitansi</em></td><td><em>s
-etor muka</em>, <em>densitas mineral tulang</em>, <em>galat absolut</em>, <em>saluran pelanggan</em>, <em>waktu paruh</em>, <em>peta situs</em>, <em>dikosongkan</em
->, <em>beda tipis</em>, <em>sakramen rekonsiliasi</em>, <em>kaidah hukum</em>, <em>kehidupan nyata</em>, <em>sel udara</em>, <em>Prapaskah</em>, <em>yuks</em>, <em>
-abu gosok</em>, <em>meng-</em>, <em>metode penyusutan</em>, <em>mee</em>, <em>tata graha</em>, <em>Gumelar</em>, <em>saluran induk</em>, <em>tahun ajaran</em>, <em>tulung</em>, <em>yuri</em>, <em>guru pamong</em></td></tr>
-<tr><td>Malay</td><td><em>akuarium</em>, <em>forsep</em>, <em>sok</em>, <em>kemabukan</em>, <em>liang</em>, <em>batas</em>, <em>ekadasa</em>, <em>meleis</em>, <em>k
-antor</em>, <em>tabib</em>, <em>yuyu</em>, <em>salji</em>, <em>politikus</em>, <em>sepatu</em>, <em>jajahan</em>, <em>tengkujuh</em>, <em>seroja</em>, <em>ovari</em
->, <em>tuanku</em>, <em>penggawa</em>, <em>animasi</em>, <em>bawal</em>, <em>tahil</em>, <em>tatabahasa</em>, <em>maun</em></td><td><em>putra</em>, <em>Bachok</em>,
- <em>sektor awam</em>, <em>enam likur</em>, <em>asam garam</em>, <em>keselamatan siber</em>, <em>maklum balas</em>, <em>limau bali</em>, <em>cicit laki-laki</em>, <
-em>jenis darah</em>, <em>oneng-oneng laki-laki</em>, <em>samun gurun</em>, <em>bilik rehat</em>, <em>anat</em>, <em>limă</em>, <em>ayam-ayam</em>, <em>Negara Brunei
- Darussalam</em>, <em>Sep</em>, <em>hormat senjata</em>, <em>Wasap</em>, <em>Nov</em>, <em>batu kawi</em>, <em>sebiru</em>, <em>slip gaji</em>, <em>kelemari</em></td></tr>
-<tr><td>Arabic</td><td><em>ابتلعي</em>, <em>انمين</em>, <em>جزى</em>, <em>يبتدئن</em>, <em>تفطرتن</em>, <em>يؤمن</em>, <em>حضروا</em>, <em>نيتروجين</em>, <em>مركيزة
-</em>, <em>تعتقدن</em>, <em>أتخذ</em>, <em>قردتم</em>, <em>أسخطتن</em>, <em>تحسبن</em>, <em>استدررت</em>, <em>ردفت</em>, <em>عاق</em>, <em>أخرنطم</em>, <em>يهاجم</e
-m>, <em>يتزلزلون</em>, <em>أديت</em>, <em>خطمن</em>, <em>بطة</em>, <em>يهجمن</em>, <em>تستنرن</em></td><td><em>لوحات مفاتيح</em>, <em>أوكلاهوما</em>, <em>الصويرة</e
-m>, <em>مدين</em>, <em>سلوك</em>, <em>إشعار</em>, <em>منتف</em>, <em>هفو</em>, <em>رأسمالية</em>, <em>هندسة معمارية</em>, <em>فغر</em>, <em>مداخلة</em>, <em>إفريقيا
-</em>, <em>بقجة</em>, <em>خفر</em>, <em>تأدية</em>, <em>تجر</em>, <em>جهارمحال وبختياري</em>, <em>بكين</em>, <em>صفي الدين</em>, <em>مقاولة</em>, <em>الامرأت</em>, <em>تكدس</em>, <em>تعال</em>, <em>الدنمرك</em></td></tr>
-<tr><td>Swahili</td><td><em>mfano</em>, <em>kifafa</em>, <em>mwanachuoni</em>, <em>rejea</em>, <em>pasa</em>, <em>hadubini</em>, <em>moshogi</em>, <em>furahi</em>, 
-<em>chapati</em>, <em>puliza</em>, <em>bodi</em>, <em>kupatwa</em>, <em>ubadhirifu</em>, <em>sijui</em>, <em>ustawishaji</em>, <em>uenezaji</em>, <em>jemadari</em>,
- <em>ala</em>, <em>mkabidhi</em>, <em>mafundisho</em>, <em>motisha</em>, <em>dira</em>, <em>shuke</em>, <em>pasipoti</em>, <em>azimio</em></td><td><em>zaliana</em>,
- <em>wanajibu</em>, <em>misumeno ya mnyororo</em>, <em>Yoeli</em>, <em>watunza</em>, <em>nyongwa</em>, <em>kusafihi</em>, <em>magruneti</em>, <em>kufurika</em>, <em
->kukerana</em>, <em>telekea</em>, <em>kupendwa</em>, <em>huko</em>, <em>wenza</em>, <em>mikorogo</em>, <em>shushika</em>, <em>vizuizui</em>, <em>tunarudi</em>, <em>chomeka</em>, <em>utotoni</em>, <em>kubakisha</em>, <em>kuinuza</em>, <em>ugonjwa wa kupooza</em>, <em>kusambaratisha</em>, <em>themanini na mbili</em></td></tr>   
+<tr><td>Serbo-Croatian (Latin)</td><td><em>povučen</em>, <em>ražanj</em>, <em>medicina</em>, <em>paleozoik</em>, <em>razveseliti</em>, <em>raskid</em>, <em>autonomist</em>, <em>cinabarit</em>, <em>krpariti</em>, <em>vegetarijanizam</em>, <em>peteljka</em>, <em>delinkvent</em>, <em>odmicati</em>, <em>orman</em>, <em>krvni</em>, <em>istinit</em>, <em>vagon</em>, <em>morski</em>, <em>fursat</em>, <em>cenzus</em>, <em>direktno</em>, <em>ljuljaška</em>, <em>slinav</em>, <em>rečnik</em>, <em>naočit</em></td><td><em>Januš</em>, <em>majstorom</em>, <em>ploči</em>, <em>Dretar</em>, <em>klena</em>, <em>proleteri svih zemalja, ujedinite se</em>, <em>tkano</em>, <em>potezi</em>, <em>radnje</em>, <em>čvarci</em>, <em>Helsinki</em>, <em>radarima</em>, <em>donesti</em>, <em>Zadro</em>, <em>kolenu</em>, <em>Bogumil</em>, <em>Cetinjanin</em>, <em>smeten</em>, <em>dece</em>, <em>krikom</em>, <em>Vodomir</em>, <em>Booleova logika</em>, <em>glasba</em>, <em>bulom</em>, <em>tamo-amo</em></td></tr>
+<tr><td>Serbo-Croatian (Cyrillic)</td><td><em>засебно</em>, <em>секта</em>, <em>хумореска</em>, <em>задржати</em>, <em>цинк</em>, <em>дарвинизам</em>, <em>поправак</em>, <em>елизија</em>, <em>спречавати</em>, <em>пакет</em>, <em>посекотина</em>, <em>картица</em>, <em>котловина</em>, <em>зачахурити</em>, <em>судионик</em>, <em>плеснивост</em>, <em>чинити</em>, <em>окречити</em>, <em>фестивал</em>, <em>изрека</em>, <em>сукладно</em>, <em>ненормалан</em>, <em>индонезијски</em>, <em>звијезда</em>, <em>хумано</em></td><td><em>Тихи океан</em>, <em>гњусан</em>, <em>одмаћи</em>, <em>забугаривати</em>, <em>Новозеланђанка</em>, <em>-ушина</em>, <em>Египћанин</em>, <em>-ава</em>, <em>-це</em>, <em>Индонежанин</em>, <em>Социјалистичка Република Србија</em>, <em>лиже</em>, <em>Валпово</em>, <em>Бјеловар</em>, <em>Швабо</em>, <em>Волга</em>, <em>носовима</em>, <em>Витомир</em>, <em>добивати</em>, <em>лисицу</em>, <em>доодила</em>, <em>Еквадорац</em>, <em>носић</em>, <em>Ковачићи</em>, <em>ћер</em></td></tr>
+<tr><td>Macedonian</td><td><em>повеќенасочен</em>, <em>енисејски</em>, <em>осети</em>, <em>некоректност</em>, <em>симпатичност</em>, <em>мокасина</em>, <em>лондонец</em>, <em>позитивност</em>, <em>њуделхиец</em>, <em>синовски</em>, <em>методолошки</em>, <em>купечки</em>, <em>конопот</em>, <em>рола</em>, <em>болежлив</em>, <em>незамајан</em>, <em>фер</em>, <em>недијагнозирање</em>, <em>домаќин</em>, <em>недоловлив</em>, <em>бездомник</em>, <em>модератор</em>, <em>докуп</em>, <em>феноменолошки</em>, <em>деминутивен</em></td><td><em>дваесет и осуммина</em>, <em>фати на дело</em>, <em>подзамрзнат</em>, <em>во кратки црти</em>, <em>преименуван</em>, <em>однесен</em>, <em>формализирање</em>, <em>аман заман</em>, <em>Водопост</em>, <em>проституирање</em>, <em>линии</em>, <em>понадворешен</em>, <em>славеи</em>, <em>кметици</em>, <em>сакало</em>, <em>Дака</em>, <em>напојници</em>, <em>раце</em>, <em>Егеју</em>, <em>помножување</em>, <em>извишен</em>, <em>школки</em>, <em>лека ноќ</em>, <em>расчовечен</em>, <em>позабавуван</em></td></tr>
+<tr><td>Bulgarian</td><td><em>бръснарница</em>, <em>рицар</em>, <em>каузативен</em>, <em>препрочета</em>, <em>чорбаджия</em>, <em>жигосвам</em>, <em>век</em>, <em>избягване</em>, <em>хлас</em>, <em>бол</em>, <em>поледица</em>, <em>боря</em>, <em>брощ</em>, <em>даващия</em>, <em>илач</em>, <em>тетрев</em>, <em>седелия</em>, <em>физика</em>, <em>корения</em>, <em>ажиотаж</em>, <em>рай</em>, <em>питач</em>, <em>минута</em>, <em>книжовност</em>, <em>кривак</em></td><td><em>опираме</em>, <em>светлината</em>, <em>изпят</em>, <em>начала</em>, <em>домитали</em>, <em>подвеждалата</em>, <em>авангарда</em>, <em>корящите</em>, <em>захапвах</em>, <em>решете</em>, <em>изгребвахме</em>, <em>ендемична</em>, <em>електрически заряд</em>, <em>Плутон</em>, <em>травматичните</em>, <em>почитаха</em>, <em>прегръщаха</em>, <em>агротехничка</em>, <em>допринасяш</em>, <em>пърдяхте</em>, <em>поизмела</em>, <em>насичал</em>, <em>спрелите</em>, <em>наследяваното</em>, <em>Дамгов</em></td></tr>
+<tr><td>Russian</td><td><em>двойной</em>, <em>рой</em>, <em>ливанский</em>, <em>хлопнуть</em>, <em>вымолить</em>, <em>якорь</em>, <em>магистратура</em>, <em>получеловек</em>, <em>работоспособный</em>, <em>геофизик</em>, <em>лор</em>, <em>джинсовый</em>, <em>пукать</em>, <em>браунинг</em>, <em>горняк</em>, <em>северокорейский</em>, <em>загорелый</em>, <em>перерасти</em>, <em>истинность</em>, <em>мяч</em>, <em>товарный</em>, <em>католичество</em>, <em>интим</em>, <em>обвязать</em>, <em>агрономия</em></td><td><em>первопроходчиками</em>, <em>викторинах</em>, <em>вываливаемся</em>, <em>трунить</em>, <em>изворачивались</em>, <em>фарватерам</em>, <em>осветитесь</em>, <em>поджидающий</em>, <em>подвернул</em>, <em>отринул</em>, <em>этикеткою</em>, <em>опросу</em>, <em>чокнулся</em>, <em>маоизмом</em>, <em>Артемида</em>, <em>набатов</em>, <em>кровавимый</em>, <em>отвращением</em>, <em>нардепе</em>, <em>штрафам</em>, <em>лор</em>, <em>продаст</em>, <em>ведьмаками</em>, <em>подпоркам</em>, <em>заморозили</em></td></tr>
+<tr><td>Ukrainian</td><td><em>ієрархічний</em>, <em>низина</em>, <em>палець</em>, <em>вимусити</em>, <em>мотати</em>, <em>натякати</em>, <em>мінімум</em>, <em>хвора</em>, <em>намотувати</em>, <em>ототожнити</em>, <em>геоморфологічний</em>, <em>авдит</em>, <em>топка</em>, <em>потовстіти</em>, <em>барель</em>, <em>совкодрочер</em>, <em>загальновідомий</em>, <em>вілла</em>, <em>афроамериканець</em>, <em>пароплав</em>, <em>акваріум</em>, <em>модно</em>, <em>розвантажувати</em>, <em>верблюжа</em>, <em>виходити</em></td><td><em>івано-франківський</em>, <em>Герца</em>, <em>Бухарестові</em>, <em>нижче</em>, <em>сумнівавсь</em>, <em>Сінгапур</em>, <em>насиченій</em>, <em>їхнім</em>, <em>чітких</em>, <em>родам</em>, <em>красива</em>, <em>вимив</em>, <em>сяде</em>, <em>мікро-</em>, <em>актів</em>, <em>тверкінгом</em>, <em>столиками</em>, <em>запозичення</em>, <em>бонусами</em>, <em>-янка</em>, <em>лексиконів</em>, <em>окупанти</em>, <em>дисплеях</em>, <em>Георгійович</em>, <em>щокам</em></td></tr>
+<tr><td>Polish</td><td><em>siłownia</em>, <em>przeprowadzić</em>, <em>aplikacja</em>, <em>biskup</em>, <em>ilekroć</em>, <em>upolować</em>, <em>odwaga</em>, <em>kulturystyka</em>, <em>gwizdka</em>, <em>kryminał</em>, <em>ton</em>, <em>poprzedzać</em>, <em>rodzinny</em>, <em>balans</em>, <em>hałaśliwy</em>, <em>odpychać</em>, <em>kadra</em>, <em>petycja</em>, <em>pozbawiać</em>, <em>wiek</em>, <em>defetyzm</em>, <em>upór</em>, <em>cool</em>, <em>krocz</em>, <em>zestawić</em></td><td><em>klimaksie</em>, <em>zarchiwizowany</em>, <em>rewerans</em>, <em>Seksty</em>, <em>klapką</em>, <em>Rzeszót</em>, <em>Plaskiewicz</em>, <em>zawziętszy</em>, <em>pijam</em>, <em>refowałby</em>, <em>słonczy</em>, <em>abonował</em>, <em>pomylenie</em>, <em>wynajmujmy</em>, <em>przyprawiałbym</em>, <em>decymuję</em>, <em>neuronowym</em>, <em>kompanować</em>, <em>Dębowy</em>, <em>obserwowaliśmy</em>, <em>pychotą</em>, <em>kremacjami</em>, <em>Wawrosz</em>, <em>odraczałyście</em>, <em>wypędzało</em></td></tr>
+<tr><td>Czech</td><td><em>sponzor</em>, <em>stezka</em>, <em>akupunktura</em>, <em>pootočit</em>, <em>mělčina</em>, <em>okolky</em>, <em>vychovaný</em>, <em>javor</em>, <em>pojíst</em>, <em>vykřičník</em>, <em>pach</em>, <em>spodnička</em>, <em>nalezený</em>, <em>naživu</em>, <em>parmezán</em>, <em>součin</em>, <em>záměrně</em>, <em>podpořit</em>, <em>čtivý</em>, <em>scénárista</em>, <em>dvouletý</em>, <em>balón</em>, <em>průsečík</em>, <em>kvóta</em>, <em>výřečný</em></td><td><em>polit</em>, <em>sila</em>, <em>prudil</em>, <em>bažantů</em>, <em>Štikarovský</em>, <em>pedantický</em>, <em>falešné dilema</em>, <em>Gryc</em>, <em>Frídin</em>, <em>děde</em>, <em>Nymburk</em>, <em>stolek</em>, <em>tahán</em>, <em>mám</em>, <em>jakutština</em>, <em>tvore</em>, <em>bezstarostněji</em>, <em>extraartikulární</em>, <em>strukturovatelný</em>, <em>Mrhač</em>, <em>oblékni</em>, <em>podle mě</em>, <em>Hosák</em>, <em>sestry</em>, <em>Lodín</em></td></tr>
+<tr><td>Slovak</td><td><em>ununtrium</em>, <em>stromový</em>, <em>manažér</em>, <em>antropomorfický</em>, <em>automobilový</em>, <em>plynojem</em>, <em>pozor</em>, <em>jaspis</em>, <em>okrajový</em>, <em>drak</em>, <em>panteizmus</em>, <em>výťahový</em>, <em>antiamerikanizmus</em>, <em>bronzový</em>, <em>turizmus</em>, <em>vidieť</em>, <em>sadový</em>, <em>basista</em>, <em>biatlonový</em>, <em>obdobie</em>, <em>sadra</em>, <em>afarčina</em>, <em>gastrológia</em>, <em>vyjsť</em>, <em>medvedica</em></td><td><em>hundrete</em>, <em>sokolica</em>, <em>lakťu</em>, <em>Arno</em>, <em>kane</em>, <em>hrče</em>, <em>Bodrog</em>, <em>vlnka</em>, <em>buku</em>, <em>Pucher</em>, <em>Elvíra</em>, <em>Tamilnádu</em>, <em>vdovách</em>, <em>vodičský preukaz</em>, <em>chudá</em>, <em>kňazík</em>, <em>luhala</em>, <em>Sokrates</em>, <em>najvyšší</em>, <em>sople</em>, <em>hôľ</em>, <em>dcérkach</em>, <em>Geier</em>, <em>najbohatší</em>, <em>predstavovať</em></td></tr>
+<tr><td>Lithuanian</td><td><em>sportinis</em>, <em>kadangi</em>, <em>atlaikas</em>, <em>įdavėjas</em>, <em>interesas</em>, <em>dubnis</em>, <em>diegti</em>, <em>valsas</em>, <em>paleontologija</em>, <em>randant</em>, <em>tamsiaakis</em>, <em>nurengsiant</em>, <em>dovanoti</em>, <em>išbučiuoti</em>, <em>karpa</em>, <em>prašom</em>, <em>buksyras</em>, <em>ryžis</em>, <em>kudakuoti</em>, <em>atsistebėti</em>, <em>žvaigždiškas</em>, <em>patarti</em>, <em>pusdievis</em>, <em>skundas</em>, <em>risti</em></td><td><em>sapnavusioje</em>, <em>airiškuose</em>, <em>stebinčiajam</em>, <em>oksidai</em>, <em>įspūdingiausioms</em>, <em>mylėjusiai</em>, <em>blogiausiąsias</em>, <em>būdavusiai</em>, <em>teatidaro</em>, <em>paradoksams</em>, <em>bendravai</em>, <em>mažiausiosiose</em>, <em>meniškesniesiems</em>, <em>ištylėtumėme</em>, <em>bėgusių</em>, <em>lenkiškuose</em>, <em>pisančioms</em>, <em>mažesniąją</em>, <em>audros</em>, <em>palieka</em>, <em>įduosiančiose</em>, <em>išvalgantis</em>, <em>gnostiškam</em>, <em>ejakuliavusias</em>, <em>erekcijai</em></td></tr>
+<tr><td>Latvian</td><td><em>skuveklis</em>, <em>raudādams</em>, <em>ķeizariski</em>, <em>izskatīties</em>, <em>tadžikiski</em>, <em>erchercogiste</em>, <em>necepšana</em>, <em>atriebjošs</em>, <em>nemeklēts</em>, <em>apavniece</em>, <em>mats</em>, <em>garš</em>, <em>neizardams</em>, <em>spēkone</em>, <em>mundrāk</em>, <em>nepaarušais</em>, <em>purpurs</em>, <em>francijs</em>, <em>nevingrodams</em>, <em>centrāle</em>, <em>dabūjams</em>, <em>nepārcepušais</em>, <em>locīt</em>, <em>kurināts</em>, <em>korejietis</em></td><td><em>neadāmiem</em>, <em>visērtākos</em>, <em>kosmiskākus</em>, <em>Bāzeles</em>, <em>producējušus</em>, <em>ūdeņainajām</em>, <em>uzaramu</em>, <em>miglās</em>, <em>nedegošos</em>, <em>neredzējušam</em>, <em>Anna</em>, <em>neautajai</em>, <em>spriedošas</em>, <em>centralizējošajām</em>, <em>tālākajam</em>, <em>simbolistiskā</em>, <em>sistos</em>, <em>ģeometriskākajās</em>, <em>stingākie</em>, <em>īgnākajai</em>, <em>saprastu</em>, <em>sargāmie</em>, <em>reģistrā</em>, <em>modrībā</em>, <em>nenoteicošiem</em></td></tr>
+<tr><td>German</td><td><em>Weinbau</em>, <em>Ernährung</em>, <em>Ausprägung</em>, <em>Thematik</em>, <em>Küchengerät</em>, <em>parteilos</em>, <em>Zurückschreiben</em>, <em>Tweed</em>, <em>Hochdruck</em>, <em>Stubenarrest</em>, <em>Funktionalismus</em>, <em>Jungsteinzeit</em>, <em>windstill</em>, <em>Heimcomputer</em>, <em>Nomenklatur</em>, <em>abgraben</em>, <em>tiefschwarz</em>, <em>Kreuzweg</em>, <em>Aufenthaltsraum</em>, <em>global</em>, <em>Umwelttechnik</em>, <em>Programmiererin</em>, <em>untätig</em>, <em>docken</em>, <em>Geschichtsrevisionismus</em></td><td><em>Hansa</em>, <em>Abschnittsende</em>, <em>Handballspielers</em>, <em>Brennholze</em>, <em>übertriffst</em>, <em>spickten</em>, <em>Zivilverteidigungen</em>, <em>osmotische</em>, <em>untergehest</em>, <em>Parfum</em>, <em>unterschiebst</em>, <em>einunddreißigstes</em>, <em>desavouierte</em>, <em>sportlicheren</em>, <em>Knochenfischen</em>, <em>hellwacher</em>, <em>überschattest</em>, <em>regulärerer</em>, <em>Quotienten</em>, <em>traumatisierst</em>, <em>zirconiumhaltigsten</em>, <em>herzog</em>, <em>tapezierte</em>, <em>Küchenlöffels</em>, <em>tablettenförmig</em></td></tr>
+<tr><td>English</td><td><em>methoxy</em>, <em>purification</em>, <em>prebendary</em>, <em>activewear</em>, <em>mealy</em>, <em>viscount</em>, <em>concert</em>, <em>currently</em>, <em>prion</em>, <em>imperishable</em>, <em>postmaster</em>, <em>wetland</em>, <em>persecutor</em>, <em>jolting</em>, <em>vier</em>, <em>tassie</em>, <em>upstate</em>, <em>stocking</em>, <em>fanaticism</em>, <em>wry</em>, <em>tuned</em>, <em>earpiece</em>, <em>awardee</em>, <em>slimline</em>, <em>behaved</em></td><td><em>haploidify</em>, <em>Harry Holts</em>, <em>elaenias</em>, <em>dutifullness</em>, <em>antireproductive</em>, <em>wingwalkers</em>, <em>centralisms</em>, <em>Heeze-Leende</em>, <em>plated up</em>, <em>Doue</em>, <em>gingerbready</em>, <em>sibilates</em>, <em>seismomicrophone</em>, <em>radlib</em>, <em>tabtop</em>, <em>muroid</em>, <em>pediatrists</em>, <em>Z-plasty</em>, <em>advertainment</em>, <em>heck no</em>, <em>Yellow Dog</em>, <em>petrogenetically</em>, <em>Ingalls</em>, <em>khomoks</em>, <em>candle-wick</em></td></tr>
+<tr><td>Dutch</td><td><em>rollen</em>, <em>nep</em>, <em>bezorgen</em>, <em>kogel</em>, <em>rijksdag</em>, <em>kaften</em>, <em>concurrentie</em>, <em>gijzelnemer</em>, <em>recentelijk</em>, <em>karma</em>, <em>meevallen</em>, <em>scheepswerf</em>, <em>opstanding</em>, <em>vuilnisbelt</em>, <em>travestiet</em>, <em>frituurpan</em>, <em>container</em>, <em>bezetten</em>, <em>gentherapie</em>, <em>admiraal</em>, <em>onwrikbaar</em>, <em>aanstekelijk</em>, <em>ondoorgrondelijk</em>, <em>drie</em>, <em>alleskunner</em></td><td><em>galjoot</em>, <em>benamen</em>, <em>oogappels</em>, <em>Afar</em>, <em>onstuimigs</em>, <em>luchtziek</em>, <em>Exloo</em>, <em>bezettertjes</em>, <em>weigeraar</em>, <em>treurduif</em>, <em>terminologietje</em>, <em>dodenakkertje</em>, <em>Holterbroek</em>, <em>Kuikseind</em>, <em>suikerbrood</em>, <em>lhbt</em>, <em>beekjuffer</em>, <em>jeukte</em>, <em>zadelkleed</em>, <em>huilebalkt</em>, <em>poserend</em>, <em>alkjes</em>, <em>ontvlechtingen</em>, <em>disputen</em>, <em>aanknopingspuntjes</em></td></tr>
+<tr><td>Swedish</td><td><em>krock</em>, <em>samexistens</em>, <em>blomblad</em>, <em>mörkhyad</em>, <em>oförståelse</em>, <em>röst</em>, <em>härförare</em>, <em>psykologi</em>, <em>sexualdrift</em>, <em>nybäddad</em>, <em>program</em>, <em>groll</em>, <em>aptitretare</em>, <em>förnärmad</em>, <em>kärnenergi</em>, <em>diet</em>, <em>spela</em>, <em>sammanstötning</em>, <em>kalasjnikov</em>, <em>lider</em>, <em>förlika</em>, <em>räcka</em>, <em>fjärde</em>, <em>stabilisera</em>, <em>poppel</em></td><td><em>tillmätts</em>, <em>gruppspels</em>, <em>kulturfenomenet</em>, <em>samlevnadens</em>, <em>bruksföremålen</em>, <em>inkarnera</em>, <em>krullhårig</em>, <em>tebrickorna</em>, <em>konstgjorda</em>, <em>förordnar</em>, <em>rwandiskan</em>, <em>pyntet</em>, <em>essentialister</em>, <em>skavnings</em>, <em>urtavlans</em>, <em>anlitade</em>, <em>framgår</em>, <em>vassen</em>, <em>parallellsamhällets</em>, <em>finansmans</em>, <em>isoton</em>, <em>persikoträdets</em>, <em>knaprat</em>, <em>stolpillren</em>, <em>motsägelselust</em></td></tr>
+<tr><td>Spanish</td><td><em>rejuvenecimiento</em>, <em>chucha</em>, <em>afligido</em>, <em>apalear</em>, <em>topar</em>, <em>mezcolanza</em>, <em>relajar</em>, <em>artrosis</em>, <em>persecución</em>, <em>pierna</em>, <em>lagar</em>, <em>itálica</em>, <em>desgobierno</em>, <em>bronceador</em>, <em>dinero</em>, <em>despavorido</em>, <em>carbonera</em>, <em>también</em>, <em>venoso</em>, <em>cachorro</em>, <em>referendo</em>, <em>lago</em>, <em>reescribir</em>, <em>bobada</em>, <em>reencuentro</em></td><td><em>dantos</em>, <em>celebrándolos</em>, <em>afligiere</em>, <em>moderaría</em>, <em>nebulizaras</em>, <em>a cielo abierto</em>, <em>desalmacenarías</em>, <em>hierosolimitano</em>, <em>gonadal</em>, <em>twerkeasen</em>, <em>barroquismas</em>, <em>reorquestaron</em>, <em>deslastrándoles</em>, <em>alcanzaría</em>, <em>desmoralizarles</em>, <em>difaman</em>, <em>desnacemos</em>, <em>embrear</em>, <em>desliares</em>, <em>aguisé</em>, <em>patrimonializaréis</em>, <em>pintarais</em>, <em>prototiparan</em>, <em>parceros</em>, <em>climatólogos</em></td></tr>
+<tr><td>French</td><td><em>pigeon</em>, <em>digérer</em>, <em>cupidon</em>, <em>auvent</em>, <em>relocation</em>, <em>alimentaire</em>, <em>provoquer</em>, <em>chlorophylle</em>, <em>processeur</em>, <em>écriteau</em>, <em>antiviral</em>, <em>dynastie</em>, <em>horticulture</em>, <em>méridienne</em>, <em>accablant</em>, <em>mutualiser</em>, <em>traque</em>, <em>diffamer</em>, <em>keynésianisme</em>, <em>séculier</em>, <em>muséographique</em>, <em>indemnisation</em>, <em>renouvellement</em>, <em>carnassier</em>, <em>brésil</em></td><td><em>retestèrent</em>, <em>manivelles</em>, <em>édenterait</em>, <em>encombreraient</em>, <em>photocopias</em>, <em>clopinerions</em>, <em>stomodæum</em>, <em>conspuons</em>, <em>célèbrerez</em>, <em>préréglera</em>, <em>époptique</em>, <em>suburbicaire</em>, <em>engloberez</em>, <em>enlacerait</em>, <em>locution nominale</em>, <em>prévaudrai</em>, <em>crachotât</em>, <em>mastiquons</em>, <em>oevrée</em>, <em>crècherons</em>, <em>transsexuels</em>, <em>ROU</em>, <em>avachiront</em>, <em>resaccadait</em>, <em>bastiaise</em></td></tr>
+<tr><td>Italian</td><td><em>esclamazione</em>, <em>trench</em>, <em>avvicinamento</em>, <em>giovane</em>, <em>disertore</em>, <em>scorno</em>, <em>interbase</em>, <em>ventrale</em>, <em>annullabile</em>, <em>piccardo</em>, <em>crono</em>, <em>loro</em>, <em>sentimento</em>, <em>staccionata</em>, <em>prospiciente</em>, <em>tridimensionale</em>, <em>gongola</em>, <em>domandarci</em>, <em>trifoglio</em>, <em>autostazione</em>, <em>marinaro</em>, <em>restio</em>, <em>possessione</em>, <em>trovane</em>, <em>lesbismo</em></td><td><em>svettiate</em>, <em>polifagi</em>, <em>sgorbiata</em>, <em>preannunciati</em>, <em>tortureremmo</em>, <em>bellicosa</em>, <em>cofondarono</em>, <em>puzzeremmo</em>, <em>scalogna</em>, <em>foranea</em>, <em>bivaccherebbero</em>, <em>vagillare</em>, <em>avvantaggiarvene</em>, <em>flagrano</em>, <em>sbagliandole</em>, <em>guarnii</em>, <em>accreditarsi</em>, <em>riappacificandoci</em>, <em>indignarvi</em>, <em>compartimentalizzavano</em>, <em>volteggiaste</em>, <em>radiocomandarono</em>, <em>vibrerebbero</em>, <em>ridarvi</em>, <em>candissi</em></td></tr>
+<tr><td>Portuguese</td><td><em>zoologia</em>, <em>dono</em>, <em>bafafá</em>, <em>distraído</em>, <em>luís</em>, <em>devorar</em>, <em>redecorar</em>, <em>sucessor</em>, <em>vanguardista</em>, <em>croissant</em>, <em>esnobe</em>, <em>incongruente</em>, <em>demolição</em>, <em>gémeo</em>, <em>passageiro</em>, <em>líquen</em>, <em>recentemente</em>, <em>meu</em>, <em>sinestesia</em>, <em>falecer</em>, <em>cintura</em>, <em>nadar</em>, <em>humilhante</em>, <em>tampo</em>, <em>rapa</em></td><td><em>alçapremáramos</em>, <em>fretasses</em>, <em>rejubilais</em>, <em>mordi</em>, <em>endereçariam</em>, <em>contagiada</em>, <em>bembé</em>, <em>semelhou</em>, <em>intimidemos</em>, <em>infirmeis</em>, <em>exterminassem</em>, <em>pufes</em>, <em>pastoreásseis</em>, <em>desencanaremos</em>, <em>compactávamos</em>, <em>enrustiu</em>, <em>desenvolvia</em>, <em>atturarmos</em>, <em>faz tudo</em>, <em>rotastes</em>, <em>procrastinarão</em>, <em>esbraseáramos</em>, <em>bobeássemos</em>, <em>acetificarão</em>, <em>pintalgaríeis</em></td></tr>
+<tr><td>Romanian</td><td><em>masturbarăm</em>, <em>bitum</em>, <em>jnepeniș</em>, <em>partițiune</em>, <em>conexare</em>, <em>satirizare</em>, <em>pergamentos</em>, <em>electrocorticografie</em>, <em>aligote</em>, <em>incuba</em>, <em>alodial</em>, <em>augment</em>, <em>vinotecă</em>, <em>bandajat</em>, <em>ișala</em>, <em>geometrizat</em>, <em>fierbinte</em>, <em>geognozie</em>, <em>vindecabil</em>, <em>strabic</em>, <em>triorhidie</em>, <em>trabuc</em>, <em>codaj</em>, <em>adiționare</em>, <em>urocultură</em></td><td><em>Petcuță</em>, <em>suplicat</em>, <em>Cotorbești</em>, <em>asemene</em>, <em>high-life</em>, <em>deget mijlociu</em>, <em>ioanită</em>, <em>des-de-noapte</em>, <em>pensiuni</em>, <em>funcționați</em>, <em>sodomizează</em>, <em>aburit</em>, <em>cataloage</em>, <em>Moigrad-Porolissum</em>, <em>lovitură de pedeapsă</em>, <em>pliroforițiune</em>, <em>tărăgănat</em>, <em>proglot</em>, <em>Valea Fetei</em>, <em>Mâner</em>, <em>greva</em>, <em>Nădăștean</em>, <em>moalele capului</em>, <em>Pătrășcani</em>, <em>bâjbâit</em></td></tr>
+<tr><td>Greek</td><td><em>γεωδαιτικός</em>, <em>κλάδα</em>, <em>επιγράφομαι</em>, <em>αντίρροπος</em>, <em>ανεξαργύρωτος</em>, <em>αναγνωρισμένος</em>, <em>αργομισθία</em>, <em>αποφαντικός</em>, <em>αστέρι</em>, <em>αμπελουργική</em>, <em>διένεξη</em>, <em>τζιτζίκι</em>, <em>προδοσία</em>, <em>παράπτωμα</em>, <em>όλος</em>, <em>κάμαρα</em>, <em>πλάτανος</em>, <em>προγραμματισμένος</em>, <em>απολυμαντικός</em>, <em>σύμβαση</em>, <em>χορός</em>, <em>μικροοικονομικός</em>, <em>τζάουλ</em>, <em>απομεινάρι</em>, <em>πρώτος</em></td><td><em>αποδιεθνοποιήσεων</em>, <em>επιστατριών</em>, <em>γαστροοισοφαγικούς</em>, <em>βουτιάς</em>, <em>αλλαντοπώλες</em>, <em>ανασταλτικό</em>, <em>συμβόλαια</em>, <em>γοήτευσα</em>, <em>καρβοξυλική</em>, <em>Βάσω</em>, <em>αστιγματισμούς</em>, <em>μποδίστηκα</em>, <em>θειαιθέρες</em>, <em>αερόβιους</em>, <em>γαλακτικές</em>, <em>αγγειοδιασταλτικοί</em>, <em>διαχωρίζομαι</em>, <em>απασχολήσεων</em>, <em>μοριακό</em>, <em>β΄ συνθ.</em>, <em>τυπική απόκλιση</em>, <em>χημικούς</em>, <em>ατομισμέ</em>, <em>νεαροί</em>, <em>αξύριστες</em></td></tr>
+<tr><td>Armenian</td><td><em>կանխել</em>, <em>կարկեհան</em>, <em>առկախ</em>, <em>զեռալ</em>, <em>լուսանցքային</em>, <em>ֆրակ</em>, <em>ձեռնարկել</em>, <em>անկախանալ</em>, <em>հակաօսմանյան</em>, <em>հետևանք</em>, <em>մարդաշատ</em>, <em>պար</em>, <em>բլոգեր</em>, <em>քվազար</em>, <em>համոզել</em>, <em>երբուծ</em>, <em>բավականաչափ</em>, <em>մող</em>, <em>բնակել</em>, <em>նորաշխարհ</em>, <em>կարմիր</em>, <em>սահաթչի</em>, <em>սպառազինություն</em>, <em>ծեփել</em>, <em>պատենտ</em></td><td><em>Բոտսվանա</em>, <em>ՄԱԿ</em>, <em>Որոնտես</em>, <em>դելփին</em>, <em>Մեսրոպյան</em>, <em>անց կենալ</em>, <em>քաղաքական գործիչ</em>, <em>Թորոյան</em>, <em>Աբու Զաբի</em>, <em>Գալճյան</em>, <em>Արաբական Միացյալ Էմիրություններ</em>, <em>ՍՍՀ</em>, <em>Զապորոժիե</em>, <em>Ստեփանյան</em>, <em>վրաններ</em>, <em>հուսո</em>, <em>Աարե</em>, <em>Տիշճյան</em>, <em>ծախսվել</em>, <em>սարեր</em>, <em>Մասերու</em>, <em>Բուդաքյան</em>, <em>պոլի շոր</em>, <em>Ֆլորենցիա</em>, <em>Քիրեմիճյան</em></td></tr>
+<tr><td>Albanian</td><td><em>zeshkan</em>, <em>kaptë</em>, <em>currek</em>, <em>absorbim</em>, <em>ujdhesar</em>, <em>gjakës</em>, <em>ftohtësi</em>, <em>ulok</em>, <em>pesëdhjetenjë</em>, <em>tregjysh</em>, <em>kanun</em>, <em>shikoj</em>, <em>zemërim</em>, <em>qepshe</em>, <em>laknëqafe</em>, <em>gërhanë</em>, <em>trajtësoj</em>, <em>mbidialektor</em>, <em>onomatopeik</em>, <em>greth</em>, <em>krinë</em>, <em>zhgjyrç</em>, <em>ekologji</em>, <em>thikëz</em>, <em>meksh</em></td><td><em>cepëra</em>, <em>vorbat</em>, <em>Afrikës</em>, <em>sheu</em>, <em>Kadri</em>, <em>kurvat</em>, <em>Konxhe</em>, <em>xhenxhefila</em>, <em>vegshi</em>, <em>xhamia</em>, <em>cute</em>, <em>zbatica</em>, <em>cahisa</em>, <em>nxura</em>, <em>capokë</em>, <em>përbindëshat</em>, <em>cylaqë</em>, <em>zgavra</em>, <em>Hysenbelliu</em>, <em>Zuzaki</em>, <em>sarkave</em>, <em>mësallat</em>, <em>shkuaka</em>, <em>Tahiri</em>, <em>ushtari</em></td></tr>
+<tr><td>Hindi</td><td><em>गंजीफ़ा</em>, <em>मुल्तानी</em>, <em>कोदो</em>, <em>पुनर्जीवित</em>, <em>हिदायत</em>, <em>थोक</em>, <em>प्राचार्या</em>, <em>शुक्ता</em>, <em>सॉकरूओस</em>, <em>दासता</em>, <em>शिकस्त</em>, <em>निरावेशित</em>, <em>राजपूत</em>, <em>प्रशासनिक</em>, <em>कायापलट</em>, <em>हमलावर</em>, <em>ईर्खा</em>, <em>कीकर</em>, <em>अहाब</em>, <em>कड़वापन</em>, <em>इक़रारनामा</em>, <em>प्रत्यावर्ती</em>, <em>चतुर्घात</em>, <em>मिसाल</em>, <em>ग़द्दार</em></td><td><em>चमेलियों</em>, <em>त्रिवेणी नगर</em>, <em>ऍल्युमिनियम</em>, <em>गबरुओं</em>, <em>शीतोष्ण वर्षावन</em>, <em>पिलानेवालीं</em>, <em>निर्धारित करना</em>, <em>सेकती</em>, <em>गाहे-बगाहे</em>, <em>संध्याएँ</em>, <em>सुधारियेगा</em>, <em>मित्रो</em>, <em>मुज़क्कर</em>, <em>जिताके</em>, <em>छेड़ेंगे</em>, <em>खत्री</em>, <em>क़ज़ाक़</em>, <em>चढ़नेवाली</em>, <em>हारेगा</em>, <em>धड़कें</em>, <em>छान</em>, <em>अड़ायेगी</em>, <em>टोंटियों</em>, <em>मिलवायेंगे</em>, <em>पाली</em></td></tr>
+<tr><td>Persian</td><td><em>تذکر</em>, <em>نعلبکی</em>, <em>بالین</em>, <em>قاعده</em>, <em>غرفه</em>, <em>نیشکر</em>, <em>رعنا</em>, <em>پاریسی</em>, <em>ضیافت</em>, <em>صادر</em>, <em>رفتار</em>, <em>شهله</em>, <em>جشن</em>, <em>اونطور</em>, <em>سیگارت</em>, <em>جزیه</em>, <em>کوفتن</em>, <em>نبید</em>, <em>گهگاه</em>, <em>باز</em>, <em>سگرنه</em>, <em>زرافه</em>, <em>پنکه</em>, <em>آفتاب‌گردان</em>, <em>منگنه</em></td><td><em>شیر گاو</em>, <em>بلندترین</em>, <em>فاحش‌ترین</em>, <em>درجه‌ها</em>, <em>خراسان</em>, <em>فرنچ پرس</em>, <em>اژه</em>, <em>بخشای</em>, <em>اسم خاص</em>, <em>کورم</em>, <em>حیوون</em>, <em>اعلام کردن</em>, <em>پابرهنگان</em>, <em>یاد دادن</em>, <em>پلاو</em>, <em>سلواکیا</em>, <em>سولاخ</em>, <em>می‌برشتیم</em>, <em>کپان</em>, <em>آیت‌الله‌ها</em>, <em>فلوریدا</em>, <em>می‌آمد</em>, <em>سبک عراقی</em>, <em>تعجب کردن</em>, <em>رفتند</em></td></tr>
+<tr><td>Georgian</td><td><em>ქმარი</em>, <em>ოფოფი</em>, <em>მიკროპროცესორი</em>, <em>კრუნჩხვითი</em>, <em>კონუსი</em>, <em>მოსაწყენად</em>, <em>შინაარსიანი</em>, <em>საზრიანი</em>, <em>პრაქტიკული</em>, <em>დაბალპროფილური</em>, <em>გენიტალური</em>, <em>ჰელსინკელი</em>, <em>სათვალიანი</em>, <em>პრეზიდიუმი</em>, <em>თქო</em>, <em>გააჩერებს</em>, <em>ანთრაციტი</em>, <em>აპრიორული</em>, <em>ორმოცდარვა</em>, <em>დავთარი</em>, <em>ნოტიო</em>, <em>ნაყოფიერი</em>, <em>ორე</em>, <em>მოყვარული</em>, <em>თანმხლები</em></td><td><em>ჩეჩნეთი</em>, <em>ნიგერია</em>, <em>ვმღეროდი</em>, <em>სატელიტური სახელმწიფო</em>, <em>აღდგომელაშვილი</em>, <em>საბაზრო ღირებულება</em>, <em>სამხატვრო გალერეა</em>, <em>ბევრეთი</em>, <em>რცხილაფოთლიანი ძელქვა</em>, <em>ღმერთები</em>, <em>დღის</em>, <em>ვითარება</em>, <em>მრავალპარტიული სისტემა</em>, <em>კვანტური გადახლართულობა</em>, <em>ატლანტი</em>, <em>ბინძური კამპანია</em>, <em>პრობლემამ</em>, <em>რუსეთის</em>, <em>სოციალურ-ეკონომიკური</em>, <em>ჰოთ-დოგი</em>, <em>მცენარეები</em>, <em>ტუჩნი</em>, <em>მოიცადე</em>, <em>მგონია</em>, <em>უპ.ყ.</em></td></tr>
+<tr><td>Finnish</td><td><em>tarkkaavainen</em>, <em>pääideologi</em>, <em>kuvittaja</em>, <em>yöllä</em>, <em>absoluuttinen</em>, <em>lupahakemus</em>, <em>paikannimi</em>, <em>ympäristöministeriö</em>, <em>singota</em>, <em>laturetki</em>, <em>kili</em>, <em>roomalainen</em>, <em>sapluuna</em>, <em>juustoraaste</em>, <em>tullivirkailija</em>, <em>savuke</em>, <em>vesipullo</em>, <em>tapa</em>, <em>teatraalinen</em>, <em>sopimaton</em>, <em>jalkatila</em>, <em>lisäpalvelu</em>, <em>seerumi</em>, <em>automaatioasentaja</em>, <em>pelimanni</em></td><td><em>gallialaisuuden</em>, <em>ulkoeteinen</em>, <em>viisikymmentäkuusi</em>, <em>jäsenalennus</em>, <em>miestä</em>, <em>takaaladattava</em>, <em>hobitit</em>, <em>taistele</em>, <em>mättäinen</em>, <em>nojapyörä</em>, <em>sallinen</em>, <em>valvoi</em>, <em>satuloiminen</em>, <em>levitetty</em>, <em>känttykahvit</em>, <em>kauppausanssi</em>, <em>alijäähdytään</em>, <em>piispankukka</em>, <em>asuntokauppalaki</em>, <em>ainesana</em>, <em>hakematon</em>, <em>hälytin</em>, <em>rauhaset</em>, <em>amerikkalaistutaan</em>, <em>raukeasti</em></td></tr>
+<tr><td>Turkish</td><td><em>cümle</em>, <em>helva</em>, <em>boyayıcı</em>, <em>kartograf</em>, <em>beyazlık</em>, <em>hediyelik</em>, <em>sülale</em>, <em>kuir</em>, <em>dindarlık</em>, <em>çerçeveci</em>, <em>endişeli</em>, <em>kayyım</em>, <em>boğuşmak</em>, <em>derogasyon</em>, <em>pille</em>, <em>fizikokimyasal</em>, <em>töz</em>, <em>urgancı</em>, <em>ayal</em>, <em>akrofobi</em>, <em>söylem</em>, <em>binyıl</em>, <em>triloji</em>, <em>icabet</em>, <em>grup</em></td><td><em>kuşağı</em>, <em>olay güdümlü</em>, <em>İlbey</em>, <em>katyonlar</em>, <em>ditme</em>, <em>gayzerden</em>, <em>yitirme</em>, <em>Batu</em>, <em>filozoflara</em>, <em>evrimlerimizden</em>, <em>sorgular</em>, <em>tirad</em>, <em>ilköğretim okulu</em>, <em>içyüzüm</em>, <em>algoritmama</em>, <em>utandırmak</em>, <em>Yahşihan</em>, <em>yöntemi</em>, <em>yerim</em>, <em>kralın</em>, <em>Tunçsoy</em>, <em>mayınlarından</em>, <em>kaldırılmak</em>, <em>değişkeni</em>, <em>desenim</em></td></tr>
+<tr><td>Korean</td><td><em>갑툭튀</em>, <em>인상</em>, <em>양치하다</em>, <em>숨소리</em>, <em>이것</em>, <em>플루오렌</em>, <em>아휴</em>, <em>생각나다</em>, <em>신인</em>, <em>민속</em>, <em>발칙하다</em>, <em>장례</em>, <em>이성애</em>, <em>보전하다</em>, <em>원앙</em>, <em>이성애자</em>, <em>이음매</em>, <em>레루</em>, <em>싱글벙글</em>, <em>포진</em>, <em>모색하다</em>, <em>사각팔방</em>, <em>시신경</em>, <em>요람</em>, <em>너트</em></td><td><em>깊은</em>, <em>아프가니스탄</em>, <em>-이나</em>, <em>아이스 아메리카노</em>, <em>-지요</em>, <em>키갈리</em>, <em>트리니다드 토바고</em>, <em>유니언 잭</em>, <em>해운대</em>, <em>-으믄</em>, <em>소셜 저스티스 워리어</em>, <em>업뎃</em>, <em>콘택트</em>, <em>나블루스</em>, <em>마리오</em>, <em>앵기다</em>, <em>테트라코산</em>, <em>태양계</em>, <em>차우셰스쿠</em>, <em>-에요</em>, <em>생과일 주스</em>, <em>한번</em>, <em>시베리아</em>, <em>거란 소자</em>, <em>깜빠니야</em></td></tr>
+<tr><td>Indonesian</td><td><em>memformat</em>, <em>abak</em>, <em>petinju</em>, <em>rumahsakitkan</em>, <em>jati</em>, <em>kasta</em>, <em>esens</em>, <em>wasrey</em>, <em>mikologi</em>, <em>sabun</em>, <em>kres</em>, <em>akuntan</em>, <em>punggah</em>, <em>ereksi</em>, <em>prasarana</em>, <em>bioetika</em>, <em>nekrosis</em>, <em>penuaan</em>, <em>komitmen</em>, <em>berkalung</em>, <em>pesetrum</em>, <em>hidrografer</em>, <em>senggang</em>, <em>emisi</em>, <em>dekat</em></td><td><em>Mugiarto</em>, <em>Sugeng</em>, <em>kenaikan pangkat luar biasa</em>, <em>bungker</em>, <em>kentjana</em>, <em>apam pinang</em>, <em>Paputungan</em>, <em>kota besar</em>, <em>barang siapa</em>, <em>dimotivasi</em>, <em>SPBU</em>, <em>diperbuat</em>, <em>ditipu</em>, <em>ditaklukkan</em>, <em>patju</em>, <em>Bumi</em>, <em>teknik industri</em>, <em>syahadan</em>, <em>merah merang</em>, <em>tata guna</em>, <em>tidur-tidur</em>, <em>kitab undang-undang hukum pidana</em>, <em>alam rendah</em>, <em>walet gua</em>, <em>Aditya</em></td></tr>
+<tr><td>Malay</td><td><em>parang</em>, <em>menyusurgalurkan</em>, <em>tua</em>, <em>bura</em>, <em>mangsa</em>, <em>urin</em>, <em>kamul</em>, <em>bepang</em>, <em>keringat</em>, <em>jauhkan</em>, <em>garu</em>, <em>syaitan</em>, <em>sore</em>, <em>baucar</em>, <em>semangat</em>, <em>keterangan</em>, <em>cerpen</em>, <em>pengertian</em>, <em>kuku</em>, <em>penyahpepijat</em>, <em>hadis</em>, <em>semandar</em>, <em>beranggap</em>, <em>sedekah</em>, <em>berabang</em></td><td><em>takse</em>, <em>air seni</em>, <em>Sekinchan</em>, <em>pisang tidak akan berbuah dua kali</em>, <em>uskup agung</em>, <em>-nya</em>, <em>beras belanda</em>, <em>sindrom Klinefelter</em>, <em>empat puluh tujuh</em>, <em>Bentala</em>, <em>selamat Hari Raya</em>, <em>tumbung</em>, <em>tak organik</em>, <em>haji</em>, <em>kayu api</em>, <em>bongkok</em>, <em>sampai nanti</em>, <em>gelam</em>, <em>pari kelawar</em>, <em>abuk</em>, <em>duduk-duduk</em>, <em>siapa-siapa</em>, <em>hak asasi manusia</em>, <em>ahli fikir</em>, <em>Rogayah</em></td></tr>
+<tr><td>Arabic</td><td><em>مارستان</em>, <em>لكم</em>, <em>متقارب</em>, <em>اهتدى</em>, <em>يتزمتن</em>, <em>جون</em>, <em>كناسة</em>, <em>مضيرة</em>, <em>منهوب</em>, <em>أنادي</em>, <em>ضحك</em>, <em>همت</em>, <em>نشعر</em>, <em>تخادم</em>, <em>شجعنا</em>, <em>تستأنوا</em>, <em>تبردون</em>, <em>مشمش</em>, <em>تفي</em>, <em>أعيري</em>, <em>يصرفن</em>, <em>فلوكة</em>, <em>انكسوا</em>, <em>مستعمر</em>, <em>تشهدين</em></td><td><em>بدخش</em>, <em>لحج</em>, <em>تولد</em>, <em>جمهورية كوستاريكا</em>, <em>جوبا</em>, <em>المرسلات</em>, <em>تمامة</em>, <em>فانية</em>, <em>قبليون</em>, <em>جيش الدفاع الإسرائيلي</em>, <em>تزييد</em>, <em>شفاه</em>, <em>رئيسية</em>, <em>أتراك</em>, <em>تدهيش</em>, <em>إثمار</em>, <em>ثامر</em>, <em>بغض</em>, <em>مخافر</em>, <em>فعل معتل</em>, <em>نسي</em>, <em>شروب</em>, <em>شفوات</em>, <em>بلاد الزاط</em>, <em>ضغابيس</em></td></tr>
+<tr><td>Swahili</td><td><em>hapa</em>, <em>sibu</em>, <em>pisi</em>, <em>roboti</em>, <em>bafu</em>, <em>amali</em>, <em>mtumba</em>, <em>umonaki</em>, <em>msanifu</em>, <em>bisi</em>, <em>lavani</em>, <em>karotini</em>, <em>kiraka</em>, <em>gwiji</em>, <em>rumande</em>, <em>brandi</em>, <em>kivumishi</em>, <em>halaiki</em>, <em>sungura</em>, <em>peponi</em>, <em>uzalendo</em>, <em>mudiri</em>, <em>tawi</em>, <em>mkungumanga</em>, <em>jumuia</em></td><td><em>tulizwa</em>, <em>kujasiri</em>, <em>wadai</em>, <em>awasili</em>, <em>patanisha</em>, <em>vinyota</em>, <em>wasafiri</em>, <em>Irak</em>, <em>kufika</em>, <em>paji la uso</em>, <em>mnaomba</em>, <em>Pili</em>, <em>vinyozi</em>, <em>la chumvi nyingi</em>, <em>Najari</em>, <em>mikuyu</em>, <em>fara</em>, <em>nukta mkato</em>, <em>gawanywa</em>, <em>kuvuta</em>, <em>gilasi</em>, <em>virusi vya papillomavirus ya binadamu</em>, <em>uakifishi</em>, <em>zidiwa</em>, <em>rekebisho</em></td></tr>
 </table>
+<!-- END:word-samples -->
+
+### Example game chains
+
+The table below shows example chains drawn from simulations, illustrating how the overlap rule plays out across scripts and word structures:
+
+<!-- BEGIN:example-chains -->
+<table>
+<tr><th>Language</th><th>Example chain</th></tr>
+<tr><td>Serbo-Croatian (Latin)</td><td>konvertibilan → antialkoholičarka → kajzerica → carić → iće → ćepanica → cajtung</td></tr>
+<tr><td></td><td>pismohrana → nadevati → tisuću → ćutiti → tih → ihtiološki → kirurg</td></tr>
+<tr><td></td><td>trup → uporabljiv → ivica → car → argument</td></tr>
+<tr><td></td><td>uopšte → termopilski → kijamet → etiopski → kilobajt</td></tr>
+<tr><td></td><td>združiti → tipl → plakati → tiskarstvo → voćni → nikdo → događaj → ajnc</td></tr>
+<tr><td>Serbo-Croatian (Cyrillic)</td><td>крумпирача → чађ → ађутант</td></tr>
+<tr><td></td><td>осовина → наломити → тигањ</td></tr>
+<tr><td></td><td>досег → егзосфера → развијати → тишина → наивност → ступац → ацетон → онечишћивач</td></tr>
+<tr><td></td><td>јужина → намљети → тиква → васиона → налог → ограничење → његоватељ</td></tr>
+<tr><td></td><td>штоперица → цар → аргумент</td></tr>
+<tr><td>Macedonian</td><td>достапно → ножница → цајкански → киниса → санхосеанец</td></tr>
+<tr><td></td><td>прегази → зимски → километарски → киевјанец</td></tr>
+<tr><td></td><td>експериментира → раб → аби → билда → далјан → анемостат → атмосферски → кичевчанец</td></tr>
+<tr><td></td><td>армиски → кикс → ксенофобија → јаренец</td></tr>
+<tr><td></td><td>седативен → ене → невреден → ендемично → новинар → архитектонски → кингстаунец</td></tr>
+<tr><td>Bulgarian</td><td>тарос → осип → ипотека → карфиол → олицетворение</td></tr>
+<tr><td></td><td>рецепта → тача → чайник → икона → наркоза → закана → натще → щелия</td></tr>
+<tr><td></td><td>девети → тимпан → анархия</td></tr>
+<tr><td></td><td>здрав → автодезинфекционен → енергичен → енциклопедия</td></tr>
+<tr><td></td><td>познат → атол → олио</td></tr>
+<tr><td>Russian</td><td>громко → кофеварка → картография</td></tr>
+<tr><td></td><td>изготовлять → тьфу → фужер → ерик → иконопись</td></tr>
+<tr><td></td><td>отапливать → тьфу → функционирование → иерархический</td></tr>
+<tr><td></td><td>оценщик → икать → тьфу → фуксия</td></tr>
+<tr><td></td><td>расформировать → тьфу → фураж → ажурный</td></tr>
+<tr><td>Ukrainian</td><td>чаїтися → сяйво → вощити → титул → улюбленець → цькувати → тимчасовий</td></tr>
+<tr><td></td><td>безтурботність → тьху → худиківський</td></tr>
+<tr><td></td><td>втілювати → тимчасово → ворина → надлишок → окунь</td></tr>
+<tr><td></td><td>імперіалізм → зменшуватимуть → тьма → матися → сягнути → тимчасунки → кит</td></tr>
+<tr><td></td><td>галиця → цятка → каламар → артеріосклероза → заслужений</td></tr>
+<tr><td>Polish</td><td>sałata → tata → tani → nieustraszony → nyt</td></tr>
+<tr><td></td><td>archiwista → tajwański → kiczowaty → tymczasowy → wygasać</td></tr>
+<tr><td></td><td>czapka → kaszanka → kategoryczny → nyt</td></tr>
+<tr><td></td><td>altana → naoczny → nyski → kirgiski → kichać</td></tr>
+<tr><td></td><td>szmira → rasowy → wypolerować</td></tr>
+<tr><td>Czech</td><td>mediální → nízce → celoživotní → níže → žena → nahoru → runway</td></tr>
+<tr><td></td><td>zlepšovací → císařský → kýla → lakomec → echo → honitba → bavič</td></tr>
+<tr><td></td><td>zatknout → utopenec → echo → homofobie</td></tr>
+<tr><td></td><td>drůbežárna → nahradit → itinerář</td></tr>
+<tr><td></td><td>fotit → italský → kýl</td></tr>
+<tr><td>Slovak</td><td>garsónka → kanibalizmus → ustavičný</td></tr>
+<tr><td></td><td>myšlienka → kameramanský → kýchnuť</td></tr>
+<tr><td></td><td>okuliarnik → ikra → rabín</td></tr>
+<tr><td></td><td>litrový → výnimka → karpina → natvoriť</td></tr>
+<tr><td></td><td>ontogenéza → zavčas → astronautika → kasíno → nový → východný</td></tr>
+<tr><td>Lithuanian</td><td>ambasadorius → usnis → ispanė → nėmaž</td></tr>
+<tr><td></td><td>kūtvėla → laikinas → astronomija → jazminas → astatis → istorinis → ispanė → nėmaž</td></tr>
+<tr><td></td><td>alyvuogė → gėla → laužas → asmenukė → kėlinys</td></tr>
+<tr><td></td><td>sutarus → usnis → istorija → jachta → tardavus</td></tr>
+<tr><td></td><td>įmotė → tėvavardis → istorija → jauja → japonas → asmenukė → kėlinys</td></tr>
+<tr><td>Latvian</td><td>palma → manim → imperiālistiskāks → ksenons</td></tr>
+<tr><td></td><td>tieši → šizofrēnija → jautrs</td></tr>
+<tr><td></td><td>kontrole → lepnāks → ksenons</td></tr>
+<tr><td></td><td>miza → zaķis → islandisks → ksenons</td></tr>
+<tr><td></td><td>draiskulis → istaba → baterija → jaukāks → ksenons</td></tr>
+<tr><td>German</td><td>Ethiker → erwirtschaften → entsprechend</td></tr>
+<tr><td></td><td>Emser → erzielen → entwöhnen → entgegensetzen → entrümpeln</td></tr>
+<tr><td></td><td>Nachtgebet → ethisch → chirurgisch → charakterisieren → entwurzelt</td></tr>
+<tr><td></td><td>Devise → serienmäßig → igitt</td></tr>
+<tr><td></td><td>emporsteigen → entweichen → entwerfen → entwöhnen → entziehen → entstellt</td></tr>
+<tr><td>English</td><td>pinter → erythema → matchbox → oxidizing</td></tr>
+<tr><td></td><td>milkweed → editable → legged → edginess</td></tr>
+<tr><td></td><td>dromedary → ryo → yours</td></tr>
+<tr><td></td><td>theoretician → anarchy → hypocrite → tens</td></tr>
+<tr><td></td><td>extrinsic → iconography → hyphen → encroachment</td></tr>
+<tr><td>Dutch</td><td>zeemonster → erfdeel → elfje → jep → epidermis → islam → amendement</td></tr>
+<tr><td></td><td>noordwest → stelselmatig → iglo → lossen → entropie → ieders</td></tr>
+<tr><td></td><td>lokken → entourage → gewezen → enkelband</td></tr>
+<tr><td></td><td>wreef → efficiëntie → ieders</td></tr>
+<tr><td></td><td>ankeren → energiebron → onderduiker → eretitel → eland</td></tr>
+<tr><td>Swedish</td><td>dittan → anomali → likvärdig → igenkänningsfaktor → orientering</td></tr>
+<tr><td></td><td>arbetsgivare → revolutionera → rakhyvel → elenergi → giga → galopp</td></tr>
+<tr><td></td><td>mucka → kardiolog → ogenomtränglig → igenkänningsfaktor → oreglerad → adhd</td></tr>
+<tr><td></td><td>mask → skyffel → elitism → smaksak → akilleshäl → älg</td></tr>
+<tr><td></td><td>klassificera → radhus → usling</td></tr>
+<tr><td>Spanish</td><td>cooperación → ónix → ixil → ilustre → recomendación</td></tr>
+<tr><td></td><td>defraudación → ónix → ixil → ilegítimamente → testero → rompedora → radiofrecuencia</td></tr>
+<tr><td></td><td>manipulador → organismo → montado → dolencia</td></tr>
+<tr><td></td><td>despótico → compensar → arrocero → rosácea</td></tr>
+<tr><td></td><td>contraindicación → ónix → ixil → ilusionismo → mortuorio → ionización</td></tr>
+<tr><td>French</td><td>biaisé → séchoir → iridium</td></tr>
+<tr><td></td><td>héberger → errance → ceinturon → onguent</td></tr>
+<tr><td></td><td>siffleur → uriner → erg</td></tr>
+<tr><td></td><td>barman → annuler → erg</td></tr>
+<tr><td></td><td>provocateur → urine → netteté → télescopage → genièvre → relocalisation → onanisme → merveilleux</td></tr>
+<tr><td>Italian</td><td>scuotere → regnare → rendering</td></tr>
+<tr><td></td><td>plateale → legnoso → soddisfarlo → lord</td></tr>
+<tr><td></td><td>alga → gassoso → sottopagato → tonicità</td></tr>
+<tr><td></td><td>funzionale → lene → negatività</td></tr>
+<tr><td></td><td>tredici → cinguettare → retrospettivamente → telefonia → iattura → rappresentatività</td></tr>
+<tr><td>Portuguese</td><td>obrigada → daltonismo → mongo → goji → jihadista → tataravô → vôo</td></tr>
+<tr><td></td><td>decente → terminar → armazenamento → topete → terráqueo</td></tr>
+<tr><td></td><td>titubear → arte → terapêutico → congregar → argônio → iodeto → tora → rapidez</td></tr>
+<tr><td></td><td>hidromel → elegeram → amnistia → iaque</td></tr>
+<tr><td></td><td>indisponível → eloquência → ianque</td></tr>
+<tr><td>Romanian</td><td>nesupus → ustura → randare → reocupa → paramedic → icni → nicidecât</td></tr>
+<tr><td></td><td>covertă → tăurean → angoasant</td></tr>
+<tr><td></td><td>zice → celomat → atrofic → icosaedru → rubăț</td></tr>
+<tr><td></td><td>cărturăresc → scâncire → retarda → daltonist → stârv</td></tr>
+<tr><td></td><td>sermaia → iahtman → antianticorp</td></tr>
+<tr><td>Greek</td><td>ακαζού → ούρο → ροδακινιά</td></tr>
+<tr><td></td><td>εμπόρευμα → μαξιλάρα → ραδιοφωνικός</td></tr>
+<tr><td></td><td>έθιμο → μούρη → ρηχός</td></tr>
+<tr><td></td><td>επιγονατίδα → δανειολήπτρια → ιατρείο</td></tr>
+<tr><td></td><td>μαρίδα → δαμασκηνί → νίτρωση → σηκώνω → νωπογραφία</td></tr>
+<tr><td>Armenian</td><td>ձմեռել → ելմակ → ակիշ → իշայծյամ → ամերիկուհի → հիասթափություն</td></tr>
+<tr><td></td><td>երիվար → արծաթ → աթոռ → ոռնալ → ալկոհոլ → ոլորակ → ակնթարթ</td></tr>
+<tr><td></td><td>կասկածելի → լիներ → երթուղային → ինտեգրալ → ալերգիա</td></tr>
+<tr><td></td><td>արոր → որակ → ակնածոտ → ոտնապինդ</td></tr>
+<tr><td></td><td>արքա → քած → ածիկ</td></tr>
+<tr><td>Albanian</td><td>njëzetepesë → sëmur → uroj</td></tr>
+<tr><td></td><td>dallë → lëpen → ende → degëz → ëzë → zëvendës</td></tr>
+<tr><td></td><td>zgledh → dhaskal → alle → lencol → oler → ereksion → onagër</td></tr>
+<tr><td></td><td>dëshmor → oreks → kshetë → tërësisht</td></tr>
+<tr><td></td><td>shpet → etje → jeh → ehojo → josh → shëngjinës</td></tr>
+<tr><td>Hindi</td><td>हादसा → साक्षात् → त्राता → तालीम</td></tr>
+<tr><td></td><td>करी → रीझना → नाना → नाराज़ → ज़वाल</td></tr>
+<tr><td></td><td>उखाड़ना → नाना → नाठ</td></tr>
+<tr><td></td><td>नियाज़ → ज़िम्मेदारी → रीस</td></tr>
+<tr><td></td><td>तिरानवे → वेश्यावृत्ति → तिफ़लाना → नायिका → कालीन</td></tr>
+<tr><td>Persian</td><td>جامعه‌شناسی → سیاه → اهمال → الک → لکه → کهنه → نهالی → لیف</td></tr>
+<tr><td></td><td>آرم → رمزی → زیرگروه → وهم → هم‌معنی → نیمکت → کتلت</td></tr>
+<tr><td></td><td>رمزگشایی → ییلاق → اقتدارگرا → رادیوتراپی → پینگ‌پونگ → نگون → وند → ندانم‌گرایی</td></tr>
+<tr><td></td><td>مسافرت → رتبه → بهاریه → یهویی → ییلاق → اقرار → ارادت</td></tr>
+<tr><td></td><td>ارجاع → اعتماد → ادکلن → لنگ → نگال → الکترومغناطیس</td></tr>
+<tr><td>Georgian</td><td>დიახ → ახალგაზრდულად → ადევნებს</td></tr>
+<tr><td></td><td>ჰაერნაოსნობა → ბარკასი → სიგანით → ითესავს → ვსიო → იოგა → გაასწორებს</td></tr>
+<tr><td></td><td>კაზაკი → კინოფილმი → მიწისზედა → დაჭიმულად → ადასტურებს</td></tr>
+<tr><td></td><td>პანიკური → რიკოშეტი → ტიპურად → ადვილად → ადგილობითი → თილისმა → მაინტერესებს</td></tr>
+<tr><td></td><td>სამეცნიერო → რომი → მიდგომა → მარჩბივი → ვიდეო</td></tr>
+<tr><td>Finnish</td><td>taidokkaasti → tikkaus → uskoutua</td></tr>
+<tr><td></td><td>poimia → iankaikkisesti → tiibetinspanieli → liika → karpalo → loppumaton → onnistua</td></tr>
+<tr><td></td><td>vitsikäs → äsh → shoppailla → laukea</td></tr>
+<tr><td></td><td>keskeneräisyys → yskittää → äärijärjestö → törkeä</td></tr>
+<tr><td></td><td>narratiivi → viivyttely → lyhennelmä → määränpää → äänenlaatu → tunne → nel → eläköön</td></tr>
+<tr><td>Turkish</td><td>abarognoz → ozon → ondüle → lengüistik → ikincilik → iklim → imkân</td></tr>
+<tr><td></td><td>tezevvüç → üçlü → lüle → lens</td></tr>
+<tr><td></td><td>palmiye → yelve → veresiye → yeniden → endirekt</td></tr>
+<tr><td></td><td>ikramiye → yemlik → iktisadiyat → atlas → astrolog</td></tr>
+<tr><td></td><td>tülü → lütesyum → umursamaz → azık → ıkınmak → akselerasyon → onar → arşın</td></tr>
+<tr><td>Korean</td><td>체험 → 험악하다 → 다른</td></tr>
+<tr><td></td><td>천식 → 식충이 → 이용 → 용왕 → 왕가 → 가관 → 관용구 → 구렁</td></tr>
+<tr><td></td><td>불상 → 상수 → 수상하다 → 다리미 → 미나리 → 리버모륨</td></tr>
+<tr><td></td><td>달망구 → 구속 → 속세 → 세륨</td></tr>
+<tr><td></td><td>건강 → 강준치 → 치킨너겟</td></tr>
+<tr><td>Indonesian</td><td>homonim → impedansi → silt</td></tr>
+<tr><td></td><td>mewarnai → aimatatuli → linguis → istiadat → atribusi → simpleks</td></tr>
+<tr><td></td><td>tegur → urutan → antraks</td></tr>
+<tr><td></td><td>pirau → autistik → ikamah → ahuh</td></tr>
+<tr><td></td><td>perhentian → anjan → antinomi → miniatur → urip → ipuh</td></tr>
+<tr><td>Malay</td><td>lukah → ahad → adab → abuh</td></tr>
+<tr><td></td><td>merakyatkan → anu → nuklear → ardvark</td></tr>
+<tr><td></td><td>mendakan → angin → individu → dulang → ngok → okey</td></tr>
+<tr><td></td><td>berilium → umur → uranium → umrah → ahad → adik → iktizam → ambulans</td></tr>
+<tr><td></td><td>berkahkah → ahmak → aktivitet → etika → karet</td></tr>
+<tr><td>Arabic</td><td>تسحر → حرنكش → كشط → شطافة</td></tr>
+<tr><td></td><td>مأرب → ربط → بطلتم → تمثل → ثلاثية</td></tr>
+<tr><td></td><td>تنافسون → ونش → نشرر</td></tr>
+<tr><td></td><td>تنسخوا → واع → اعطسوا → واجهة</td></tr>
+<tr><td></td><td>مشرع → رعراع → اعتقدتم → تمارس → رسالة</td></tr>
+<tr><td>Swahili</td><td>kuasisi → simiti → tibu → bushuti → tiifu → funda → dahalia</td></tr>
+<tr><td></td><td>riboflauini → nikeli → lini → nira → raia</td></tr>
+<tr><td></td><td>burudi → divai → aiskrimu → mufti → tisha → hamdia</td></tr>
+<tr><td></td><td>mkoromo → momote → teketea</td></tr>
+<tr><td></td><td>mkesha → hali → lila → lapa → pambajio → iodini → nimonia</td></tr>
+</table>
+<!-- END:example-chains -->

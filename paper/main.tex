@@ -2,13 +2,16 @@
 
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{booktabs}
+\usepackage{longtable}
 \usepackage{hyperref}
 \usepackage{microtype}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
+\usepackage{fontspec}
+\usepackage{ucharclasses}
+\setmainfont{FreeSerif}
+\newfontfamily{\hangulfont}{Noto Serif CJK KR}[Scale=MatchLowercase]
+\setTransitionsForKorean{\hangulfont}{\normalfont}
 
 \hypersetup{
     colorlinks=true,
@@ -25,13 +28,16 @@
 
 \maketitle
 
+\input{abstract}
+
 \input{introduction}
 \input{methodology}
 \input{results}
 \input{conclusion}
-\input{abstract}
 
 \bibliographystyle{plain}
 \bibliography{references}
+
+\input{appendix}
 
 \end{document}

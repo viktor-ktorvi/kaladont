@@ -8,49 +8,51 @@ Table~\ref{tab:results} shows, for each language, how many words were in the fil
 \label{tab:results}
 \begin{tabular}{lrrrrrrr}
 \toprule
-Language & Overlap & Words & Min & Max & Mean & Median & Std \\
+Language & Min Freq & Min Len & Overlap & Words & Max & Mean & Median \\
 \midrule
-Serbo-Croatian (Latin) & 2 & 26{,}902 & 1 & 254 & 51.2 & 39.0 & 45.5 \\
-Indonesian & 2 & 20{,}347 & 1 & 236 & 43.3 & 33.0 & 37.3 \\
-Serbo-Croatian (Cyrillic) & 2 & 23{,}233 & 1 & 200 & 37.6 & 28.0 & 33.0 \\
-Georgian & 2 & 16{,}905 & 1 & 222 & 35.5 & 28.0 & 31.6 \\
-Malay & 2 & 6{,}862 & 1 & 131 & 34.2 & 31.0 & 23.8 \\
-Finnish & 2 & 34{,}066 & 1 & 140 & 25.9 & 19.0 & 23.9 \\
-Italian & 2 & 33{,}191 & 1 & 132 & 25.0 & 18.0 & 22.4 \\
-Persian & 2 & 10{,}557 & 1 & 94 & 23.7 & 20.0 & 17.8 \\
-Korean & 1 & 27{,}140 & 1 & 148 & 23.3 & 16.0 & 22.0 \\
-Romanian & 2 & 68{,}983 & 1 & 154 & 21.5 & 15.0 & 21.3 \\
-Macedonian & 2 & 37{,}883 & 1 & 123 & 20.4 & 15.0 & 19.4 \\
-Lithuanian & 2 & 6{,}342 & 1 & 57 & 16.6 & 13.0 & 13.2 \\
-Swahili & 2 & 7{,}761 & 1 & 117 & 14.4 & 10.0 & 13.4 \\
-Spanish & 2 & 28{,}595 & 1 & 64 & 12.7 & 10.0 & 10.4 \\
-Turkish & 2 & 16{,}959 & 1 & 61 & 12.3 & 9.0 & 10.9 \\
-Portuguese & 2 & 23{,}067 & 1 & 47 & 8.0 & 6.0 & 7.2 \\
-Arabic & 2 & 46{,}904 & 1 & 39 & 6.5 & 5.0 & 5.4 \\
-English & 2 & 41{,}022 & 1 & 33 & 5.2 & 4.0 & 4.7 \\
-Czech & 2 & 20{,}578 & 1 & 26 & 5.1 & 4.0 & 4.1 \\
-Albanian & 2 & 9{,}406 & 1 & 29 & 4.8 & 4.0 & 4.0 \\
-French & 2 & 27{,}105 & 1 & 37 & 4.3 & 3.0 & 3.7 \\
-Bulgarian & 2 & 14{,}283 & 1 & 39 & 4.2 & 3.0 & 3.9 \\
-Dutch & 2 & 25{,}575 & 1 & 24 & 4.1 & 3.0 & 3.6 \\
-German & 2 & 39{,}209 & 1 & 33 & 4.0 & 3.0 & 3.9 \\
-Swedish & 2 & 24{,}340 & 1 & 24 & 4.0 & 3.0 & 3.5 \\
-Russian & 2 & 27{,}855 & 1 & 20 & 3.7 & 3.0 & 2.8 \\
-Ukrainian & 2 & 22{,}940 & 1 & 26 & 3.5 & 3.0 & 3.1 \\
-Polish & 2 & 21{,}609 & 1 & 17 & 3.3 & 2.0 & 2.7 \\
-Armenian & 2 & 13{,}516 & 1 & 21 & 3.3 & 2.0 & 3.0 \\
-Slovak & 2 & 7{,}025 & 1 & 15 & 3.0 & 2.0 & 2.3 \\
-Latvian & 2 & 13{,}915 & 1 & 14 & 2.3 & 2.0 & 1.5 \\
-Hindi & 2 & 15{,}995 & 1 & 13 & 2.2 & 2.0 & 1.5 \\
-Greek & 2 & 24{,}284 & 1 & 10 & 2.0 & 2.0 & 1.4 \\
+Serbo-Croatian (Latin) & \textemdash & 3 & 2 & 26{,}902 & 298 & 48.6 & 36.0 \\
+Indonesian & \textemdash & 3 & 2 & 20{,}347 & 213 & 44.6 & 37.0 \\
+Serbo-Croatian (Cyrillic) & \textemdash & 3 & 2 & 23{,}233 & 250 & 39.5 & 29.0 \\
+Georgian & \textemdash & 3 & 2 & 16{,}905 & 178 & 34.6 & 28.0 \\
+Malay & \textemdash & 3 & 2 & 6{,}862 & 131 & 33.7 & 29.0 \\
+Finnish & 2.0 & 3 & 2 & 34{,}066 & 192 & 28.0 & 21.0 \\
+Italian & 2.0 & 3 & 2 & 33{,}191 & 147 & 25.4 & 20.0 \\
+Persian & \textemdash & 3 & 2 & 10{,}557 & 115 & 25.3 & 21.0 \\
+Korean & \textemdash & 2 & 1 & 27{,}140 & 172 & 24.1 & 17.0 \\
+Romanian & \textemdash & 3 & 2 & 68{,}983 & 156 & 21.3 & 15.0 \\
+Macedonian & \textemdash & 3 & 2 & 37{,}883 & 124 & 20.1 & 15.0 \\
+Lithuanian & \textemdash & 3 & 2 & 6{,}342 & 56 & 16.5 & 13.0 \\
+Swahili & \textemdash & 3 & 2 & 7{,}761 & 89 & 14.3 & 11.0 \\
+Spanish & 2.0 & 3 & 2 & 28{,}595 & 53 & 12.3 & 10.0 \\
+Turkish & \textemdash & 3 & 2 & 16{,}959 & 80 & 12.3 & 9.0 \\
+Portuguese & 2.0 & 3 & 2 & 23{,}067 & 44 & 8.0 & 6.0 \\
+Arabic & \textemdash & 3 & 2 & 46{,}904 & 43 & 6.6 & 5.0 \\
+Czech & 2.0 & 3 & 2 & 20{,}578 & 42 & 5.2 & 4.0 \\
+English & 2.0 & 3 & 2 & 41{,}022 & 31 & 5.2 & 4.0 \\
+Dutch & 2.0 & 3 & 2 & 25{,}575 & 24 & 4.4 & 3.0 \\
+Albanian & \textemdash & 3 & 2 & 9{,}406 & 24 & 4.4 & 3.0 \\
+Bulgarian & \textemdash & 3 & 2 & 14{,}283 & 27 & 4.2 & 3.0 \\
+German & 2.0 & 3 & 2 & 39{,}209 & 32 & 4.1 & 2.0 \\
+Swedish & 2.0 & 3 & 2 & 24{,}340 & 40 & 4.1 & 3.0 \\
+French & 2.0 & 3 & 2 & 27{,}105 & 24 & 4.1 & 3.0 \\
+Russian & 2.0 & 3 & 2 & 27{,}855 & 21 & 3.7 & 3.0 \\
+Ukrainian & \textemdash & 3 & 2 & 22{,}940 & 22 & 3.5 & 2.0 \\
+Polish & 2.0 & 3 & 2 & 21{,}609 & 22 & 3.4 & 2.0 \\
+Armenian & \textemdash & 3 & 2 & 13{,}516 & 20 & 3.2 & 2.0 \\
+Slovak & \textemdash & 3 & 2 & 7{,}025 & 20 & 2.9 & 2.0 \\
+Latvian & \textemdash & 3 & 2 & 13{,}915 & 14 & 2.4 & 2.0 \\
+Hindi & \textemdash & 3 & 2 & 15{,}995 & 15 & 2.2 & 2.0 \\
+Greek & \textemdash & 3 & 2 & 24{,}284 & 10 & 2.0 & 2.0 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 
 
+
 \subsection{Cross-language Variation}
 
+Appendix~\ref{app:example-chains} shows five concrete example chains per language to give an intuition for how the overlap rule plays out across different scripts and word structures.
 
 \subsection{Script and Filtering Effects}
 
