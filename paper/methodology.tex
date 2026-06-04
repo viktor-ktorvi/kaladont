@@ -23,11 +23,13 @@ We filter out entries that would not be accepted in a real game, keeping only th
     This removes a lot of short function words that would otherwise dominate the word list.
     Korean is an exception: the minimum is two characters, because each Korean character (a Hangul syllable block) already represents a full syllable, so a two-character word is already two syllables long — comparable in richness to a three-letter word in a Latin-script language.
 
-    \item \textbf{Part of speech.} We remove proper names (places, people), affixes (prefix, suffix, infix, etc.), symbols, standalone characters, phrases, proverbs, and contractions.
+    \item \textbf{Part of speech.} We remove proper names (places, people), affixes (prefix, suffix, infix, combining form, interfix), symbols, standalone characters, phrases, proverbs, and contractions.
     These either cannot be used in the game by convention or are not really independent words.
 
     \item \textbf{Casing.} Words starting with a capital letter are excluded, except in languages where common nouns are capitalised by convention (e.g.,\ German, where nouns like \textit{Hund} (dog) are always written with a capital).
-    All-uppercase words like \texttt{NATO} or \texttt{DNA} are also removed, since these are acronyms rather than regular words.
+    All-uppercase words like \texttt{NATO} or \texttt{DNA} are also removed.
+
+    \item \textbf{Abbreviations.} Entries whose Wiktionary sense definitions carry tags such as \texttt{abbreviation}, \texttt{initialism}, or \texttt{acronym} are removed, catching abbreviated forms that slipped past the casing check.
 
     \item \textbf{Inflected and alternative forms.} Wiktionary sometimes lists inflected forms — for example, the Spanish \textit{fueron} (they went), an inflected form of \textit{ir} (to go) — as their own separate entries, tagged as ``form of'' the base word.
     We remove these, since they represent the same word in a different grammatical form rather than a distinct vocabulary item.
@@ -57,8 +59,6 @@ Korean is handled differently.
 In most scripts, two characters is a rough proxy for two sounds, which matches how the game is played in practice.
 In Hangul, however, each character is already a complete syllable, so using two characters would demand an unusually long overlap.
 We use just one character (one syllable) for Korean, which corresponds to the same spirit of the rule.
-
-
 
 We repeat this 1000 times per language.
 Using random selection rather than a smart strategy means the results loosely reflect what an average game between two players of average vocabulary might look like, rather than the theoretical maximum a perfect player could achieve.
