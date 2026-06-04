@@ -1,6 +1,6 @@
 # Kaladont
 
-[Kaladont](https://en.wikipedia.org/wiki/Kaladont) is a word chain game popular amongst kids in Serbo-croatian speaking regions, where players take turns saying words, each starting with the last two letters of the previous one — for example, *tantalum* → *umpire* → *rerun* → *unpleasant*. The game's name comes from the Austrian toothpaste brand Kalodont, which became the canonical winning word because no South Slavic word begins with "nt". This project simulates the game across multiple languages using lemmatized word lists from [kaikki.org](https://kaikki.org) Wiktionary data, running Monte Carlo experiments to measure how long chains can get.
+[Kaladont](https://en.wikipedia.org/wiki/Kaladont) is a word sequence game popular amongst kids in Serbo-croatian speaking regions, where players take turns saying words, each starting with the last two letters of the previous one — for example, *tantalum* → *umpire* → *rerun* → *unpleasant*. The game's name comes from the Austrian toothpaste brand Kalodont, which became the canonical winning word because no South Slavic word begins with "nt". This project simulates the game across multiple languages using lemmatized word lists from [kaikki.org](https://kaikki.org) Wiktionary data, running Monte Carlo experiments to measure how long sequences can get.
 
 ## Installation
 
@@ -25,9 +25,9 @@ uv run python -m scripts.benchmark --simulations 1000 --output results.csv
 
 ## Supported languages
 
-Game length statistics from 1000 simulations, sorted by mean chain length:
+Game length statistics from 1000 simulations, sorted by mean sequence length:
 
-| Language | Min Freq | Min Len | Overlap | Words | Max | Mean | Median | Example chain |
+| Language | Min Freq | Min Len | Overlap | Words | Max | Mean | Median | Example sequence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Serbo-Croatian (Latin) | — | 3 | 2       | 26,902 | 291 | 51.2 | 39.0 | kovrča → čakšire → reparacija → jao → aorist → stoprem → emocija → jal → alt |
 | Indonesian | — | 3 | 2       | 20,347 | 269 | 43.8 | 37.0 | swaguna → narkose → sensorik → ikonoklas → astronaut → uterus → usung → ngocokin → inokulasi → silt |
@@ -135,13 +135,13 @@ The table below shows a random sample of surviving and filtered-out words per la
 </table>
 <!-- END:word-samples -->
 
-### Example game chains
+### Example game sequences
 
-The table below shows example chains drawn from simulations, illustrating how the overlap rule plays out across scripts and word structures:
+The table below shows example sequences drawn from simulations, illustrating how the overlap rule plays out across scripts and word structures:
 
 <!-- BEGIN:example-chains -->
 <table>
-<tr><th>Language</th><th>Example chain</th></tr>
+<tr><th>Language</th><th>Example sequence</th></tr>
 <tr><td>Serbo-Croatian (Latin)</td><td>konvertibilan → antialkoholičarka → kajzerica → carić → iće → ćepanica → cajtung</td></tr>
 <tr><td></td><td>pismohrana → nadevati → tisuću → ćutiti → tih → ihtiološki → kirurg</td></tr>
 <tr><td></td><td>trup → uporabljiv → ivica → car → argument</td></tr>

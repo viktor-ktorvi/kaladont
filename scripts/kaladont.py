@@ -12,7 +12,7 @@ from src.kaladont import (
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Kaladont word chain game")
+    parser = argparse.ArgumentParser(description="Kaladont word sequence game")
     parser.add_argument(
         "--language",
         "-l",

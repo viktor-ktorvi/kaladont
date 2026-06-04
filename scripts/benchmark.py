@@ -142,7 +142,7 @@ _COLUMN_HEADERS = {
     "game_mean": "Mean",
     "game_median": "Median",
     "game_std": "Std",
-    "example_chain": "Example chain",
+    "example_chain": "Example sequence",
 }
 
 
@@ -208,7 +208,7 @@ def _print_latex_table(rows: list[dict], columns: list[str]) -> None:
     print()
     print(r"\begin{table}[h]")
     print(r"\centering")
-    print(r"\caption{Chain length statistics (1000 simulations each).}")
+    print(r"\caption{Sequence length statistics (1000 simulations each).}")
     print(r"\label{tab:results}")
     print(f"\\begin{{tabular}}{{{alignment}}}")
     print(r"\toprule")

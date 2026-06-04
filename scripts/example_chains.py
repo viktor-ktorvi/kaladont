@@ -44,7 +44,7 @@ def _arrow_join(chain: list[str]) -> str:
 def build_html_table(data: list[tuple[str, list[list[str]]]]) -> str:
     buf = io.StringIO()
     buf.write("<table>\n")
-    buf.write("<tr><th>Language</th><th>Example chain</th></tr>\n")
+    buf.write("<tr><th>Language</th><th>Example sequence</th></tr>\n")
     for lang, chains in data:
         if not chains:
             buf.write(f"<tr><td>{lang}</td><td>—</td></tr>\n")
@@ -59,26 +59,26 @@ def build_html_table(data: list[tuple[str, list[list[str]]]]) -> str:
 def build_latex_table(data: list[tuple[str, list[list[str]]]]) -> str:
     buf = io.StringIO()
     w = buf.write
-    w(r"\begin{longtable}{lp{10cm}}" + "\n")
-    w(r"\caption{Example game chains (3--8 words each).}" + "\n")
-    w(r"\label{tab:example-chains} \\" + "\n")
-    w(r"\toprule" + "\n")
-    w(r"Language & Example chain \\" + "\n")
-    w(r"\midrule" + "\n")
-    w(r"\endfirsthead" + "\n")
-    w(r"\multicolumn{2}{c}{\tablename\ \thetable\ -- continued} \\" + "\n")
-    w(r"\toprule" + "\n")
-    w(r"Language & Example chain \\" + "\n")
-    w(r"\midrule" + "\n")
-    w(r"\endhead" + "\n")
-    w(r"\midrule" + "\n")
-    w(r"\multicolumn{2}{r}{\textit{continued on next page}} \\" + "\n")
-    w(r"\endfoot" + "\n")
-    w(r"\bottomrule" + "\n")
-    w(r"\endlastfoot" + "\n")
+    w(r"\begin{longtable}{lp{10cm}}\n")
+    w(r"\caption{Example game sequences (3--8 words each).}\n")
+    w(r"\label{tab:example-chains} \\\n")
+    w(r"\toprule\n")
+    w(r"Language & Example sequence \\\n")
+    w(r"\midrule\n")
+    w(r"\endfirsthead\n")
+    w(r"\multicolumn{2}{c}{\tablename\ \thetable\ -- continued} \\\n")
+    w(r"\toprule\n")
+    w(r"Language & Example sequence \\\n")
+    w(r"\midrule\n")
+    w(r"\endhead\n")
+    w(r"\midrule\n")
+    w(r"\multicolumn{2}{r}{\textit{continued on next page}} \\\n")
+    w(r"\endfoot\n")
+    w(r"\bottomrule\n")
+    w(r"\endlastfoot\n")
     for idx, (lang, chains) in enumerate(data):
         if idx > 0:
-            buf.write(r"\midrule" + "\n")
+            buf.write(r"\midrule\n")
         if not chains:
             buf.write(f"{lang} & --- \\\\\n")
             continue
@@ -86,13 +86,13 @@ def build_latex_table(data: list[tuple[str, list[list[str]]]]) -> str:
             label = lang if i == 0 else ""
             chain_latex = r" $\rightarrow$ ".join(chain)
             buf.write(f"{label} & {chain_latex} \\\\\n")
-    w(r"\end{longtable}" + "\n")
+    w(r"\end{longtable}\n")
     return buf.getvalue()
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--seed", type=int, default=None, help="Random seed for reproducible chains")
+    parser.add_argument("--seed", type=int, default=None, help="Random seed for reproducible sequences")
     parser.add_argument("--write", action="store_true", help="Write LaTeX table to paper/example_chains_table.tex")
     args = parser.parse_args()
 
