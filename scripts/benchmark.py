@@ -113,64 +113,67 @@ def main() -> None:
 
     rows_sorted = sorted(rows, key=lambda r: r.get("game_mean") or 0, reverse=True)
 
-    md_columns = [
+    display_columns = [
         "language",
+        "min_frequency",
+        "min_word_size",
         "chain_chars",
         "num_words",
-        "game_min",
         "game_max",
         "game_mean",
         "game_median",
-        "game_std",
         "example_chain",
     ]
-    _print_markdown_table(rows_sorted, md_columns)
-
-    ascii_columns = csv_fieldnames
-    _print_ascii_table(rows_sorted, ascii_columns)
-
-    latex_columns = [
-        "language",
-        "chain_chars",
-        "num_words",
-        "game_min",
-        "game_max",
-        "game_mean",
-        "game_median",
-        "game_std",
-    ]
-    _print_latex_table(rows_sorted, latex_columns)
+    _print_markdown_table(rows_sorted, display_columns)
+    _print_ascii_table(rows_sorted, display_columns)
+    _print_latex_table(rows_sorted, [c for c in display_columns if c != "example_chain"])
 
     print(f"\nResults written to {output_path}")
 
 
+_COLUMN_HEADERS = {
+    "language": "Language",
+    "min_frequency": "Min Freq",
+    "min_word_size": "Min Len",
+    "chain_chars": "Overlap",
+    "num_words": "Words",
+    "game_min": "Min",
+    "game_max": "Max",
+    "game_mean": "Mean",
+    "game_median": "Median",
+    "game_std": "Std",
+    "example_chain": "Example chain",
+}
+
+
+def _fmt_cell(col: str, val: object) -> str:
+    if val is None or val == "":
+        return ""
+    s = str(val)
+    if col == "min_frequency":
+        return "—" if float(s) == 0.0 else s
+    if col == "num_words":
+        return f"{int(s):,}"
+    return s
+
+
 def _print_markdown_table(rows: list[dict], columns: list[str]) -> None:
-    headers = {
-        "language": "Language",
-        "chain_chars": "Chain",
-        "num_words": "Words",
-        "game_min": "Min",
-        "game_max": "Max",
-        "game_mean": "Mean",
-        "game_median": "Median",
-        "game_std": "Std",
-        "example_chain": "Example chain",
-    }
-    header_row = " | ".join(headers.get(c, c) for c in columns)
-    separator = " | ".join("---" for _ in columns)
-    print(f"\n| {header_row} |")
-    print(f"| {separator} |")
+    headers = "".join(f"<th>{_COLUMN_HEADERS.get(c, c)}</th>" for c in columns)
+    print("\n<table>")
+    print(f"<tr>{headers}</tr>")
     for row in rows:
-        cells = " | ".join(str(row.get(c, "")) for c in columns)
-        print(f"| {cells} |")
+        cells = "".join(f"<td>{_fmt_cell(c, row.get(c, ''))}</td>" for c in columns)
+        print(f"<tr>{cells}</tr>")
+    print("</table>")
 
 
 def _print_ascii_table(rows: list[dict], columns: list[str]) -> None:
-    str_rows = [{c: str(row.get(c, "")) for c in columns} for row in rows]
-    widths = {c: max(len(c), max(len(r[c]) for r in str_rows)) for c in columns}
+    header_labels = {c: _COLUMN_HEADERS.get(c, c) for c in columns}
+    str_rows = [{c: _fmt_cell(c, row.get(c, "")) for c in columns} for row in rows]
+    widths = {c: max(len(header_labels[c]), max(len(r[c]) for r in str_rows)) for c in columns}
 
     sep = f"+-{'-+-'.join('-' * widths[c] for c in columns)}-+"
-    header = f"| {' | '.join(c.ljust(widths[c]) for c in columns)} |"
+    header = f"| {' | '.join(header_labels[c].ljust(widths[c]) for c in columns)} |"
 
     print(f"\n{sep}\n{header}\n{sep}")
     for row in str_rows:
@@ -179,25 +182,28 @@ def _print_ascii_table(rows: list[dict], columns: list[str]) -> None:
 
 
 def _print_latex_table(rows: list[dict], columns: list[str]) -> None:
-    _HEADERS = {
-        "language": "Language",
-        "chain_chars": "Chain",
-        "num_words": "Words",
-        "game_min": "Min",
-        "game_max": "Max",
-        "game_mean": "Mean",
-        "game_median": "Median",
-        "game_std": "Std",
+    _NUMERIC = {
+        "num_words",
+        "game_min",
+        "game_max",
+        "game_mean",
+        "game_median",
+        "game_std",
+        "chain_chars",
+        "min_word_size",
+        "min_frequency",
     }
-    _NUMERIC = {"num_words", "game_min", "game_max", "game_mean", "game_median", "game_std", "chain_chars"}
     alignment = "".join("r" if c in _NUMERIC else "l" for c in columns)
 
-    def _fmt(col: str, val) -> str:
+    def _fmt_latex(col: str, val: object) -> str:
         if val is None or val == "":
             return ""
+        s = str(val)
+        if col == "min_frequency":
+            return r"\textemdash" if float(s) == 0.0 else s
         if col == "num_words":
-            return f"{int(val):,}".replace(",", "{,}")
-        return str(val)
+            return f"{int(s):,}".replace(",", "{,}")
+        return s
 
     print()
     print(r"\begin{table}[h]")
@@ -206,10 +212,10 @@ def _print_latex_table(rows: list[dict], columns: list[str]) -> None:
     print(r"\label{tab:results}")
     print(f"\\begin{{tabular}}{{{alignment}}}")
     print(r"\toprule")
-    print(" & ".join(_HEADERS.get(c, c) for c in columns) + r" \\")
+    print(" & ".join(_COLUMN_HEADERS.get(c, c) for c in columns) + r" \\")
     print(r"\midrule")
     for row in rows:
-        print(" & ".join(_fmt(c, row.get(c, "")) for c in columns) + r" \\")
+        print(" & ".join(_fmt_latex(c, row.get(c, "")) for c in columns) + r" \\")
     print(r"\bottomrule")
     print(r"\end{tabular}")
     print(r"\end{table}")
