@@ -51,7 +51,7 @@ We filter out entries that would not be accepted in a real game, keeping only th
 To simulate a single game, we pick a starting word at random from the word list.
 At each step, we look up all unused words that begin with the last two characters of the current word and pick one at random.
 The game ends when no such word exists — either because that ending never appears at the start of any word, or because all words that do start with it have already been used.
-We record the number of words in the chain as the game's length.
+We record the number of words in the sequence as the game's length.
 
 Korean is handled differently.
 In most scripts, two characters is a rough proxy for two sounds, which matches how the game is played in practice.
@@ -65,7 +65,7 @@ Using random selection rather than a smart strategy means the results loosely re
 
 \subsection{Languages}
 
-Table~\ref{tab:languages} shows all the languages, along with their script, frequency threshold, chaining unit, and language family.
+Table~\ref{tab:languages} shows all the languages, along with their script, frequency threshold, overlap unit, and language family.
 The ``Overlap'' column shows how many characters are taken from the end of one word and matched against the start of the next; for Korean this is 1 (one syllable block) rather than 2.
 
 \begin{table}[H]
